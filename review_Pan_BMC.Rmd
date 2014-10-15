@@ -8,59 +8,56 @@ highlight: tango
 
 # General Comments
 
-Pan _et al._ constructed 12 segregating populations, analyzed the genetic recombination landscape of these populations and correlated the recombination hotspots with various genomic features. The authors present nice data sets that could be useful for genetic studies. However, I am not convinced by the interpretation of the data, especially the methods used for correlation studies. More work need to be done to either improve/clarify their methods and distinguish their results from those of Bauer _et al._[^c1]. Below I include comments on specific aspects of the paper; I hope they may be useful in revising the manuscript. There are a number of places with typo (e.g. `non-colineraity` on page 9 should be `non-colinearity`) or grammatical error (e.g. ), careful revision of the text with this in mind would improve legibility. Please do not hesitate to contact me if you need help to clarify questions or comments. 
-
-
-# Background
-
-* Bulleted list of concerns
-* Only concerns that are sufficiently important that they should prevent publication of the paper
-
+Pan _et al._ constructed 12 segregating populations, analyzed the genetic recombination landscape of these populations, and correlated the recombination hotspots with various genomic features. The authors present nice data sets that could be useful for future genetic studies. However, I am not convinced by the interpretation of the data, especially the methods used for correlation studies. To make the work acceptable, more work need to be done to either improve/clarify their methods and distinguish their results from those of Bauer _et al._[^c1]. Below I include comments on specific aspects of the paper and hope they may be useful in revising the manuscript. There are a number of places with typo (e.g. `"non-colineraity"` on page 9 should be `"non-colinearity"`) or grammatical error (e.g. `"averaged 1879.3 cM"` might be better to replaced by `"an average of 1879.3 cM"`), careful revision of the text with this in mind would improve legibility.
 
 # Results
 
-* The number of recombination bins and the length of genetic maps were calculated using the same set of SNPs to measure recombination events in different ways, it is obvious to me that the two values should be highly correlated. I do not think it is necessary to present this correlation value unless you have a point to make.
+* The number of recombination bins and the length of genetic maps were calculated using the same set of SNPs to measure recombination events in different ways, it is obvious to me that the two sets of values should be correlated. I do not think it is necessary to present this result unless you have a point to make.
 
-* I have concerns about the claim that you have improved the reference genome. Because B73 is not a founder line for most of the 12 populations, gaven the large number of genomic variations of maize [^c2], is it possible that the non-colinearity regions you observed are population specific inversions but not reference genome errors? Or caused by genotyping errors or mis-placement on the genetic map. Your have to rule out these possibilities for the purpose of reference genome improvement.
+* I have concerns about the claim that you have improved the reference genome. Because B73 is not a founder line for most of the 12 populations, given the large number of genomic variations of maize[^c2], is it possible that the non-colinearity regions you observed are population specific inversions but not reference genome errors? Or the non-colinearity could be caused by genotyping errors or mis-placement of markers on the genetic map. Your have to rule out these possibilities for the purpose of reference genome improvement.
 
-* For a better comparison of recombination events in 12 popualtions, x-axis and band width of the histograms in __Figure S2__ should keep the same. And you should backup this statement `As expected, the longer the chomosome is the more recombination events occur` or drop it.
+* You should backup this statement `"As expected, the longer the chomosome is the more recombination events occur"`, because it is beyond my expectation.
 
-* It may be not statistically legitimate to compare genomic features of hotspot regions with randomly selected genomic regions given SNPs on the SNP50 array may enriched in genic regions. And most of the _P_ values lower than 2.2e-16 seem worrisome. Instead of choosing random genomic regions, recombinant coldspot regions of same size and SNP density should be selected for testing as described in {Myers _et al._}[^c3]. In addition, SNP array suffers from some degree of ascertainment bias, I do not know how much it will affect this analysis, but address this concern here or in discussion seems warranted. 
+* It may be not statistically legitimate to compare genomic features of hotspot regions with randomly selected genomic regions given SNPs on the SNP50 array may enriched in genic regions. And most of the _P_ values lower than 2.2e-16 also seem worrisome. Instead of choosing random genomic regions, recombination coldspot regions of same size and SNP density were suggested to be selected for testing as described in {Myers _et al._}[^c3]. In addition, SNP array normally suffers from some degree of ascertainment bias, I do not know how much it will affect this analysis, but address this concern here or in discussion seems warranted. 
 
-* You proposed a hypothesis about the function of genes with intragenic recombination and conducted GO term enrichment test. However, it seems like you neither rejected nor validated your hypothesis. Therefore, the intrepretation may belong to discussion. 
+* You proposed a hypothesis about the function of genes with intragenic recombination and conducted GO term enrichment test. However, in the conclusion, you neither rejected nor accepted your hypothesis. Therefore, the interpretation of this section of analysis may belong to discussion. 
 
-* Again, the relationship of hotspot and gene expression should also using regions of same size and SNP density as control rather than random selected region.
+* The relationship of hotspots and gene expression should also using regions of same size and similar SNP density as control rather than random selected regions.
 
-* A citation should be given for the "genome-wide significance level" for determining the threshold of GWAS. Or why not just use well accepted `FDR` or `bonferroni` method to control multiple test problem?
+* A citation should be given for the `"genome-wide significance level"` for determining the threshold of GWAS. Or why not just use well accepted `FDR` or `bonferroni` method to control multiple test problem?
 
 * In the text, you should check whether __Fig. 4A__ pointed to the right figure.
 
-
-* In the part of result section, the header said `intragenic recombination is significantly associated with gene expression and phenotypic variation in maize`, however, I could not find any evidence in the text, except some case studies, to backup this conclusion if I did not miss anything. 
+* In the last part of result section, the header is `intragenic recombination is significantly associated with gene expression and phenotypic variation in maize`. However, I could not find any evidence in the text, except some case studies, to backup this statement if I did not miss anything. 
 
 # Discussion
 
 * You may want to talk more about how to use the 65 recombination hotspots in marker assisted selection.
 
-* I am confused about this [^s1], are the beginning and end part of the genomic region per se.
+* I am confused about this sentence[^s1], does the beginning and end be part of the genomic region _per se_.
 
 
 # Methods
 
-* Bulleted list of concerns
-* Even if the authors didn't fix these the papers would be ok, but they might improve the paper. 
+* To demonstrate the in-house Perl scripts works the same as (or better than) the estabilished methods, direct comparing their results with a test dataset would do the work. Technical details (e.g. command `"flips"`) may belong to the software manual (or README file) on the script sharing website.
 
+* The permutation procedure of hotspot identification need to be clarified, e.g., which value was permutated (or random shuffled), what test statistic was used and how to derive the threshold.
+
+* The terms in the formula (see right) should be defined.
+
+\begin{marginfigure}
+$$4N_er/kb$$
+\end{marginfigure}
 
 # Tables and Figures
 
-
-* Figure 3A: legend of _# Genes with >= 1 SNP_ should be _# Genes with <= 1 SNP_. And check the label of y-axis of Figure 3C.
-
-
-
-Pick one of:
-* Major revisions
-
+* Figure 3A: legend of `"# Genes with >= 1 SNP"` should be `"# Genes with <= 1 SNP"`?
+* Figure S2: For a better comparison of recombination events in 12 populations, x-axis and band width of the histograms in __Figure S2__ should keep the same.
+* Figure S11: From these qq-plots, it seems like the population structure was not completely controlled for most of the GWAS.
 
 [^c1]: Bauer E, Falque M, Walter H, Bauland C, Camisan C, Campo L, Meyer N, Ranc N, Rincent R, Schipprack W: Intraspecific variation of recombination rate in maize. Genome Biol 2013, 14:R103.
-[^s1]: Recombination is more likely to occur at the beginning and end of the genomic elements and no the genomic element regions `per se`, ...
+[^c2]: Springer NM, Ying K, Fu Y, Ji T, Yeh CT, Jia Y, Wu W, Richmond T, Kitzman J, Rosenbaum H, et al: Maize inbreds exhibit high levels of copy number variation (CNV) and presence/absence variation (PAV) in genome content. PLoS Genet 2009, 5:e1000734.
+[^c3]: Myers S, Bottolo L, Freeman C, McVean G, Donnelly P: A fine-scale map of recombination rates and hotspots across the human genome. Science 2005, 310:321-324.
+
+
+[^s1]: "Recombination is more likely to occur at the beginning and end of the genomic elements and no the genomic element regions `per se`, ..."
