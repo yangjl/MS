@@ -1,0 +1,84 @@
+%Template prepared by grzegorz ha\l aj for second AMaMeF conference, 17 Oct 2006
+
+
+\documentclass[12pt]{article}
+\usepackage{calc}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{placeins}
+\ifx\pdftexversion\undefined
+  \usepackage[dvips]{graphicx}
+\else
+  \usepackage[pdftex]{graphicx}
+\fi
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage[cp1250]{inputenc}
+\usepackage[OT4]{fontenc}
+
+\addtolength{\voffset}{-3.5cm} \addtolength{\textheight}{4cm}
+
+\renewcommand\Authfont{\scshape\small}
+\renewcommand\Affilfont{\itshape\small}
+\setlength{\affilsep}{1em}
+
+\newcommand{\smalllineskip}{\baselineskip=15pt}
+\newcommand{\keywords}[1]{{\footnotesize\hspace{0.68cm}{\textit{Keywords}: }#1\par
+  \vskip.7\baselineskip}}
+\renewenvironment{abstract}[0]{\small\rm
+        \begin{center}ABSTRACT
+        \\ \vspace{8pt}
+        \begin{minipage}{5.2in}\smalllineskip
+        \hspace{1pc}}{\end{minipage}\end{center}\vspace{-1pt}}
+\newcommand{\emailaddress}[1]{\newline{\sf#1}}
+
+\let\LaTeXtitle\title
+\renewcommand{\title}[1]{\LaTeXtitle{\large\textsf{\textbf{#1}}}}
+
+%%%TITLE
+\title{Strange stochastic portfolio theory in infinite dimensions}
+\date{}
+
+%%AFFILIATIONS
+\author[1]{John Smith}
+\author[2]{Jan Kowalski}
+\affil[1]{Medieval institute of strange sciences, Street of
+Something, Somewhere \emailaddress{jsmith@strscience.xx}}
+\affil[2]{Medieval institute of strange sciences, Somewhere, Street
+of Something} \affil[2]{Strange College, Somewhat Oak, Nowhere
+\emailaddress{jkowalski@strscience.xx}}
+
+%%DOCUMENT
+\begin{document}
+\maketitle
+
+%%PLEASE PUT YOUR ABSTRACT HERE
+\begin{abstract}{\it Strange stochastic theory} has never been used to model investment
+portfolios (do not even think about infinite dimensions) but who
+cares -- it is just an example. They have even not been rigorously
+defined in literature. Some hints and intuitions were given in my
+recent work of \cite{smith}.
+
+Anyway, we can warmly think about strange stochastic portfolios that
+could be defined like \cite{kowalski} did it in case of strange
+options\footnote{By the way, they have never been defined either.},
+i.e.
+\begin{equation}
+d\mathrm{strange}_{\mathrm{portf}}(t)=(\alpha_t+\mathrm{strange}_{\mathrm{portf}}(t))dt+\beta_tdw_s(t),
+\end{equation}
+where $w_s$ is Strange motion.
+\end{abstract}
+%%THE END OF ABSTRACT
+
+\begin{thebibliography}{99}
+\small
+\bibitem[1]{kowalski} Kowalski J. \textit{On inexistance of strange
+options}, Medieval Markets, Varsovia, pp. 1--100, 1478.
+
+\bibitem[2]{smith} Smith J., \textit{How a strange portfolio could look
+like?} Acta Mathematicae --- Medius Aevus, Kraków, pp. 12012--12312,
+1221.
+\end{thebibliography}
+\end{document}
