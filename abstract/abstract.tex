@@ -1,4 +1,4 @@
-%Template prepared by grzegorz ha\l aj for second AMaMeF conference, 17 Oct 2006
+%Template prepared by Jinliang Yang for maize genetic conference
 
 
 \documentclass[12pt]{article}
@@ -38,47 +38,27 @@
 \renewcommand{\title}[1]{\LaTeXtitle{\large\textsf{\textbf{#1}}}}
 
 %%%TITLE
-\title{Strange stochastic portfolio theory in infinite dimensions}
+\title{Incorporating Evolutionary Constraints in Genomic Selection Improved Prediction Accuracies for Heterotic Traits in Maize}
 \date{}
 
 %%AFFILIATIONS
-\author[1]{John Smith}
-\author[2]{Jan Kowalski}
-\affil[1]{Medieval institute of strange sciences, Street of
-Something, Somewhere \emailaddress{jsmith@strscience.xx}}
-\affil[2]{Medieval institute of strange sciences, Somewhere, Street
-of Something} \affil[2]{Strange College, Somewhat Oak, Nowhere
-\emailaddress{jkowalski@strscience.xx}}
+\author[1]{Jinliang Yang}
+\author[1,2]{Sofiane Mezmouk}
+\author[1]{Jeffrey Ross-Ibarra}
+\affil[1]{Department of Plant Sciences, University of California, Davis, CA 95616}
+\affil[2]{Current address: Institute of sciences, Somewhere, Street of Something} 
 
 %%DOCUMENT
 \begin{document}
 \maketitle
 
 %%PLEASE PUT YOUR ABSTRACT HERE
-\begin{abstract}{\it Strange stochastic theory} has never been used to model investment
-portfolios (do not even think about infinite dimensions) but who
-cares -- it is just an example. They have even not been rigorously
-defined in literature. Some hints and intuitions were given in my
-recent work of \cite{smith}.
+\begin{abstract}
 
-Anyway, we can warmly think about strange stochastic portfolios that
-could be defined like \cite{kowalski} did it in case of strange
-options\footnote{By the way, they have never been defined either.},
-i.e.
-\begin{equation}
-d\mathrm{strange}_{\mathrm{portf}}(t)=(\alpha_t+\mathrm{strange}_{\mathrm{portf}}(t))dt+\beta_tdw_s(t),
-\end{equation}
-where $w_s$ is Strange motion.
+Genomic selection (GS) gains its popularity recently as it becomes more easier to access genome-wide markers in a training population. Current methods for GS weight all of the available SNPs equally to train GS model. This normally leads to an over fitting problem especially when the number of markers are greatly larger than the number of individuals (p >> n problem). Over fitted models are prone to have lower prediction accuracies. Therefore, it would be less useful for breeding. To overcome the over fitting problem, we proposed to weight more on evolutionary constraint sites. SNPs detected at these sites tend to be deleterious and would be more informative for prediction. As a proof of the concept, a half diallel population founded from 12 diverse inbred lines was constructed, from which seven phenotypic traits were collected. After sequencing of the 12 founder lines, ~14M SNPs were discovered and the SNPs were used to identify ~50K identity by descent (IBD) blocks. With the sum of the conservation scores in the IBD blocks as the explanatory variables in the diallel population, we show that the prediction accuracies are statistically significant better than random shuffled variables using a 5-fold cross-validation approach. The result demonstrates the importance of incorporating evolutionary information in GS and plant breeding.
+
 \end{abstract}
 %%THE END OF ABSTRACT
 
-\begin{thebibliography}{99}
-\small
-\bibitem[1]{kowalski} Kowalski J. \textit{On inexistance of strange
-options}, Medieval Markets, Varsovia, pp. 1--100, 1478.
 
-\bibitem[2]{smith} Smith J., \textit{How a strange portfolio could look
-like?} Acta Mathematicae --- Medius Aevus, Kraków, pp. 12012--12312,
-1221.
-\end{thebibliography}
 \end{document}
