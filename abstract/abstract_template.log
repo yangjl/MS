@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  16 JAN 2015 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  16 JAN 2015 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**MGC2015_v0.1.tex
-(./MGC2015_v0.1.tex
+**abstract_template.tex
+(./abstract_template.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
@@ -182,23 +182,23 @@ LaTeX Font Info:    Try loading font information for OT4+cmr on input line 100.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/polski/ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 ))
-(./MGC2015_v0.1.aux)
-\openout1 = `MGC2015_v0.1.aux'.
+(./abstract_template.aux)
+\openout1 = `abstract_template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -261,48 +261,48 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OT4+cmss on input line 53.
+LaTeX Font Info:    Try loading font information for OT4+cmss on input line 54.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/polski/ot4cmss.fd
 File: ot4cmss.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 54.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 54.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 54.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
 
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./MGC2
-015_v0.1.aux) ) 
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./abstract_template.aux) ) 
 Here is how much of TeX's memory you used:
  2963 strings out of 493117
- 38971 string characters out of 6135433
- 98372 words of memory out of 5000000
+ 39016 string characters out of 6135433
+ 98504 words of memory out of 5000000
  6352 multiletter control sequences out of 15000+600000
  14961 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,5n,24p,1291b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/pl/plrm.enc}
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/local/tex
-live/2014/texmf-dist/fonts/enc/dvips/pl/plsc.enc}</usr/local/texlive/2014/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/pl/plcsc10.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/pl/plr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
-lic/pl/plr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plr8
-.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plssbx10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on MGC2015_v0.1.pdf (1 page, 52460 bytes).
+ 38i,5n,24p,1308b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/
+pl/plrm.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/u
+sr/local/texlive/2014/texmf-dist/fonts/enc/dvips/pl/plsc.enc}</usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/pl/plcsc10.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/pl/plr10.pfb></usr/local/texlive/2014/texmf-dist/fon
+ts/type1/public/pl/plr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/pl/plr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plss
+bx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plti10.pfb>
+Output written on abstract_template.pdf (1 page, 51869 bytes).
 PDF statistics:
  39 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream
