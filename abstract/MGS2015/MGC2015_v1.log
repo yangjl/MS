@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 JAN 2015 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 JAN 2015 23:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -288,7 +288,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 Here is how much of TeX's memory you used:
  2964 strings out of 493117
  38958 string characters out of 6135433
- 97634 words of memory out of 5000000
+ 97632 words of memory out of 5000000
  6353 multiletter control sequences out of 15000+600000
  14961 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -301,7 +301,7 @@ ist/fonts/type1/public/pl/plcsc10.pfb></usr/local/texlive/2014/texmf-dist/fonts
 ic/pl/plr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plr8.
 pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plssbx10.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on MGC2015_v1.pdf (1 page, 46276 bytes).
+Output written on MGC2015_v1.pdf (1 page, 48190 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream
