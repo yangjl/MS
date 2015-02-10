@@ -1,0 +1,43 @@
+\begin{figure}
+\begin{center}
+\mbox{
+\subfigure[Estimate of Lambda]{\includegraphics*[width = .4\textwidth]
+{LambdaGraph.eps}} \hspace*{.1\textwidth}
+\subfigure[Standardized Bias]{\includegraphics*[width = .4\textwidth]
+{BiasGraph.eps}}
+}
+\end{center}
+\caption{Figures from simulations like those in \protect\citeN{Rannalaetal2000} for the
+case
+$\lambda = 2$.  ``R" indicates the estimator from
+\protect\citeANP{Rannalaetal2000}\  ``P" denotes the partial sample MLE
+(Equations~\ref{eq:phat} and~\ref{eq:lambdahat}), and ``C" denotes the complete sample
+MLE (Equations~\ref{eq:phatU} and~\ref{eq:lambdahatU}).  We show results for just one
+sample size, $n=100$  infected hosts. For the ``C" estimates, the additional
+uninfected hosts are used in the estimation.  (a) Mean values of the estimates for
+$\lambda$ from data on a three allele locus with
+$p_2 = p_3 = .5(1-p_1)$ based on 50,000 simulated replicates.  The ``R" estimator
+consistently overestimates $\lambda$, while both the partial and complete sample
+estimators estimate $\lambda$ well (though the partial sample MLE tends to overestimate
+$\lambda$ when the allele frequencies are highly uneven).  (b) Percent standardized bias
+for the estimate of
+$p_1$ in the three allele locus described above. The arching curve is the same found in
+Figure~1 of
+\protect\citeN{Rannalaetal2000}.  The other two curves show that the estimators
+we propose estimate
+$\bp$ with very little bias.}
+\label{fig:BiasVar}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\begin{center}
+\includegraphics*[width=.4\textwidth]{VarianceGraph.eps}
+\end{center}
+\caption{Estimated variance of the partial and complete sample MLE's based on 50,000
+replicates.  The variance of the complete sample MLE is lower, especially for uneven
+allele frequencies.}
+\label{fig:VarGraph}
+\end{figure}
+\efloatseparator
+ 
