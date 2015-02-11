@@ -1,7 +1,13 @@
-BiBTeX compatible Bioinformatics & Genomics LaTeX templates
+A Collection of Genetics and Genomics LaTeX templates
 =============
 
-This repository contains a set of directories with latex templates for a selection of Bioinformatics and Genomics journals. Where necessary modifications have been made to the sample latex documents provided by the publisher to allow use of an external bibtex library. Bibtext style files for these modified documents were obtained via Tom Schneider's [LaTeX Style and BiBTeX Bibliography Formats for Biologists Page](http://schneider.ncifcrf.gov/latex.html) 
+This repository contains a set of directories with latex templates for a selection of Genetics and Genomics journals. Where necessary modifications have been made to the sample latex documents provided by the publisher to allow use of an external bibtex library. Bibtext style files for these modified documents were obtained via Tom Schneider's [LaTeX Style and BiBTeX Bibliography Formats for Biologists Page](http://schneider.ncifcrf.gov/latex.html) 
+
+Resources for `LaTex`
+----------
+
+- [LaTex wikiBooks](http://en.wikibooks.org/wiki/LaTeX)
+- [The Not So Short Introduction to LaTeX2ε](https://tobi.oetiker.ch/lshort/lshort.pdf)
 
 Notes and Provenance
 ----------
