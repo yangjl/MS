@@ -1,22 +1,10 @@
 \begin{thebibliography}{1}
 
-\bibitem{Cooper2005}
-Gregory~M Cooper, Eric~a Stone, George Asimenos, Eric~D Green, Serafim
-  Batzoglou, and Arend Sidow.
-\newblock {Distribution and intensity of constraint in mammalian genomic
-  sequence.}
-\newblock {\em Genome research}, 15(7):901--13, July 2005.
-
 \bibitem{Davydov2010}
 Eugene~V Davydov, David~L Goode, Marina Sirota, Gregory~M Cooper, Arend Sidow,
   and Serafim Batzoglou.
 \newblock {Identifying a high fraction of the human genome to be under
   selective constraint using GERP++.}
 \newblock {\em PLoS computational biology}, 6(12):e1001025, January 2010.
-
-\bibitem{Mezmouk2014}
-Sofiane Mezmouk and Jeffrey Ross-Ibarra.
-\newblock {The pattern and distribution of deleterious mutations in maize.}
-\newblock {\em G3 (Bethesda, Md.)}, 4(January):163--71, 2014.
 
 \end{thebibliography}

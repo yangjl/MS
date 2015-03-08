@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  7 MAR 2015 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 MAR 2015 10:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -277,19 +277,19 @@ LaTeX Info: Redefining \cite on input line 694.
 ) (./mgc2015.aux)
 \openout1 = `mgc2015.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 39.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -361,78 +361,78 @@ Package caption Info: End \AtBeginDocument code.
 <figures/cornkey.png, id=1, 252.4632pt x 235.6002pt>
 File: figures/cornkey.png Graphic file (type png)
  <use figures/cornkey.png>
-Package pdftex.def Info: figures/cornkey.png used on input line 53.
+Package pdftex.def Info: figures/cornkey.png used on input line 51.
 (pdftex.def)             Requested size: 284.52756pt x 265.54565pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <61.92> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <35.83> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
-LaTeX Font Info:    Try loading font information for U+msa on input line 60.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 60.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 58--65
+Underfull \hbox (badness 10000) in paragraph at lines 56--63
 
  []
 
 <figures/pslogo.jpg, id=3, 160.6pt x 116.435pt>
 File: figures/pslogo.jpg Graphic file (type jpg)
  <use figures/pslogo.jpg>
-Package pdftex.def Info: figures/pslogo.jpg used on input line 68.
+Package pdftex.def Info: figures/pslogo.jpg used on input line 66.
 (pdftex.def)             Requested size: 284.52756pt x 206.28891pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
 
-Overfull \hbox (24.42235pt too wide) in paragraph at lines 52--71
+Overfull \hbox (24.42235pt too wide) in paragraph at lines 50--69
 [][] [] [] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 97.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 95.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <24.88> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <29.86> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 110.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 106.
 
 <figures/pvp.pdf, id=4, 1276.77pt x 490.83376pt>
 File: figures/pvp.pdf Graphic file (type pdf)
  <use figures/pvp.pdf>
-Package pdftex.def Info: figures/pvp.pdf used on input line 114.
+Package pdftex.def Info: figures/pvp.pdf used on input line 110.
 (pdftex.def)             Requested size: 801.74945pt x 308.2233pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 118.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
 
 <figures/gerp.pdf, id=5, 950.55125pt x 529.98pt>
 File: figures/gerp.pdf Graphic file (type pdf)
  <use figures/gerp.pdf>
-Package pdftex.def Info: figures/gerp.pdf used on input line 128.
+Package pdftex.def Info: figures/gerp.pdf used on input line 123.
 (pdftex.def)             Requested size: 801.74945pt x 447.03203pt.
 
 <figures/gerpIBD.pdf, id=6, 722.7pt x 229.85875pt>
 File: figures/gerpIBD.pdf Graphic file (type pdf)
  <use figures/gerpIBD.pdf>
-Package pdftex.def Info: figures/gerpIBD.pdf used on input line 142.
+Package pdftex.def Info: figures/gerpIBD.pdf used on input line 135.
 (pdftex.def)             Requested size: 1002.183pt x 318.75214pt.
 
 <figures/cvres.pdf, id=7, 951.555pt x 653.44125pt>
 File: figures/cvres.pdf Graphic file (type pdf)
  <use figures/cvres.pdf>
-Package pdftex.def Info: figures/cvres.pdf used on input line 160.
+Package pdftex.def Info: figures/cvres.pdf used on input line 152.
 (pdftex.def)             Requested size: 801.74945pt x 550.59189pt.
 
 (./mgc2015.bbl) [1
@@ -441,26 +441,26 @@ Package pdftex.def Info: figures/cvres.pdf used on input line 160.
 Non-PDF special ignored!{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/upd
 map/pdftex.map} <./figures/cornkey.png> <./figures/pslogo.jpg> <./figures/pvp.p
 df> <./figures/gerp.pdf> <./figures/gerpIBD.pdf> <./figures/cvres.pdf>]
-[2] (./mgc2015.aux) ) 
+(./mgc2015.aux) ) 
 Here is how much of TeX's memory you used:
- 4855 strings out of 493117
- 71787 string characters out of 6135433
- 157443 words of memory out of 5000000
- 8233 multiletter control sequences out of 15000+600000
+ 4849 strings out of 493117
+ 71676 string characters out of 6135433
+ 179648 words of memory out of 5000000
+ 8227 multiletter control sequences out of 15000+600000
  25287 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,6n,38p,1636b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8
-r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
-.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.p
-fb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mgc2015.pdf (2 pages, 453378 bytes).
+ 38i,6n,38p,1406b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.en
+c}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on mgc2015.pdf (1 page, 449982 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 165 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
