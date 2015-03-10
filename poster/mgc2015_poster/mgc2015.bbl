@@ -1,10 +1,21 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{}
 
-\bibitem{Davydov2010}
-Eugene~V Davydov, David~L Goode, Marina Sirota, Gregory~M Cooper, Arend Sidow,
-  and Serafim Batzoglou.
+\bibitem[Browning and Browning, 2009]{Browning2009}
+Browning, B.~L. and Browning, S.~R. (2009).
+\newblock A unified approach to genotype imputation and haplotype-phase
+  inference for large data sets of trios and unrelated individuals.
+\newblock {\em Am J Hum Genet}, 84(2):210--23.
+
+\bibitem[Davydov et~al., 2010]{Davydov2010}
+Davydov, E.~V., Goode, D.~L., Sirota, M., Cooper, G.~M., Sidow, A., and
+  Batzoglou, S. (2010).
 \newblock {Identifying a high fraction of the human genome to be under
   selective constraint using GERP++.}
-\newblock {\em PLoS computational biology}, 6(12):e1001025, January 2010.
+\newblock {\em PLoS computational biology}, 6(12):e1001025.
+
+\bibitem[Habier et~al., 2011]{Habier2011}
+Habier, D., Fernando, R.~L., Kizilkaya, K., and Garrick, D.~J. (2011).
+\newblock {Extension of the bayesian alphabet for genomic selection.}
+\newblock {\em BMC bioinformatics}, 12(1):186.
 
 \end{thebibliography}
