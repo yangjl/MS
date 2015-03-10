@@ -1,5 +1,5 @@
 % Template for PLoS
-% Version 3.0 December 2014
+% Version 3.1 February 2015
 %
 % To compile to pdf, run:
 % latex plos.template
@@ -40,6 +40,7 @@
 % - Figures should be uploaded separately from your manuscript file. 
 % - Figures generated using LaTeX should be extracted and removed from the PDF before submission. 
 % - Figures containing multiple panels/subfigures must be combined into one image file before submission.
+% For figure citations, please use "Fig." instead of "Figure".
 % See http://www.plosone.org/static/figureGuidelines for PLOS figure guidelines.
 %
 % Tables should be cell-based and may not contain:
@@ -120,7 +121,7 @@
 \usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
 
 % Use the PLoS provided BiBTeX style
-\bibliographystyle{plos2009}
+\bibliographystyle{plos2015}
 
 % Remove brackets from numbering in List of References
 \makeatletter
@@ -132,10 +133,11 @@
 
 % Header and Footer with logo
 \usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
 \pagestyle{myheadings}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\includegraphics[natwidth=1.3in,natheight=0.4in]{PLOSlogo.png}}
+\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
 \rfoot{\thepage/\pageref{LastPage}}
 \renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
 \fancyheadoffset[L]{2.25in}
@@ -153,28 +155,32 @@
 \begin{document}
 \vspace*{0.35in}
 
-% Title must be 150 characters or less
+% Title must be 250 characters or less.
+% Please capitalize all terms in the title except conjunctions, prepositions, and articles.
 \begin{flushleft}
 {\Large
-\textbf\newline{Article Title - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem}
+\textbf\newline{Article Title - Submission to PLOS Journals}
 }
 \newline
-% Insert Author names, affiliations and corresponding author email.
+% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
 \\
-Name1 Surname\textsuperscript{1},
-Name2 Surname\textsuperscript{2,\textpilcrow},
+Name1 Surname\textsuperscript{1,\Yinyang},
+Name2 Surname\textsuperscript{2,\Yinyang},
 Name3 Surname\textsuperscript{2,\textcurrency a},
 Name4 Surname\textsuperscript{2,\ddag},
 Name5 Surname\textsuperscript{2,\ddag},
-Name6 Surname\textsuperscript{2,\Yinyang},
-Name7 Surname\textsuperscript{3,*,\Yinyang}
+Name6 Surname\textsuperscript{2},
+Name7 Surname\textsuperscript{3,*},
+with the Lorem Ipsum Consortium\textsuperscript{\textpilcrow}
 \\
+\bigskip
 \bf{1} Affiliation Dept/Program/Center, Institution Name, City, State, Country
 \\
 \bf{2} Affiliation Dept/Program/Center, Institution Name, City, State, Country
 \\
 \bf{3} Affiliation Dept/Program/Center, Institution Name, City, State, Country
 \\
+\bigskip
 
 % Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
 % 
@@ -184,6 +190,7 @@ Name7 Surname\textsuperscript{3,*,\Yinyang}
 \Yinyang These authors contributed equally to this work.
 
 % Additional Equal Contribution Note
+% Also use this double-dagger symbol for special authorship notes, such as senior authorship.
 \ddag These authors also contributed equally to this work.
 
 % Current address notes
@@ -195,9 +202,11 @@ Name7 Surname\textsuperscript{3,*,\Yinyang}
 \dag Deceased
 
 % Group/Consortium Author Note
-\textpilcrow Insert Collaborative Author line here
+\textpilcrow Membership list can be found in the Acknowledgments section.
 
-* E-mail: Corresponding author@institute.edu
+% Use the asterisk to denote corresponding authorship and provide email address in note below.
+* CorrespondingAuthor@institute.edu
+
 \end{flushleft}
 % Please keep the abstract below 300 words
 \section*{Abstract}
@@ -214,12 +223,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta er
 
 \section*{Introduction}
 Lorem ipsum dolor sit~\cite{bib1} amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam Eq.~(\ref{eq:schemeP}) sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id.~\cite{bib2} Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
-\begin{equation}\label{eq:schemeP}
-D_{coll} = \frac{D_f+\frac{[S]^2}{K_D S_T} D_S} {1+\frac{[S]^2}{K_D S_T}},
+
+\begin{equation}\label{eq:schemeP} 
+D_{coll} = \frac{D_f+\frac{[S]^2}{K_D S_T} D_S} {1+\frac{[S]^2}{K_D S_T}}, 
 D_{sm} = \frac{D_f+ \frac{[S]}{K_D} D_S}{1+\frac{[S]}{K_D}},
 \end{equation}
-
-
 
 % You may title this section "Methods" or "Models". 
 % "Models" is not a valid title for PLoS ONE authors. However, PLoS ONE
@@ -227,7 +235,8 @@ D_{sm} = \frac{D_f+ \frac{[S]}{K_D} D_S}{1+\frac{[S]}{K_D}},
 \section*{Materials and Methods}
 \subsection*{Etiam eget sapien nibh.}
 
-Nulla mi mi, Figure~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
+% For figure citations, please use "Fig." instead of "Figure".
+Nulla mi mi, Fig.~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
 
 \begin{figure}[h]
 \caption{{\bf Figure Title first bold sentence Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.}
@@ -269,13 +278,11 @@ $cell1 row3$ & cell2 row 3 & cell3 row 3 & cell4 row 3 & cell5 row 3 & cell6 row
 
 Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. 
 
-Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor.
-
 \subsection*{Sed ac quam id nisi malesuada congue.}
 
 Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
 
-% Please do not create a heading level below \subsection. For 3rd level headings, use \paragraph{}.
+% Please do not create a heading level below \subsection. For 3rd level headings, use \paragraph{}. 
 \subsection*{Subsection 1}
 Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
 
@@ -306,11 +313,14 @@ Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 \label{S1_Fig}
 {\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
 
+\subsection*{S2 Fig}
+\label{S2_Fig}
+{\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+
 \subsection*{S1 Table}
 \label{S1_Table}
 {\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
 
-% Do NOT remove this, even if you are not including acknowledgments.
 \section*{Acknowledgments}
 Cras egestas velit mauris, eu mollis turpis pellentesque sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam id pretium nisi. Sed ac quam id nisi malesuada congue. Sed interdum aliquet augue, at pellentesque quam rhoncus vitae.
 
@@ -325,16 +335,16 @@ Cras egestas velit mauris, eu mollis turpis pellentesque sit amet. Interdum et m
 %
 % OR
 %
-% Compile your BiBTeX database using our plos2009.bst
+% Compile your BiBTeX database using our plos2015.bst
 % style file and paste the contents of your .bbl file
 % here.
 % 
 \begin{thebibliography}{10}
 \bibitem{bib1}
-Lorem M, Ipsum VE (1990) Rank Correlation Methods. New York: Oxford University Press, 5th edition.
+Devaraju P, Gulati R, Antony PT, Mithun CB, Negi VS. Susceptibility to SLE in South Indian Tamils may be influenced by genetic selection pressure on TLR2 and TLR9 genes. Mol Immunol. 2014 Nov 22. pii: S0161-5890(14)00313-7. doi: 10.1016/j.molimm.2014.11.005
 
 \bibitem{bib2}
-Ipsum M, Ipsum JD (1990) Rank Correlation Methods. New York: Oxford University Press, 5th edition.
+Huynen MMTE, Martens P, Hilderlink HBM. The health impacts of globalisation: a conceptual framework. Global Health. 2005;1: 14. Available: http://www.globalizationandhealth.com/content/1/1/14.
 
 \end{thebibliography}
 
