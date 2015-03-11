@@ -145,7 +145,7 @@
 \lfoot{\sf PLOS}
 
 %% Include all macros below
-
+\usepackage{hyperref}
 \newcommand{\lorem}{{\bf LOREM}}
 \newcommand{\ipsum}{{\bf IPSUM}}
 \usepackage[svgnames]{xcolor}
@@ -222,7 +222,7 @@ Patrick S. Schnable\textsuperscript{1,4,*}
 
 % Please keep the abstract below 300 words
 \section*{Abstract}
-Advances in next generation sequencing technologies and the development of appropriate populations and statistical approaches enable genome-wide dissection of the genetic determinants of traits via genome-wide association studies (GWAS). Although multiple statistical approaches for conducting GWAS are available and many have been tested using simulated data, empirical studies designed to determine which approaches perform best have not yet been conducted. Kernel row number (KRN) trait data were collected from a set of 6,230 entries derived from four related maize populations. A set of $\sim$13M variants ($\sim$2M of which were newly discovered) were projected and/or imputed onto the 6,230 entries. Three distinct approaches to GWAS were compared: 1) single-variant, 2) stepwise regression and 3) Bayesian-based multi-variant model fitting. In combination, these analyses identified associations in 764 100-kb chromosomal bins. A subset of these KRN-associated variants (KAVs) were subjected to genetic validation using three unrelated populations that were not included in the GWAS; approximately 50\% of successfully genotyped KAVs exhibited associations with the KRN trait in at least one unrelated population. Importantly, $\sim$60\% of the tested KAVs exhibited associations in only one of the three statistical approaches. This finding demonstrates that the three GWAS approaches are complementary. Interestingly, KAVs in low recombination regions were more likely to exhibit associations in independent populations than KAVs in recombinationally active regions, probably as a consequence of linkage disequilibrium. The KAVs identified in this study have the potential to enhance our understanding of the developmental steps involved in ear development a trait of considerable evolutionary and economic importance.
+Advances in next generation sequencing technologies and the development of appropriate populations and statistical approaches enable genome-wide dissection of the genetic determinants of traits via genome-wide association studies (GWAS). Although multiple statistical approaches for conducting GWAS are available and many have been tested using simulated data, empirical studies designed to determine which approaches perform best have not yet been conducted. Kernel row number (KRN) trait data were collected from a set of 6,230 entries derived from four related maize populations. A set of $\sim$13M variants ($\sim$2M of which were newly discovered) were projected and/or imputed onto the 6,230 entries. Three distinct approaches to GWAS were compared: 1) single-variant, 2) stepwise regression and 3) Bayesian-based multi-variant model fitting. In combination, these analyses identified associations in 764 100-kb chromosomal bins. A subset of these KRN-associated variants (KAVs) were subjected to genetic validation using three unrelated populations that were not included in the GWAS; approximately 50\% of successfully genotyped KAVs exhibited associations with the KRN trait in at least one unrelated population. Importantly, $\sim$60\% of the tested KAVs exhibited associations in only one of the three statistical approaches. This finding demonstrates that the three GWAS approaches are complementary. Interestingly, KAVs in low recombination regions were more likely to exhibit associations in independent populations than KAVs in recombinationally active regions, probably as a consequence of linkage disequilibrium. The KAVs identified in this study have the potential to enhance our understanding of the developmental steps involved in ear development.
 
 % Please keep the Author Summary between 150 and 200 words
 % Use first person. PLOS ONE authors please skip this step. 
@@ -245,15 +245,7 @@ There is a need to compare the various GWAS methods ~\cite{Bush2012}[22].  Recen
 
 GWAS is typically associated with high rates of false discovery ~\cite{Visscher2012}[2]. In human studies, a second cohort is often used to genetically validate the most significant SNPs discovered in the first cohort, thereby cost effectively reducing the number of false discoveries ~\cite{Sladek2007}[24]. GWAS often identify associations between genes in pathways expected to impact the phenotype of interest. In plants for example, Dwarf8 locus associated with flowering time in maize have been validated in a number of populations ~\cite{Larsson2013}[25]. Although finding of this type demonstrate that GWAS is identifying correct associations, they do not provide an estimate of false discovery. To our knowledge no large sets of genetic variations identified via GWAS as being associated with a trait of interest but that do have any other obvious connection to the phenotype have been subjected to this type of genetic validation. Here, we report on such a set of genetic variations and provide a maximum estimate for false discovery from GWAS.  
 
-Our analyses were conducted on the kernel row number (KRN) trait, which is both a component of yield and a model trait for genetic studies ~\cite{}[26]. It is highly heritable and exhibits little variation in response to environment ~\cite{Lu2011}[27]. In addition, it is easily scored as an integer, and this scoring can be conducted after completion of the busy pollination season. 
-
-
-%Lorem ipsum dolor sit~\cite{bib1} amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam Eq.~(\ref{eq:schemeP}) sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id.~\cite{bib2} Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
-
-\begin{equation}\label{eq:schemeP} 
-D_{coll} = \frac{D_f+\frac{[S]^2}{K_D S_T} D_S} {1+\frac{[S]^2}{K_D S_T}}, 
-D_{sm} = \frac{D_f+ \frac{[S]}{K_D} D_S}{1+\frac{[S]}{K_D}},
-\end{equation}
+Our analyses were conducted on the kernel row number (KRN) trait, which is both a component of yield and a model trait for genetic studies ~\cite{hallauer2010quantitative}[26]. It is highly heritable and exhibits little variation in response to environment ~\cite{Lu2011}[27]. In addition, it is easily scored as an integer, and this scoring can be conducted after completion of the busy pollination season. 
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -268,74 +260,77 @@ D_{sm} = \frac{D_f+ \frac{[S]}{K_D} D_S}{1+\frac{[S]}{K_D}},
 
 KRN phenotypes were collected from several related populations, including recombinant inbred lines (RILs) of intermated B73 and Mo17 (IBM, N = 325 RILs) ~\cite{Lee2002}[28] and the nested association mapping (NAM, N = 4,699 RILs) ~\cite{Yu2008}[29] populations, a subset of the RILs that were backcrossed to the inbred line B73 (B73 x RILs, N = 692 BC1 lines), a subset of the RILs that were backcrossed to the inbred line Mo17 (Mo17 x RILs, N = 289 BC1 lines) and a partial diallel of the 26 NAM founders plus Mo17 (N = 225 F1 hybrids). Because reciprocal crosses were not considered and some of the crosses were not successful, the diallel population was both a partial and incomplete (225/351 = 64\%) diallel. For statistical analyses, the IBM RILs were treated as a subpopulation of the NAM RILs.
 
-During the years 2008-2011, subsets of the above populations were planted in replicated field trials in up to three fields in Ames, IA (summer season) and one field in Molokai, HI (winter season). There were 5-12 plants of the same line grown within each row. KRN counts were collected from mature ears. Phenotypic values were estimated for each line using a mixed linear model implemented in R [57], with fixed effects for entries and random effects for locations, years, plots and blocks. Phenotypic density distributions in this study were estimated and plotted using R with default smoothing parameters. 
+During the years 2008-2011, subsets of the above populations were planted in replicated field trials in up to three fields in Ames, IA (summer season) and one field in Molokai, HI (winter season). There were 5-12 plants of the same line grown within each row. KRN counts were collected from mature ears. Phenotypic values were estimated for each line using a mixed linear model implemented in R ~\cite{DevelopmentCoreTeam2011}[57], with fixed effects for entries and random effects for locations, years, plots and blocks. Phenotypic density distributions in this study were estimated and plotted using R with default smoothing parameters. 
 
 \subsection*{QTL analyses.}
-A two-step composite interval mapping (CIM) ~\cite{Zeng1993}[15] method was employed using a suite of programs within QTL cartographer ~\cite{DaCostaE.Silva2012}[58]. First, an automatic stepwise regression procedure was used to sequentially test all SNP markers; the most significant marker (inclusion threshold = 0.05) was kept after each iteration. This procedure was repeated until none of the added SNPs improved the model. In the second step, linkage analyses were conducted at 1-Mb intervals along the chromosome treating previously selected SNPs (other than those within the 1-Mb interval under analysis) as co-variants. A significance threshold was determined by conducting 1,000 permutations and support intervals were defined using a 1.5-LOD drop from QTL peak ~\cite{}[59].
+A two-step composite interval mapping (CIM) ~\cite{Zeng1993}[15] method was employed using a suite of programs within QTL cartographer ~\cite{DaCostaE.Silva2012}[58]. First, an automatic stepwise regression procedure was used to sequentially test all SNP markers; the most significant marker (inclusion threshold = 0.05) was kept after each iteration. This procedure was repeated until none of the added SNPs improved the model. In the second step, linkage analyses were conducted at 1-Mb intervals along the chromosome treating previously selected SNPs (other than those within the 1-Mb interval under analysis) as co-variants. A significance threshold was determined by conducting 1,000 permutations and support intervals were defined using a 1.5-LOD drop from QTL peak ~\cite{Lander1989}[59].
 
 \subsection*{Variant processing.}
-A set of 6.2 million genic variants (SNPs and small Indels) was identified via analysis of RNA-seq data from five tissues (shoot apical meristem, ear, tassel, shoot and root; Li, Yeh, and Schnable, unpublished data) on 26 NAM founder lines and Mo17. Another two sets of variants generated from the maize HapMap project were extracted from the Panzea database (www.panzea.org). These three sets of variants were merged using the consensus mode of PLINK ~\cite{}[60]. The merged variants were further filtered by discarding variants with a call rate of < 0.4 and a MAF of < 0.1 across genotypes. The finalized set consists of 12,966,279 variants on NAM founders, which were used for imputation or projection onto the four related populations.
+A set of 6.2 million genic variants (SNPs and small Indels) was identified via analysis of RNA-seq data from five tissues (shoot apical meristem, ear, tassel, shoot and root; Li, Yeh, and Schnable, unpublished data) on 26 NAM founder lines and Mo17. Another two sets of variants generated from the maize HapMap project were extracted from the Panzea database (\url{www.panzea.org}). These three sets of variants were merged using the consensus mode of PLINK ~\cite{Purcell2007}[60]. The merged variants were further filtered by discarding variants with a call rate of $<$0.4 and a MAF of $<$0.1 across genotypes. The finalized set consists of 12,966,279 variants on NAM founders, which were used for imputation or projection onto the four related populations.
 
-Genotyping scores for ~1,000 tagging SNPs that had been directly genotyped on the ~5,000 NAM RILs were obtained from the Panzea database. Based on these tagging SNPs and known pedigree information, the ~13 million variants discovered in the NAM founders were imputed onto NAM RILs using customized Perl scripts based on the method of Yu et al. ~\cite{Yu2008}[29]. Because B73 x RIL, Mo17 x RIL and partial diallel populations were composed of hybrids of two known haplotypes, their genotypic data were directly projected from their known parents. 
+Genotyping scores for $\sim$1,000 tagging SNPs that had been directly genotyped on the $\sim$5,000 NAM RILs were obtained from the Panzea database. Based on these tagging SNPs and known pedigree information, the $\sim$13 million variants discovered in the NAM founders were imputed onto NAM RILs using customized Perl scripts based on the method of Yu et al. ~\cite{Yu2008}[29]. Because B73 x RIL, Mo17 x RIL and partial diallel populations were composed of hybrids of two known haplotypes, their genotypic data were directly projected from their known parents. 
 
 \subsection*{Three statistical approaches for conducting GWAS.}
 \paragraph{Single-variant model.} 
-Data from the four populations discussed above were used for GWAS. To account for documented stratification effects, the statistical model included fixed effects for population and subpopulation. Additional fixed effects were fitted in the model to control for effects of QTLs on other chromosomes, while all variants on a single chromosome were scanned, resulting in the following model for the kth variant:  
- 
-where Yl is the adjusted KRN phenotypic value for line l from the mixed linear model analysis; uk is an intercept parameter; Pil is 1 if line l is of GWAS population i and is 0 otherwise, and aik is the effect of the ith population in the model for variant k; Sjl is 1 if line l is from subpopulation j and 0 otherwise, bjk is the effect of subpopulation j in the model for variant k; Qml indicates the line l genotype of the mth QTL detected by the joint linkage analyses, ckm is the effect of the mth QTL in the model for variant k, Ch(-k) is the set of QTLs detected by the joint linkage analysis that lie on chromosomes other than the chromosome of variant k; VARkl indicates the genotype of the kth variant in line l, dk is the effect of the kth variant; and ekl is an error term. This single-variant model was implemented using SNPTEST v2.3.0 ~\cite{Marchini2010}[61].
+Data from the four populations discussed above were used for GWAS. To account for documented stratification effects, the statistical model included fixed effects for population and subpopulation. Additional fixed effects were fitted in the model to control for effects of QTLs on other chromosomes, while all variants on a single chromosome were scanned, resulting in the following model ~(\ref{eq:schemeP1}) for the $k$th variant:  
+
+\begin{equation}\label{eq:schemeP1} 
+Y_l = u_k + \sum_{i=1}^{4}a_{ik}P_{il} + \sum_{j=1}^{26} b_{jk}S_{jl} + \sum_{m \in Ch(-k)}c_{km}Q_{ml} + d_kVAR_{kl} + e_{kl}
+\end{equation}
+
+
+where $Y_l$ is the adjusted KRN phenotypic value for line $l$ from the mixed linear model analysis; $u_k$ is an intercept parameter; $P_{il}$ is 1 if line $l$ is of GWAS population $i$ and is 0 otherwise, and $a_{ik}$ is the effect of the $i$th population in the model for variant $k$; $S_{jl}$ is 1 if line $l$ is from subpopulation $j$ and 0 otherwise, $b_{jk}$ is the effect of subpopulation $j$ in the model for variant $k$; $Q_{ml}$ indicates the line $l$ genotype of the $m$th QTL detected by the joint linkage analyses, $c_{km}$ is the effect of the $m$th QTL in the model for variant $k$, $Ch(-k)$ is the set of QTLs detected by the joint linkage analysis that $l_{ie}$ on chromosomes other than the chromosome of variant $k$; $VAR_{kl}$ indicates the genotype of the $k$th variant in line $l$, $d_k$ is the effect of the $k$th variant; and $e_{kl}$ is an error term. This single-variant model ~(\ref{eq:schemeP1}) was implemented using SNPTEST v2.3.0 ~\cite{Marchini2010}[61].
 
 \paragraph{Stepwise regression model.} 
-In the stepwise regression test, population and subpopulation effects were fitted first, and then marker effects were added to the model based on their P values computed from the marginal F-test. Using this automatic model selection procedure, a maximum of 300 variants was selected using a P value cutoff of 0.05.
+In the stepwise regression test, population and subpopulation effects were fitted first, and then marker effects were added to the model based on their P values computed from the marginal F-test. Using this automatic model selection procedure, a maximum of 300 variants was selected using a $P$ value cutoff of 0.05.
 
 \paragraph{Bayesian-based multi-variant model.} 
-A Bayesian-based multi-variant model was constructed using the BayesC option of GenSel v4.1 ~\cite{}[21]. This model differs from the single-variant model in that it estimates the effects of all variants simultaneously rather than testing them one-at-a-time. Because biases could be introduced by population stratification, known population and subpopulation factors were included in the model as fixed effects. The effects of the variants were fitted as random effects. The following mixed model used was:  
- 
-where VARkl indicates the genotype of the kth variant in line l and ck is the effect of the kth variant; other terms in the model are as described in the single-variant model except that neither the u, ai, or bj parameters nor the el error terms are specific to the kth variant in the multi-variant model. 
+A Bayesian-based multi-variant model was constructed using the BayesC option of GenSel v4.1 ~\cite{Habier2011}[21]. This model differs from the single-variant model in that it estimates the effects of all variants simultaneously rather than testing them one-at-a-time. Because biases could be introduced by population stratification, known population and subpopulation factors were included in the model as fixed effects. The effects of the variants were fitted as random effects. The following mixed model ~(\ref{eq:schemeP2}) used was:  
 
-The BayesC option of GenSel requires that the fraction of markers having no effect ( be inputted as a prior. In the test runs, several values  and were tried and similar posterior genetic variations accounted for by the markers were observed. In this study,  was set as 0.9999 (i.e., 1, the number of markers with effects, was assumed to be ~1,300). Other prior information such as residual and genotypic variances was estimated using a testing run consisting of 1,000 iterations. The estimated variances were used to seed their respective priors for full training with a chain length of 41,000; the first 1,000 iterations were discarded as a burn-in. The posterior model frequency of a variant, which is the proportion of draws in which that variant was included in the model, was used in lieu of a traditional measurement of significance.
+\begin{equation}\label{eq:schemeP2} 
+Y_l = u + \sum_{i=1}^{4}a_{i}P_{il} + \sum_{j=1}^{26} b_{j}S_{jl} + \sum_k^{\sim 13M}c_k VAR_{kl} + e_l
+\end{equation}
+
+where $VAR_{kl}$ indicates the genotype of the $k$th variant in line $l$ and $c_k$ is the effect of the $k$th variant; other terms in the model are as described in the single-variant model except that neither the $u$, $a_i$, or $b_j$ parameters nor the $e_l$ error terms are specific to the $k$th variant in the multi-variant model. 
+
+The BayesC option of GenSel requires that the fraction ($f$) of markers having no effect be inputted as a prior. In the test runs, several ($f$) values (0.9995, 0.9999 and 0.99995) were tried and similar posterior genetic variations accounted for by the markers were observed. In this study, $f$ was setted as 0.9999 (i.e., $1 - f$, the number of markers with effects, was assumed to be $\sim$1,300). Other prior information such as residual and genotypic variances was estimated using a testing run consisting of 1,000 iterations. The estimated variances were used to seed their respective priors for full training with a chain length of 41,000; the first 1,000 iterations were discarded as a burn-in. The posterior model frequency of a variant, which is the proportion of draws in which that variant was included in the model, was used in lieu of a traditional measurement of significance.
 
 \subsection*{Variant thinning procedure.}
-A variant thinning procedure was developed to select the most significant variants and to avoid concentration of selected variants in certain regions. For variants located in the 28 QTL intervals from the joint analysis and their 1-Mb flanking regions, the top 10 most significant variants were selected. For variants located in other regions, significant variants were determined by the following arbitrary thresholds: –log10(P) > 20 for the single-variant approach, posterior model frequency (MF) > 0.02 for the Bayesian-based approach and an inclusion P value < 0.05 for the stepwise regression. These significant variants were clustered as groups if none of their pair-wise physical distances exceeded10-Mb. From these clustered groups, no more than 10 most significant variants were selected.        
+A variant thinning procedure was developed to select the most significant variants and to avoid concentration of selected variants in certain regions. For variants located in the 28 QTL intervals from the joint analysis and their 1-Mb flanking regions, the top 10 most significant variants were selected. For variants located in other regions, significant variants were determined by the following arbitrary thresholds: $–log_{10}(P) > 20$ for the single-variant approach, posterior model frequency (MF) $>$ 0.02 for the Bayesian-based approach and an inclusion $P$ value $< 0.05$ for the stepwise regression. These significant variants were clustered as groups if none of their pair-wise physical distances exceeded10-Mb. From these clustered groups, no more than 10 most significant variants were selected.        
 
 \subsection*{Genetic validation populations.} 
 \paragraph{Elite inbred lines.}
-%A total of 220 elite inbred lines, commercial lines that had formerly been subject to IP (Intellectual Property) protection via the plant variation protection act, were obtained from the USDA Plant Introduction Station in Ames, IA (http://www.ars.usda.gov/main/site_main.htm?modecode=36-25-12-00). These lines were planted in three randomized field trials and observed for KRN phenotypes. DNA was isolated from seedling tissues and used to conduct GBMAS (a PCR-based method that exploits Next Generation Sequencing to provide rapid and cost-effective genotyping results (Wu, Liu and Schnable, unpublished)). After sequence trimming, barcode sorting, and alignment to the reference genome, polymorphic variants were discovered using a variant calling pipeline we developed previously [39].
-%
-The following statistical model was used to test the hypothesis that the favorable KAVs were associated with high KRN in the elite inbred lines:
 
-where Yl is the KRN phenotypic value from the mixed linear model analysis; uk is an intercept parameter; PCil designates the principle components i for line l derived from a random set of SNPs to account for population structure, and aik is the effect of the ith principle component for variant k; VARkl indicates the genotype of the kth variant in line l and dk its effect; and ekl is the residual error. The R add-on package GenABEL ~\cite{Aulchenko2007}[62] was used to conduct the analysis. Significant variants were determined using a false discovery rate (FDR) ~\cite{Benjamini1995}[63] cutoff of < 0.05. In addition, the directions of variant effects were compared with the direction of effects for each KAV in the GWAS populations. Variants with conflicting effects were discarded. 
+A total of 220 elite inbred lines, commercial lines that had formerly been subject to IP (Intellectual Property) protection via the plant variation protection act, were obtained from the USDA Plant Introduction Station in Ames, IA (\url{http://www.ars.usda.gov/main/site_main.htm?modecode=36-25-12-00}). These lines were planted in three randomized field trials and observed for KRN phenotypes. DNA was isolated from seedling tissues and used to conduct GBMAS (a PCR-based method that exploits Next Generation Sequencing to provide rapid and cost-effective genotyping results (Wu, Liu and Schnable, unpublished)). After sequence trimming, barcode sorting, and alignment to the reference genome, polymorphic variants were discovered using a variant calling pipeline we developed previously [39].
+%
+The following statistical model ~(\ref{eq:schemeP3}) was used to test the hypothesis that the favorable KAVs were associated with high KRN in the elite inbred lines:
+
+\begin{equation}\label{eq:schemeP3} 
+Y_l = u_k + \sum_{i=1}^3 a_{ik}PC_{il} + d_kVAT_{kl} + e_{kl}
+\end{equation}
+
+where $Y_l$ is the KRN phenotypic value from the mixed linear model analysis; $u_k$ is an intercept parameter; $PC_il$ designates the principle components $i$ for line $l$ derived from a random set of SNPs to account for population structure, and $a_ik$ is the effect of the $i$th principle component for variant $k$; $VAR_{kl}$ indicates the genotype of the $k$th variant in line $l$ and $d_k$ its effect; and $e_{kl}$ is the residual error. The R add-on package GenABEL ~\cite{Aulchenko2007}[62] was used to conduct the analysis. Significant variants were determined using a false discovery rate (FDR) ~\cite{Benjamini1995}[63] cutoff of $<$ 0.05. In addition, the directions of variant effects were compared with the direction of effects for each KAV in the GWAS populations. Variants with conflicting effects were discarded. 
 
 \paragraph{Extreme KRN USDA accessions.}
-The germplasm resources information network (GRIN) database (http://www.ars-grin.gov/cgi-bin/npgs/html/index.pl) of the USDA contains KRN records of ~7,000 accessions, from which the 225 lines with highest KRN values, the 208 lines with lowest KRN values and 173 random lines were obtained (Table S14). Because of the genetic heterozygosity of the obtained accessions, up to 12 random seeds were germinated and pooled together for each accession for DNA isolation. After genotyping by GBMAS, variants were discovered using an approach that allowed for the calling of heterozygous variants.
+The germplasm resources information network (GRIN) database (\url{http://www.ars-grin.gov/cgi-bin/npgs/html/index.pl}) of the USDA contains KRN records of $\sim$7,000 accessions, from which the 225 lines with highest KRN values, the 208 lines with lowest KRN values and 173 random lines were obtained (Table S14). Because of the genetic heterozygosity of the obtained accessions, up to 12 random seeds were germinated and pooled together for each accession for DNA isolation. After genotyping by GBMAS, variants were discovered using an approach that allowed for the calling of heterozygous variants.
 
-The following model was used to test whether the alleles at the kth variant are associated with KRN in the selected USDA accessions:
+The following model ~(\ref{eq:schemeP4}) was used to test whether the alleles at the $k$th variant are associated with KRN in the selected USDA accessions:
 
-%where Yg is the KRN phenotype for line l; uk is an intercept parameter; Fkl is the number of favorable alleles at variant k in line l, β_k is the additive effect of the favorable allele at variant k; and ekg is the residual error. Significant variants were determined using an FDR cutoff of < 0.05 and variants with conflicting effects compared with KAVs in the GWAS populations were discarded.
+\begin{equation}\label{eq:schemeP4} 
+Y_l = u_k + \beta_k F_{kl} + e_{kl}
+\end{equation}
+
+where $Y_l$ is the KRN phenotype for line $l$; $u_k$ is an intercept parameter; $F_{kl}$ is the number of favorable alleles at variant $k$ in line $l$, $\beta_k$ is the additive effect of the favorable allele at variant $k$; and $e_{kl}$ is the residual error. Significant variants were determined using an FDR cutoff of $<$ 0.05 and variants with conflicting effects compared with KAVs in the GWAS populations were discarded.
 %
 \paragraph{Iowa Long Ear Synthetic (BSLE).}
 The BSLE population was the product of a long-term selection project conducted by Arnel Hallauer and his colleagues at Iowa State University, whose goal was to divergently select long and short ears from a single founder population ~\cite{Hallauer2004}[56]. Parental lines of BSLE and bulked seeds from cycle 0 (C0), cycle 30 short ear (C30 SE) and cycle 30 long ear (C30 LE) were obtained from Arnel Hallauer. DNA was isolated individually from seedling tissues of these obtained materials (N = 60 for C0, N = 101 for C30 SE and N = 96 for C30 LE). After genotyping by GBMAS, variants were called as described above. Population allele frequencies were estimated based on the surveyed samples. 
 
 The ‘qtscore’ function of GenABEL ~\cite{Aulchenko2007}[62] was used to conduct a score test of association between a C30 population indicator variable (0 for C30 LE, 1 for C30 SE) and genotype of the kth variant. Significant variants were determined using an FDR cutoff of < 0.05 and variants with conflicting effects compared with KAVs in the GWAS populations were discarded.
 
-To rule out the possibility that detected differences in allele frequency were due to genetic drift, a procedure that simulated the selection process without considering directionality was implemented. The simulation was started with the initial variant allele frequencies from C0; and the same number of alleles (N = 60) was randomly sampled without replacement from the same sampling space (N = 800) as the selection program proceeded. After each cycle of re-sampling, variant allele frequencies were updated. The re-sampling process was conducted for 30 cycles to mimic the 30 generations of selections in the real selection program. The above procedure was repeated 10,000 times and the P value was calculated as the probability of the difference between the observed variant allele frequencies in the two subpopulations being larger than the values obtained from the simulation. The P values were adjusted using the FDR method to correct for multiple testing. 
+To rule out the possibility that detected differences in allele frequency were due to genetic drift, a procedure that simulated the selection process without considering directionality was implemented. The simulation was started with the initial variant allele frequencies from C0; and the same number of alleles (N = 60) was randomly sampled without replacement from the same sampling space (N = 800) as the selection program proceeded. After each cycle of re-sampling, variant allele frequencies were updated. The re-sampling process was conducted for 30 cycles to mimic the 30 generations of selections in the real selection program. The above procedure was repeated 10,000 times and the $P$ value was calculated as the probability of the difference between the observed variant allele frequencies in the two subpopulations being larger than the values obtained from the simulation. The $P$ values were adjusted using the FDR method to correct for multiple testing. 
 
 \subsection*{Functional analyses of KAV-linked genes.} 
-Auxin and cytokinin biosynthesis and signal transduction related genes, as well as CLV-WUS related genes were extracted from The Arabidopsis Information Resource (TAIR) database ~\cite{Poole2007}[64]. Genes related to auxin and cytokinin hormone biosynthesis and signal transduction pathways in maize and rice were downloaded from KEGG database ~\cite{Kanehisa2002}[65]. In addition, various genes involved in inflorescence development ~\cite{Barazesh2008}[44] were manually extracted from the literature, including ramosa genes ~\cite{Bortiri2006}[49] and others ~\cite{McSteen2001, Upadyayula2006, Xu2011}[50-52]. These sets of evidence supported genes were blasted against the filtered gene set (FGSv2-5b) on B73 reference genome (RefGenv2) with coverage $>$50\% and identity $>$50\%. KAV-linked genes were defined as genes located in the 500-kb flanking regions of the identified KAVs.
-
-% For figure citations, please use "Fig." instead of "Figure".
-Nulla mi mi, Fig.~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
-
-\begin{figure}[h]
-\caption{{\bf Figure Title first bold sentence Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.}
-Figure Caption Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
-\label{fig1}
-\end{figure}
-
-\begin{enumerate}
-\item{react}
-\item{diffuse free particles}
-\item{increment time by dt and go to 1}
-\end{enumerate}
+Auxin and cytokinin biosynthesis and signal transduction related genes, as well as CLV-WUS related genes were extracted from The Arabidopsis Information Resource (TAIR) database ~\cite{Poole2007}[64]. Genes related to auxin and cytokinin hormone biosynthesis and signal transduction pathways in maize and rice were downloaded from KEGG database ~\cite{Kanehisa2002}[65]. In addition, various genes involved in inflorescence development ~\cite{Barazesh2008}[44] were manually extracted from the literature, including ramosa genes ~\cite{Bortiri2006}[49] and others ~\cite{McSteen2001, Upadyayula2006, Xu2011}[50-52]. These sets of evidence supported genes were blasted against the filtered gene set (FGSv2.5b) on B73 reference genome (RefGen\_v2) with coverage $>$50\% and identity $>$50\%. KAV-linked genes were defined as genes located in the 500-kb flanking regions of the identified KAVs.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % % % RESULTS % % %
@@ -345,70 +340,80 @@ Figure Caption Proin rutrum vel massa non gravida. Quisque tempor sem et digniss
 \section*{Results}
 \subsection*{Phenotypic observations of KRN in four related populations.}
 
-KRN trait data were collected from 6,230 entries within four related GWAS populations grown at two locations over four years. The first GWAS population consisted of the intermated B73 and Mo17 (IBM) ~\cite{Lee2002}[28] and nested association mapping (NAM) ~\cite{Yu2008}[29] RILs, which were developed from crosses of 25 inbreds by the common B73 inbred. The second and third GWAS populations were obtained by crossing a subset of the IBM and NAM RILs by B73 or by Mo17.  The final GWAS population was a partial diallel of the 27 inbred founders of the IBM and NAM RILs. Additional KRN trait data were extracted from published data collected from NAM RILs grown in eight environments ~\cite{Brown2011}[3]. The resulting KRN data were analyzed using a mixed model to derive the best linear unbiased predictor (BLUP) of phenotype for each of the 6,230 entries in the four GWAS populations (Table S1). In this combined analysis, KRN phenotype values ranged from 9.1 to 23.6, with a mean of 14.9 rows, whereas the B73 inbred had an above average KRN phenotype of 17.1 rows. Density plots of the four GWAS populations exhibited the expected bell-shaped distributions (Figure 1A).
+KRN trait data were collected from 6,230 entries within four related GWAS populations grown at two locations over four years. The first GWAS population consisted of the intermated B73 and Mo17 (IBM) ~\cite{Lee2002}[28] and nested association mapping (NAM) ~\cite{Yu2008}[29] RILs, which were developed from crosses of 25 inbreds by the common B73 inbred. The second and third GWAS populations were obtained by crossing a subset of the IBM and NAM RILs by B73 or by Mo17.  The final GWAS population was a partial diallel of the 27 inbred founders of the IBM and NAM RILs. Additional KRN trait data were extracted from published data collected from NAM RILs grown in eight environments ~\cite{Brown2011}[3]. The resulting KRN data were analyzed using a mixed model to derive the best linear unbiased predictor (BLUP) of phenotype for each of the 6,230 entries in the four GWAS populations (\nameref{Table_S1}). In this combined analysis, KRN phenotype values ranged from 9.1 to 23.6, with a mean of 14.9 rows, whereas the B73 inbred had an above average KRN phenotype of 17.1 rows. Density plots of the four GWAS populations exhibited the expected bell-shaped distributions Fig.~\ref{fig1}.
+
+% For figure citations, please use "Fig." instead of "Figure".
+\begin{figure}[h]
+\caption{{\bf Phenotypic distribution of the KRN trait.}
+In panel (A), density plots of the four cross type populations. In panel (B), boxplots of the 26 NAM RIL subpopulations. Blue and red dashed lines indicate the mean phenotypic values of B73 (KRN=17.1) and Mo17 (KRN=10.8), respectively.}
+\label{fig1}
+\end{figure}
 
 \subsection*{KRN exhibits little heterosis or reciprocal effects.}
-One of the four GWAS populations (i.e., the IBM and NAM RILs) was developed by crossing the B73 inbred to each of 26 diverse inbreds and developing ~200 RILs per cross ~\cite{Lee2002, McMullen2009}[28, 30]. The median KRN phenotype computed for each of the 26 sets of RILs (Figure 1B) was significantly correlated (r = 0.74, Pearson’s correlation test P value < 0.01) with the KRN of the corresponding non-B73 parent. As expected based on prior research ~\cite{Srdic2007, Toledo2011}[31, 32], we observed little heterosis for KRN in the other three GWAS populations (Figure S1). Hence, we conclude that KRN is, in general, mostly controlled by additive gene effects rather than dominant gene effects or epistasis. Further, there is no evidence (Student’s t-test, P value = 0.59) for the existence of reciprocal effects for this trait based on comparisons of reciprocal crosses between B73 and Mo17 (Figure S2).
+One of the four GWAS populations (i.e., the IBM and NAM RILs) was developed by crossing the B73 inbred to each of 26 diverse inbreds and developing ~200 RILs per cross ~\cite{Lee2002, McMullen2009}[28, 30]. The median KRN phenotype computed for each of the 26 sets of RILs (~\ref{fig1}) was significantly correlated ($r$ = 0.74, Pearson’s correlation test $P$ value $<$ 0.01) with the KRN of the corresponding non-B73 parent. As expected based on prior research ~\cite{Srdic2007, Toledo2011}[31, 32], we observed little heterosis for KRN in the other three GWAS populations (\nameref{Fig_S1}). Hence, we conclude that KRN is, in general, mostly controlled by additive gene effects rather than dominant gene effects or epistasis. Further, there is no evidence (Student’s t-test, $P$ value = 0.59) for the existence of reciprocal effects for this trait based on comparisons of reciprocal crosses between B73 and Mo17 (\nameref{Fig_S2}).
 
 \subsection*{Separate and joint QTL studies.}
 
-QTL linkage analyses were conducted using the KRN trait data and published genetic maps derived from analysis of the IBM ~\cite{Liu2010}[33] and NAM ~\cite{Buckler2009}[34] RILs. Separate QTL studies on the 26 individual subpopulations of bi-parental RILs identified a total of 146 QTLs (Figure 2A, Table S2), although many of these presumably represent the same QTLs detected in different subpopulations. For example, a significant QTL in the region chr4:189-237Mb was detected in 88\% (23/26) of the subpopulations. In this QTL region, the B73 allele was favorable in all subpopulations for which the QTL was detected. The largest contrast of QTL effect at this locus occurs between B73 and NC350 alleles, wherein the B73 allele increases KRN by 2.5 rows and accounts for 37\% of phenotypic variation in this subpopulation. However, for some other QTL regions the B73 allele is favorable in some subpopulations but unfavorable in other subpopulations (e.g., regions of chr1:6-50Mb, chr1:204-232Mb, chr5:12-84Mb and chr10:99-142Mb; Table S3). This phenomenon could be caused by tightly linked QTLs.
+QTL linkage analyses were conducted using the KRN trait data and published genetic maps derived from analysis of the IBM ~\cite{Liu2010}[33] and NAM ~\cite{Buckler2009}[34] RILs. Separate QTL studies on the 26 individual subpopulations of bi-parental RILs identified a total of 146 QTLs (Fig.~\ref{fig2}, \nameref{Table_S2}), although many of these presumably represent the same QTLs detected in different subpopulations. For example, a significant QTL in the region chr4:189-237Mb was detected in 88\% (23/26) of the subpopulations. In this QTL region, the B73 allele was favorable in all subpopulations for which the QTL was detected. The largest contrast of QTL effect at this locus occurs between B73 and NC350 alleles, wherein the B73 allele increases KRN by 2.5 rows and accounts for 37\% of phenotypic variation in this subpopulation. However, for some other QTL regions the B73 allele is favorable in some subpopulations but unfavorable in other subpopulations (e.g., regions of chr1:6-50Mb, chr1:204-232Mb, chr5:12-84Mb and chr10:99-142Mb; \nameref{Table_S3}). This phenomenon could be caused by tightly linked QTLs.
 
-A joint QTL linkage analysis of the 25 NAM RIL subpopulations identified 28 QTLs (Figure 2B, Table S4). Consistent with the observation that the average KRN trait value of B73 is higher than the average KRN value, the favorable alleles of 79\% (22/28) of identified QTL were provided by B73. In this joint analysis, the QTL detected on chromosome 4 could be resolved into three QTLs. Therefore, the large effects observed in some of the individual subpopulations may be caused by multiple linked QTLs all having the same direction of effects. To distinguish among these possible explanations, higher resolution mapping was required.
+% For figure citations, please use "Fig." instead of "Figure".
+\begin{figure}[h]
+\caption{{\bf Plots of separate and joint QTL results in the physical map.}
+In panel (A), physical positions of the significant QTLs and their effects by separate analyses on the 26 RIL subpopulations. Blue color indicates the favorable QTL allele is derived from B73 and red color indicates that the non-B73 allele is favorable. In panel (B), joint QTL results using the 25 NAM RIL subpopulations. The red dashed line denotes the significant threshold determined by 1,000 permutations. Under the curve, QTL confidence intervals were plotted using black solid lines.}
+\label{fig2}
+\end{figure}
+
+
+A joint QTL linkage analysis of the 25 NAM RIL subpopulations identified 28 QTLs (Fig.~\ref{fig2}, \nameref{Table_S4}). Consistent with the observation that the average KRN trait value of B73 is higher than the average KRN value, the favorable alleles of 79\% (22/28) of identified QTL were provided by B73. In this joint analysis, the QTL detected on chromosome 4 could be resolved into three QTLs. Therefore, the large effects observed in some of the individual subpopulations may be caused by multiple linked QTLs all having the same direction of effects. To distinguish among these possible explanations, higher resolution mapping was required.
 
 \subsection*{Joint GWAS using three different statistical approaches.}
 \paragraph{GWAS exploits historical recombination events.}
-Hence, assuming a sufficient number of genetic markers are used, GWAS is expected to increase mapping resolution as compared to even joint QTL studies ~\cite{Yu2008}[29]. Three sources of genotypic variants: maize HapMap1 ~\cite{Gore2009}[35], HapMap2 ~\cite{Chia2012}[36] and independently discovered RNA-seq derived variants ~\cite{Barbazuk2007}[37](Li, Yeh and Schnable, unpublished data), were merged and filtered to form a set of ~13 million variants having a call rate of  > 0.4 and a minor allele frequency (MAF) of  > 0.1. These variants were imputed for three of the GWAS populations (IBM and NAM RILs, B73 x RILs and Mo17 x RILs) and projected onto the F1 hybrids derived from the partial diallel of IBM and NAM founders. 
+Hence, assuming a sufficient number of genetic markers are used, GWAS is expected to increase mapping resolution as compared to even joint QTL studies ~\cite{Yu2008}[29]. Three sources of genotypic variants: maize HapMap1 ~\cite{Gore2009}[35], HapMap2 ~\cite{Chia2012}[36] and independently discovered RNA-seq derived variants ~\cite{Barbazuk2007}[37](Li, Yeh and Schnable, unpublished data), were merged and filtered to form a set of $\sim$13 million variants having a call rate of  $>$0.4 and a minor allele frequency (MAF) of  $>$0.1. These variants were imputed for three of the GWAS populations (IBM and NAM RILs, B73 x RILs and Mo17 x RILs) and projected onto the F1 hybrids derived from the partial diallel of IBM and NAM founders. 
 
 \paragraph{Three GWAS approaches were used to identify KAVs.}
-In each approach, population and subpopulation were included as fixed effects to account for inherent structure in the 6,230 entries included in the GWAS. First, a single-variant approach ~\cite{}[38]\yang{fix}, was used to scan the ~13M variants one-by-one using QTL detected in the joint analysis as covariates. Using an arbitrary cutoff of –log10(P) > 20, this approach identified linked clusters of variants, most of which were located within the 28 QTL intervals that had been identified by the joint QTL analysis (Figure 3C and 3D). To diminish the over-representation of certain regions by significant variants, a thinning procedure was developed that resulted in the identification of 257 KAVs representing 192 100-kb bins (Table S5), which in combination accounted for 51\% of the phenotypic variation.
+In each approach, population and subpopulation were included as fixed effects to account for inherent structure in the 6,230 entries included in the GWAS. First, a single-variant approach ~\cite{Manolio2010}[38], was used to scan the $\sim$13M variants one-by-one using QTL detected in the joint analysis as covariates. Using an arbitrary cutoff of $–log_{10}(P) > 20$, this approach identified linked clusters of variants, most of which were located within the 28 QTL intervals that had been identified by the joint QTL analysis (Fig.~\ref{fig3}). To diminish the over-representation of certain regions by significant variants, a thinning procedure was developed that resulted in the identification of 257 KAVs representing 192 100-kb bins (\nameref{Table_S5}), which in combination accounted for 51\% of the phenotypic variation.
 
-Second, in an attempt to improve mapping resolution, a multi-variant stepwise regression approach was used, which automatically controls for background QTL effects. Using cutoff described in Materials and Methods, 300 variants representing 296 100-kb bins that covered 22 of the 28 QTL intervals detected in the joint analysis were identified; in combination, these variants accounted for 78\% of phenotypic variation (Figure 3B, Table S5). 
+% For figure citations, please use "Fig." instead of "Figure".
+\begin{figure}[h]
+\caption{{\bf Stacked Manhattan plots of joint QTL and GWAS results.}
+From upper to lower panels are results from the Bayesian-based (A), stepwise regression (B) and single-variant (C) approaches for GWAS and joint QTL mapping (D), respectively. The red dashed line in the QTL plot indicates the 1,000 permutation threshold and black lines show the QTL confidence intervals. Red squares in panel (A), triangles in panel (B) and circles in panel (C) indicate the KAVs selected for further genetic validation.}
+\label{fig3}
+\end{figure}
 
-Third, a Bayesian-based approach ~\cite{}[21] \yang{ref} was used to estimate effects of all ~13M variants simultaneously via a mixed model. After applying the variant thinning procedure and cutoffs described in Materials and Methods, a set of 442 variants representing 343 100-kb bins, which together accounted for 74\% of the phenotypic variation, was identified (Figure 3A, Table S5). Most promisingly, this approach identified smaller chromosomal intervals than the single-variant approach.
+Second, in an attempt to improve mapping resolution, a multi-variant stepwise regression approach was used, which automatically controls for background QTL effects. Using cutoff described in Materials and Methods, 300 variants representing 296 100-kb bins that covered 22 of the 28 QTL intervals detected in the joint analysis were identified; in combination, these variants accounted for 78\% of phenotypic variation (Fig.~\ref{fig3}, \nameref{Table_S5}). 
 
-In the separate linkage mapping analyses described above, four QTL regions were detected for which in some subpopulations the B73 allele was favorable and in other subpopulations the non-B73 allele was favorable. After conducting GWAS with the three approaches, individual variant effects were examined for the 135 KAVs located in these four regions. Two out of four of these QTL regions contained KAVs at which the B73 allele had either positive or negative effects (Table S6), suggesting that the improved resolution afforded by GWAS was better a distinguishing among tightly linked loci than the joint QTL analyses. 
+Third, a Bayesian-based approach ~\cite{Habier2011}[21] was used to estimate effects of all $\sim$13M variants simultaneously via a mixed model. After applying the variant thinning procedure and cutoffs described in Materials and Methods, a set of 442 variants representing 343 100-kb bins, which together accounted for 74\% of the phenotypic variation, was identified (Fig.~\ref{fig3}, \nameref{Table_S5}). Most promisingly, this approach identified smaller chromosomal intervals than the single-variant approach.
+
+In the separate linkage mapping analyses described above, four QTL regions were detected for which in some subpopulations the B73 allele was favorable and in other subpopulations the non-B73 allele was favorable. After conducting GWAS with the three approaches, individual variant effects were examined for the 135 KAVs located in these four regions. Two out of four of these QTL regions contained KAVs at which the B73 allele had either positive or negative effects (\nameref{Table_S6}), suggesting that the improved resolution afforded by GWAS was better a distinguishing among tightly linked loci than the joint QTL analyses. 
 
 \subsection*{Comparison of KAVs identified by the GWAS approaches}
-In combination, the three GWAS approaches identified 764 100-kb bins (Table S5), each of which contained one or more significant variants. Encouragingly, among these 764 bins, 66 (containing 169 variants) were detected by at least two approaches (Figure 3). Only one of these bins was detected by all three approaches. That bin (chr4:229.0-Mb) overlaps the most significant QTL peak detected in the joint QTL study (Figure 2B). To estimate the an upper bound for false positive discovery (FDR) for each approach and to determine whether the KAVs that were detected by more than one approach are more reliable, a set of 231 KAVs was selected for genetic validation. This set of KAVs (Figure 3, Table S7) included the 169 variants in the 66 bins detected by at least two approaches and 62 of the most significant one or two variants selected from 20 bins that had only been detected by one approach (approach-specific variants). Hence, in total KAVs from a total of 126 bins (66 + 20 × 3) were selected for genetic validation.
-In combination, the 231 selected KAVs explained 64\% of phenotypic variation after fitting a multi-variant model. Individually, most of the KAVs (83\%, 192/231) explained less than 5\% of the phenotypic variation, but, 17\% (39/231) of the KAVs individually accounted for more than 5\% but less than 10\% of phenotypic variation (Figure S4). As expected for the reasons described previously, the B73 variant-type was favorable for nearly three-quarters (73\%, 168/231) of these KAVs. Other characterizations of these KAVs are presented in Figure S5.  Consistent with our previous study ~\cite{Li2012}[39], KAVs are substantially enriched for variants located within genes or within 5-kb upstream of genes (2.0-fold change, Chi-square P value < 0.01) and enriched in variants discovered from the RNA-seq data (1.9-fold change, Chi-square P value < 0.01), relative to the ~13M variants used for GWAS. These observations emphasize the value of including genic variants derived from RNA-seq data as a complement to low pass whole genome sequencing (WGS) data such as maize HapMap2 variants ~\cite{Chia2012}[36].
+In combination, the three GWAS approaches identified 764 100-kb bins (\nameref{Table_S5}), each of which contained one or more significant variants. Encouragingly, among these 764 bins, 66 (containing 169 variants) were detected by at least two approaches (Fig.~\ref{fig3}). Only one of these bins was detected by all three approaches. That bin (chr4:229.0-Mb) overlaps the most significant QTL peak detected in the joint QTL study (Fig.~\ref{fig2}). To estimate the an upper bound for false positive discovery (FDR) for each approach and to determine whether the KAVs that were detected by more than one approach are more reliable, a set of 231 KAVs was selected for genetic validation. This set of KAVs (Fig.~\ref{fig3}, \nameref{Table_S7}) included the 169 variants in the 66 bins detected by at least two approaches and 62 of the most significant one or two variants selected from 20 bins that had only been detected by one approach (approach-specific variants). Hence, in total KAVs from a total of 126 bins ($66 + 20 \times 3$) were selected for genetic validation.
+
+In combination, the 231 selected KAVs explained 64\% of phenotypic variation after fitting a multi-variant model. Individually, most of the KAVs (83\%, 192/231) explained less than 5\% of the phenotypic variation, but, 17\% (39/231) of the KAVs individually accounted for more than 5\% but less than 10\% of phenotypic variation (Fig.~\ref{fig4}). As expected for the reasons described previously, the B73 variant-type was favorable for nearly three-quarters (73\%, 168/231) of these KAVs. Other characterizations of these KAVs are presented in \nameref{Table_S5}.  Consistent with our previous study ~\cite{Li2012}[39], KAVs are substantially enriched for variants located within genes or within 5-kb upstream of genes (2.0-fold change, Chi-square P value $<$ 0.01) and enriched in variants discovered from the RNA-seq data (1.9-fold change, Chi-square $P$ value $<$ 0.01), relative to the $\sim$13M variants used for GWAS. These observations emphasize the value of including genic variants derived from RNA-seq data as a complement to low pass whole genome sequencing (WGS) data such as maize HapMap2 variants ~\cite{Chia2012}[36].
 
 \subsection*{Genetic validation of KAVs using three unrelated populations}
-To distinguish true positive association signals from potentially false positive associations, three genetic validation populations that were unrelated to the GWAS populations and to each other were genotyped with the KAVs. PCR-based genotyping-by-multiplexed-amplicon-sequencing (GBMAS) assays were designed for 140/231 (61\%) KAVs (Wu, Liu and Schnable, unpublished). A total of 1,102 DNA samples from elite inbred lines (N = 208), extreme KRN accessions from the USDA germplasm collection (N = 606) and individuals from the Iowa Long Ear Synthetic (BSLE, N = 288) ~\cite{Hallauer2005}[40] were individually genotyped by sequencing all multiplexed amplicons from all 1,102 samples in one HiSeq2000 lane (Table S9). A variant calling pipeline was used to identify variants that were consistent with those detected in the GWAS analyses and that were segregating in at least one of the three genetic validation populations (Table S10-S12). Informative variants, defined as those which were successfully genotyped, were polymorphic, and had a call rate of  > 0.4 and a MAF > 0.05 were used for genetic validation.
+To distinguish true positive association signals from potentially false positive associations, three genetic validation populations that were unrelated to the GWAS populations and to each other were genotyped with the KAVs. PCR-based genotyping-by-multiplexed-amplicon-sequencing (GBMAS) assays were designed for 140/231 (61\%) KAVs (Wu, Liu and Schnable, unpublished). A total of 1,102 DNA samples from elite inbred lines (N = 208), extreme KRN accessions from the USDA germplasm collection (N = 606) and individuals from the Iowa Long Ear Synthetic (BSLE, N = 288) ~\cite{Hallauer2005} were individually genotyped by sequencing all multiplexed amplicons from all 1,102 samples in one HiSeq2000 lane (\nameref{Table_S9}). A variant calling pipeline was used to identify variants that were consistent with those detected in the GWAS analyses and that were segregating in at least one of the three genetic validation populations (\nameref{Table_S10}, \nameref{Table_S11} and \nameref{Table_S12}). Informative variants, defined as those which were successfully genotyped, were polymorphic, and had a call rate of  $>$ 0.4 and a MAF $>$ 0.05 were used for genetic validation.
 
-The 208 elite inbred lines were phenotyped for the KRN trait (Table S9). Among these lines 70/140 (50\%) of the KAVs were informative. To control for population structure, a set of SNPs that had previously been used to genotype a subset (N = 91) of these lines was fitted ~\cite{Nelson2008}[41]. Using this control, 22/70 (31\%) of the informative KAVs could be genetically validated in the set of 91 elite inbreds with an FDR < 0.05. Because the elite inbreds are not closely related to the GWAS populations, it is unlikely that uncontrolled population structure could yield false-positive validation assays for KAVs derived from the GWAS populations. Hence, we also conducted a naive analysis using the entire set of elite inbreds (N = 209) without controlling for population structure. In this analysis, 33/70 (47\%) of the KAVs, which included all of the 22 KAVs discussed above, could be validated (Table S9, S10 and S13). 
+The 208 elite inbred lines were phenotyped for the KRN trait (\nameref{Table_S9}). Among these lines 70/140 (50\%) of the KAVs were informative. To control for population structure, a set of SNPs that had previously been used to genotype a subset (N = 91) of these lines was fitted ~\cite{Nelson2008}[41]. Using this control, 22/70 (31\%) of the informative KAVs could be genetically validated in the set of 91 elite inbreds with an FDR $<$ 0.05. Because the elite inbreds are not closely related to the GWAS populations, it is unlikely that uncontrolled population structure could yield false-positive validation assays for KAVs derived from the GWAS populations. Hence, we also conducted a naive analysis using the entire set of elite inbreds (N = 209) without controlling for population structure. In this analysis, 33/70 (47\%) of the KAVs, which included all of the 22 KAVs discussed above, could be validated (\nameref{Table_S9}, \nameref{Table_S10} and \nameref{Table_S13}). 
 
-The USDA Plant Introduction station maintains a large collection of maize germplasm. 6,952 of their maize accessions have been phenotyped for the KRN trait. We selected the 225 accessions with the largest KRN values, the 208 accessions with the smallest KRN values, and 173 random accessions to serve as the second genetic validation population (Table S9). The KRN phenotypes in this population are extreme, ranging from 16-30 rows in the high KRN pool to 4-12 rows in the low KRN pool. Because these accessions were maintained via random pollination within accessions, individual accessions are both heterogeneous and heterozygous. We therefore genotyped pools of DNA extracted from up to 12 plants per accession. A model fitted to the estimated allele frequencies was used to test the hypothesis that favorable KAV alleles have higher frequencies in the high KRN pools than in low KRN pools. Among the 56/131 (43\%) informative variants, 14/56 (25\%) could be validated using the cutoffs described in Materials and Methods (Table S9, S11 and S13). 
+The USDA Plant Introduction station maintains a large collection of maize germplasm. 6,952 of their maize accessions have been phenotyped for the KRN trait. We selected the 225 accessions with the largest KRN values, the 208 accessions with the smallest KRN values, and 173 random accessions to serve as the second genetic validation population (\nameref{Table_S9}). The KRN phenotypes in this population are extreme, ranging from 16-30 rows in the high KRN pool to 4-12 rows in the low KRN pool. Because these accessions were maintained via random pollination within accessions, individual accessions are both heterogeneous and heterozygous. We therefore genotyped pools of DNA extracted from up to 12 plants per accession. A model fitted to the estimated allele frequencies was used to test the hypothesis that favorable KAV alleles have higher frequencies in the high KRN pools than in low KRN pools. Among the 56/131 (43\%) informative variants, 14/56 (25\%) could be validated using the cutoffs described in Materials and Methods (\nameref{Table_S9}, \nameref{Table_S11} and \nameref{Table_S13}). 
 
-The BSLE population had been subjected to 30 generations of divergent selection for long ears (LE) and short ears (SE) (Hallauer 2005) \yang{change}. During selection, KRN exhibited a negatively correlated response (r = 0.6, Pearson’s correlation test P value < 0.05), i.e., longer and shorter ears had smaller and larger KRN trait values, respectively. Genotyping was conducted on the parental lines and bulked seeds from cycle 0 (C0), cycle 30 long ear (C30 LE) and cycle 30 short ear (C30 SE) populations. Of the 51 informative KAVs in the BSLE population, 7/51 (14\%) showed significant differences in allele frequency between C30 LE and C30 SE populations using the cutoffs described in Materials and Methods. A simulation procedure that mimicked the selection program was conducted to test whether observed changes in allele frequency were larger than expected by genetic drift or stochastic sampling error. After simulation, one validated KAV did not pass the cutoff (FDR < 0.05) and was removed. Hence, even after accounting for drift and stochastic sampling errors, 6/51 (12\%) KAVs were deemed to have been under divergent selection (Table S9, S12 and S13). Collectively, these loci account for ~40\% of the total between-population variance for KRN trait. Variants that are segregating in BSLE but not in GWAS populations or that were simply not detected as being KAVs in the GWAS populations may explain the remaining ~60\% of variation between C30 LE and C30 SE.
+The BSLE population had been subjected to 30 generations of divergent selection for long ears (LE) and short ears (SE) ~\cite{Hallauer2004}. During selection, KRN exhibited a negatively correlated response ($r$ = 0.6, Pearson’s correlation test $P$ value $<$ 0.05), i.e., longer and shorter ears had smaller and larger KRN trait values, respectively. Genotyping was conducted on the parental lines and bulked seeds from cycle 0 (C0), cycle 30 long ear (C30 LE) and cycle 30 short ear (C30 SE) populations. Of the 51 informative KAVs in the BSLE population, 7/51 (14\%) showed significant differences in allele frequency between C30 LE and C30 SE populations using the cutoffs described in Materials and Methods. A simulation procedure that mimicked the selection program was conducted to test whether observed changes in allele frequency were larger than expected by genetic drift or stochastic sampling error. After simulation, one validated KAV did not pass the cutoff (FDR $<$ 0.05) and was removed. Hence, even after accounting for drift and stochastic sampling errors, 6/51 (12\%) KAVs were deemed to have been under divergent selection (\nameref{Table_S9}, \nameref{Table_S12} and \nameref{Table_S13}). Collectively, these loci account for $\sim$40\% of the total between-population variance for KRN trait. Variants that are segregating in BSLE but not in GWAS populations or that were simply not detected as being KAVs in the GWAS populations may explain the remaining ~60\% of variation between C30 LE and C30 SE.
 
-In summary, 40/77 (52\%) of informative KAVs, which represent 39 100-kb chromosomal bins exhibited associations with the KRN trait in at least one of the validation populations. The genetic validation results from the three GWAS approaches are illustrated in Figure 4. Considering all KAVs detected by each approach, the validation rates were 61\% (20/33) for the single-variant approach, 43\% (6/14) for the stepwise regression approach and 45\% (14/31) for the Bayesian-based approach (Figure 4A). Validation rates were 67\% (10/15) for KAVs detected only by the single-variant approach, 43\% (6/14) for those detected only by stepwise regression, 35\% (9/26) for KAVs detected only by the Bayesian-based approach, 76\% (16/21) for KAVs detected by both single-variant and Bayesian-based approaches (Figure 4B), and 11\% (1/9) for control variants (Table S10-S13). Although both the regression and Bayesian approaches had lower validation rates than the single variant approach, these results demonstrate that each of the three approaches identified validated KAVs that were not identified by other approaches. Thus, the three GWAS approaches are complementary. 
+In summary, 40/77 (52\%) of informative KAVs, which represent 39 100-kb chromosomal bins exhibited associations with the KRN trait in at least one of the validation populations. The genetic validation results from the three GWAS approaches are illustrated in Fig.~\ref{fig4}. Considering all KAVs detected by each approach, the validation rates were 61\% (20/33) for the single-variant approach, 43\% (6/14) for the stepwise regression approach and 45\% (14/31) for the Bayesian-based approach (Figure 4A). Validation rates were 67\% (10/15) for KAVs detected only by the single-variant approach, 43\% (6/14) for those detected only by stepwise regression, 35\% (9/26) for KAVs detected only by the Bayesian-based approach, 76\% (16/21) for KAVs detected by both single-variant and Bayesian-based approaches (Fig.~\ref{fig4}), and 11\% (1/9) for control variants (\nameref{Table_S10}-\nameref{Table_S13}). Although both the regression and Bayesian approaches had lower validation rates than the single variant approach, these results demonstrate that each of the three approaches identified validated KAVs that were not identified by other approaches. Thus, the three GWAS approaches are complementary. 
+
+% For figure citations, please use "Fig." instead of "Figure".
+\begin{figure}[h]
+\caption{{\bf Genetic validation for KAVs identified from the three different GWAS approaches.}
+Transformed single-variant P values and Bayesian-based posterior model frequencies were extracted and plotted for all the 77 informative KAVs identified by at least one of the three GWAS approaches. KAVs detected only by the single-variant approach are plotted in the lower right quadrant, KAVs detected only by the stepwise regression approach are plotted as non-grey dots in the lower left quadrant, the KAVs detected only by the Bayesian-based approach are plotted in the upper left quadrant, KAVs detected by both the single-variant and Bayesian-based approaches are plotted in the upper right quadrant and control variants are plotted as grey dots in the lower left quadrant. Validated KAVs are marked in red.}
+\label{fig4}
+\end{figure}
 
 Informative genotyping data were also obtained for 34 KAVs reported in an earlier GWAS ~\cite{Brown2011}[3]. Using the statistical analyses described above, 26\% (9/34) of these KAVs could be validated in at least one of the three unrelated populations (Table S10-S13).
-The amount of genetic recombination per Mb in maize varies substantially across the genome ~\cite{Fu2002}[42]. To investigate whether the probability of genetic validation varies based on the amount of recombination per Mb, the 111 tested KAVs (77 from this study and 34 from Brown et al. 2011) were projected onto the NAM genetic map ~\cite{Buckler2009}[34] using our previously published method ~\cite{Liu2009}[43]. Recombination rates (cM/Mb) were estimated for every 10 cM window. KAVs were classified as being located in regions recombinationally “cold” (< 1 cM/Mb) or “hot” (>= 1 cM/Mb) chromosomal regions. KAVs located in recombinational cold zones were 3.5X more likely to be genetically validated than those in recombinational hot zones (Chi\yang{change!}-square P value < 0.003; Figure S6). 
+The amount of genetic recombination per Mb in maize varies substantially across the genome ~\cite{Fu2002}[42]. To investigate whether the probability of genetic validation varies based on the amount of recombination per Mb, the 111 tested KAVs (77 from this study and 34 from Brown et al. 2011) were projected onto the NAM genetic map ~\cite{Buckler2009}[34] using our previously published method ~\cite{Liu2009}[43]. Recombination rates (cM/Mb) were estimated for every 10 cM window. KAVs were classified as being located in regions recombinationally “cold” ($<$ 1 cM/Mb) or “hot” ($\geq$ 1 cM/Mb) chromosomal regions. KAVs located in recombinational cold zones were 3.5X more likely to be genetically validated than those in recombinational hot zones (hi-square $P$ value $<$ 0.003; \nameref{Fig_S6}). 
 
 \subsection*{Candidate genes within KAV-associated chromosomal bins were previously associated with KRN via functional analyses.}
-A set of 2,690 KAV-linked genes was defined as those gene models (FGSv2.5b) falling into 500-kb regions flanking the 231 selected KAVs. KRN is a consequence of inflorescence branching. Thus, KRN is determined by the fates and identities of an array of meristems ~\cite{Barazesh2008}[44]. Traditional genetic analyses have identified genes or metabolic pathways relevant to inflorescence development. For instance, fasciated ear2 (fea2) ~\cite{Bommert2013}[45] and thick tassel dwarf1 (td1) ~\cite{Bommert2005}[46] cause fasciated ear phenotypes with irregular but higher KRNs. Fea2 and td1 are homologs of CLV1 and CLV2 of Arabidopsis, both of which belong to the CLV-WUS regulatory pathway that promotes stem cell differentiation ~\cite{Clark2001}[47]. In addition, genes involved in various stages of grass inflorescence development have been identified, including 1) auxin and 2) cytokinin signal transduction ~\cite{Barazesh2008, Sigmon2010}[44, 48], 3) ramose genes ~\cite{Bortiri2006}[49] and 4) other ungrouped genes ~\cite{McSteen2001, Upadyayula2006, Xu2011}[50-52]. In total, ~200 evidence-supported genes or their maize homologs were mapped onto maize gene models (FGSv2.5b). A Monte Carlo simulation test indicated that the KAV-linked genes are over-represented (12 genes overlapped, P value < 0.01) among this set of evidence-supported genes. Furthermore, the KAV-linked genes are significantly enriched in members of two metabolic pathways, auxin (10 genes) and cytokinin (2 genes) signal transduction, both of which were known to be involved in inflorescence development (Table S14). 
-
-
-\begin{table}[!ht]
-\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
-\caption{
-{\bf Table caption Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.}}
-\begin{tabular}{|l|l|l|l|l|l|l|l|}
-\hline
-\multicolumn{4}{|l|}{\bf Heading1} & \multicolumn{4}{|l|}{\bf Heading2}\\ \hline
-$cell1 row1$ & cell2 row 1 & cell3 row 1 & cell4 row 1 & cell5 row 1 & cell6 row 1 & cell7 row 1 & cell8 row 1\\ \hline
-$cell1 row2$ & cell2 row 2 & cell3 row 2 & cell4 row 2 & cell5 row 2 & cell6 row 2 & cell7 row 2 & cell8 row 2\\ \hline
-$cell1 row3$ & cell2 row 3 & cell3 row 3 & cell4 row 3 & cell5 row 3 & cell6 row 3 & cell7 row 3 & cell8 row 3\\ \hline
-\end{tabular}
-\begin{flushleft} Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed.
-\end{flushleft}
-\label{table1}
-\end{adjustwidth}
-\end{table}
-
-
+A set of 2,690 KAV-linked genes was defined as those gene models (FGSv2.5b) falling into 500-kb regions flanking the 231 selected KAVs. KRN is a consequence of inflorescence branching. Thus, KRN is determined by the fates and identities of an array of meristems ~\cite{Barazesh2008}[44]. Traditional genetic analyses have identified genes or metabolic pathways relevant to inflorescence development. For instance, fasciated ear2 (fea2) ~\cite{Bommert2013}[45] and thick tassel dwarf1 (td1) ~\cite{Bommert2005}[46] cause fasciated ear phenotypes with irregular but higher KRNs. Fea2 and td1 are homologs of CLV1 and CLV2 of Arabidopsis, both of which belong to the CLV-WUS regulatory pathway that promotes stem cell differentiation ~\cite{Clark2001}[47]. In addition, genes involved in various stages of grass inflorescence development have been identified, including 1) auxin and 2) cytokinin signal transduction ~\cite{Barazesh2008, Sigmon2010}[44, 48], 3) ramose genes ~\cite{Bortiri2006}[49] and 4) other ungrouped genes ~\cite{McSteen2001, Upadyayula2006, Xu2011}[50-52]. In total, ~200 evidence-supported genes or their maize homologs were mapped onto maize gene models (FGSv2.5b). A Monte Carlo simulation test indicated that the KAV-linked genes are over-represented (12 genes overlapped, P value < 0.01) among this set of evidence-supported genes. Furthermore, the KAV-linked genes are significantly enriched in members of two metabolic pathways, auxin (10 genes) and cytokinin (2 genes) signal transduction, both of which were known to be involved in inflorescence development (\nameref{Table_S14})\yang{no S14}. 
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -431,12 +436,6 @@ KAVs located in chromosomal regions with low rates of recombination (cM/Mb) were
 In conclusion, this study identified hundreds of KAVs that in combination explain 64\% of phenotypic variation for KRN in lines that sample ~60\% of the genetic diversity of maize ~\cite{Liu2003}[55]. Over 50\% of KAVs that were tested could be genetically validated. The KAVs detected in this study can be used to facilitate marker-assisted breeding or transgenic approaches for crop improvement. Further, in-depth analyses of KAV-linked genes will enable us to better understand the molecular and developmental processes that control variation in the KRN trait and may eventually be useful in breaking the negative correlation between KRN and ear length ~\cite{Hallauer2004}[56], thereby increasing grain yields.
 
 
-\subsection*{\lorem\ and \ipsum\ Nunc blandit a tortor.}
-
-CO\textsubscript{2} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. 
-
-Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor. For more information, see \nameref{S1_Text}.
-
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % % % SUPPORTING INFORMATION % % %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -444,25 +443,89 @@ Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 \section*{Supporting Information}
 
 % Include only the SI item label in the subsection heading. Use the \nameref{label} command to cite SI items in the text.
-\subsection*{S1 Video}
-\label{S1_Video}
-{\bf Bold the first sentence.}  Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
-
-\subsection*{S1 Text}
-\label{S1_Text}
-{\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
 
 \subsection*{S1 Fig}
-\label{S1_Fig}
-{\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+\label{Fig_S1}
+{\bf High parent heterosis (HPH) and mid-parent heterosis (MPH) of the KRN trait in three hybrid populations.} 
 
 \subsection*{S2 Fig}
-\label{S2_Fig}
-{\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+\label{Fig_S2}
+{\bf Phenotypic distribution of the B73, Mo17 and their reciprocal F1 hybrids.} 
+
+\subsection*{S3 Fig}
+\label{Fig_S3}
+{\bf Venn diagram comparing KAV bins identified by the three different approaches.} 
+
+\subsection*{S4 Fig}
+\label{Fig_S4}
+{\bf Single variant effect and heritability of the 231 KAVs.} 
+
+\subsection*{S5 Fig}
+\label{Fig_S5}
+{\bf Characteristics of the ~13M variants and 231 KAVs. } 
+
+\subsection*{S6 Fig}
+\label{Fig_S6}
+{\bf Genetic and physical positions of the KAVs across 10 maize chromosomes.} 
 
 \subsection*{S1 Table}
-\label{S1_Table}
-{\bf Lorem Ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+\label{Table_S1}
+{\bf KRN trait data of the 6,230 lines.}
+
+\subsection*{S2 Table}
+\label{Table_S2}
+{\bf Separate QTL results of IBM and NAM RILs.}
+
+\subsection*{S3 Table}
+\label{Table_S3}
+{\bf Four QTL regions exhibit opposite effects in different NAM RIL subpopulations.}
+
+\subsection*{S4 Table}
+\label{Table_S4}
+{\bf Joint QTL results of 25 NAM RIL subpopulations.}
+
+\subsection*{S5 Table}
+\label{Table_S5}
+{\bf KAVs identified by three GWAS approaches.} Column “value” are significant measurements of different approaches, where –log10(P) values for single-variant approach, F-test statistic values for stepwise regression approach, and posterior model frequencies (MF) for Bayesian-based multi-variant approach. Binsize  = 100-kb.
+
+\subsection*{S6 Table}
+\label{Table_S6}
+{\bf Effects of KAVs in the four QTL regions.} In QTL regions of order 1 and 2, both positive and negative effects were observed for identified KAVs. 
+
+\subsection*{S7 Table}
+\label{Table_S7}
+{\bf KThe 231 KAVs selected for cross-validation.} Note some of the KAVs were identified by multiple approaches. 
+
+\subsection*{S8 Table}
+\label{Table_S8}
+{\bf Favorable allele frequencies and statistical test results of historical lines. }
+
+\subsection*{S9 Table}
+\label{Table_S9}
+{\bf Cross-validation samples.}
+
+\subsection*{S10 Table}
+\label{Table_S10}
+{\bf Genotypic data for cross-validation population of elite inbred lines.} Genotypes were coded using 3 for reference-like, 2 for heterozygotes, 1 for non-reference-like variant types and 0 for missing.
+
+\subsection*{S11 Table}
+\label{Table_S11}
+{\bf Genotypic data for cross-validation population of USDA PI accessions.}
+
+\subsection*{S12 Table}
+\label{Table_S12}
+{\bf Genotypic data for cross-validation population of BSLE.}
+
+\subsection*{S13 Table}
+\label{Table_S13}
+{\bf Summary of cross-validation results.} 
+Columns of “Elite1\_Qvalue” and “Elite2\_Qvalue” are cross-validation results using elite inbred population with and without population structure control. Columns of “USDA\_Qvalue” and “BSLE\_Qvalue” are cross-validation results using USDA germplasm accessions and BSLE population. Columns “Elite1\_DOE”, “Elite2\_DOE”, “USDA\_DOE” and “BSLE\_DOE” are products of direction of effects (DOE) of KAVs in the GWAS population and the cross-validation populations, where positive numbers indicated consistency and negative number indicated inconsistency of DOE. “NA” in the table indicated the data are not available. Significant KAVs were indicated by stars ($\ast$) in the column of “SNPID”.
+
+\subsection*{S14 Table}
+\label{Table_S14}
+{\bf List of candidate genes within KAV-associated chromosomal bins that aligned to evidence supported genes.}
+
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % % % ACKNOWLEDGEMENTS % % %
@@ -487,6 +550,8 @@ We gratefully acknowledge Dr. Arnel Hallauer, Dr. Kendall Lamkey and Mr. Paul Wh
 % style file and paste the contents of your .bbl file
 % here.
 % 
+
+
 
 \begin{thebibliography}{10}
 
@@ -649,9 +714,9 @@ Bush WS, Moore JH.
 \newblock PLoS Computational Biology. 2012;8(12).
 
 \bibitem{Galesloot2014}
-Galesloot TE, {Van Steen} K, Kiemeney LaLM, Janss LL, Vermeulen SH.
+Galesloot TE, {Van Steen} K, Kiemeney LALM, Janss LL, Vermeulen SH.
 \newblock {A comparison of multivariate genome-wide association methods}.
-\newblock PLoS ONE. 2014;9(4):1--8.
+\newblock PLoS ONE. 2014;9.
 
 \bibitem{Sladek2007}
 Sladek R, Rocheleau G, Rung J, Dina C, Shen L, Serre D, et~al.
@@ -665,6 +730,11 @@ Larsson SJ, Lipka AE, Buckler ES.
 \newblock {Lessons from Dwarf8 on the Strengths and Weaknesses of Structured
   Association Mapping}.
 \newblock PLoS Genetics. 2013;9(2).
+
+\bibitem{hallauer2010quantitative}
+Hallauer AR, Carena MJ, Miranda~Filho Jd.
+\newblock {Quantitative genetics in maize breeding}. vol.~6.
+\newblock Springer Science \& Business Media; 2010.
 
 \bibitem{Lu2011}
 Lu M, Xie CX, Li XH, Hao ZF, Li MS, Weng JF, et~al.
@@ -686,11 +756,30 @@ Yu J, Holland JB, McMullen MD, Buckler ES.
 \newblock Available from:
   \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2206100\&tool=pmcentrez\&rendertype=abstract}.
 
+\bibitem{DevelopmentCoreTeam2011}
+{Development Core Team} R. {R: A Language and Environment for Statistical
+  Computing}; 2011.
+\newblock Available from: \url{http://www.r-project.org}.
+
 \bibitem{DaCostaE.Silva2012}
 {Da Costa E  Silva} L, Wang S, Zeng ZB.
 \newblock {Composite interval mapping and multiple interval mapping: Procedures
   and guidelines for using windows QTL cartographer}.
 \newblock Methods in Molecular Biology. 2012;871:75--119.
+
+\bibitem{Lander1989}
+Lander ES, Botstein S.
+\newblock {Mapping mendelian factors underlying quantitative traits using RFLP
+  linkage maps}.
+\newblock Genetics. 1989;121:185.
+
+\bibitem{Purcell2007}
+Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MaR, Bender D, et~al.
+\newblock {PLINK: a tool set for whole-genome association and population-based
+  linkage analyses.}
+\newblock American journal of human genetics. 2007 Sep;81(3):559--75.
+\newblock Available from:
+  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1950838\&tool=pmcentrez\&rendertype=abstract}.
 
 \bibitem{Marchini2010}
 Marchini J, Howie B.
@@ -814,6 +903,12 @@ Barbazuk WB, Emrich SJ, Chen HD, Li L, Schnable PS.
 \newblock Available from:
   \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2169515\&tool=pmcentrez\&rendertype=abstract}.
 
+\bibitem{Manolio2010}
+Manolio Ta.
+\newblock {Genomewide association studies and assessment of the risk of
+  disease.}
+\newblock The New England journal of medicine. 2010;363:166--176.
+
 \bibitem{Li2012}
 Li X, Zhu C, Yeh CT, Wu W, Takacs EM, Petsch Ka, et~al.
 \newblock {Genic and nongenic contributions to natural variation of
@@ -823,7 +918,7 @@ Li X, Zhu C, Yeh CT, Wu W, Takacs EM, Petsch Ka, et~al.
   \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3514673\&tool=pmcentrez\&rendertype=abstract}.
 
 \bibitem{Hallauer2005}
-a~R~Hallauer.
+Hallauer AR.
 \newblock {Registration of BSLE(M-S)C30 and BSLE(M-L)C30 Maize Germplasm}.
 \newblock Crop Science. 2005;45(5):2132.
 \newblock Available from:
@@ -899,11 +994,7 @@ Liu K, Goodman M, Muse S, Smith JS, Buckler E, Doebley J.
 
 \end{thebibliography}
 
-
-
-
 %\bibliography{ref} % Use the example bibliography file sample.bib
-
 
 
 \end{document}
