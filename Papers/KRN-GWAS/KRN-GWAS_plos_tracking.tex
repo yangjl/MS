@@ -1,7 +1,7 @@
 % Template for PLoS
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL KRN-GWAS_plos.tex           Mon Jul  6 11:05:36 2015
-%DIF ADD KRN-GWAS_plos_revised.tex   Sat Jul  4 18:20:23 2015
+%DIF ADD KRN-GWAS_plos_revised.tex   Mon Jul  6 11:48:19 2015
 % Version 3.1 February 2015
 %
 % To compile to pdf, run:
@@ -267,7 +267,10 @@ Subsequent to the adoption of genome wide association studies (GWAS) ~\cite{Klei
 
 There are multiple statistical approaches for conducting GWAS, including both single-variant and multi-variant approaches. Single-variant analyses compare the phenotypic distributions of alternative genotypes at each polymorphic site independently. They can be conducted without correction for population structure or with correction using techniques such as genomic control ~\cite{Devlin1999}, principle component analysis ~\cite{Price2006} or mixed linear models ~\cite{Yu2006}. Although single-variant analyses are most often used in published literature, they have a number of inherent limitations, such as not being able to distinguish among the contributions of closely linked loci ~\cite{Yang2012}, and they sometimes overcorrect for inflation caused by polygenic inheritance ~\cite{Yang2011}. In comparison, multi-variant approaches have already been demonstrated to be superior in classical linkage analyses, where for example, composite interval mapping outperforms simple interval mapping ~\cite{Zeng1993}. Multi-variant approaches to GWAS can explicitly account for large effect loci and estimate their effects simultaneously. Similarly, it has been suggested that the power of GWAS may be improved by conditioning on major-effect loci ~\cite{Kang2010}. One challenge to using multi-variant approaches is, however, the substantial computational burden associated with analyzing a large number of polymorphic sites. As a partial solution, stepwise regression, which selects markers based on forward inclusion and backward elimination, has been proposed ~\cite{Segura2012}. Because the order of marker inclusion has large effects on model fitting, a robust subsampling-based method was developed ~\cite{Valdar2006}. As an alternative to stepwise regression, multi-variant Bayesian-based approaches that were initially developed for genomic prediction by simultaneously fitting all genotyped loci across the genome ~\cite{Meuwissen2001} have been used for GWAS ~\cite{Fan2011, Habier2011}. These approaches fit a mixed model, where the effects of variants are treated as random, with prior assumptions regarding the distributions of their effects. 
 
-There is a need to compare the various GWAS methods ~\cite{Bush2012}.  Recently, many GWAS methods have been compared using simulated data ~\cite{Galesloot2014}. Although such studies can provide insight, they suffer from the limitation that simulated data do not necessarily reflect all characteristics of real data because some characteristics of empirical data may be unknown to the simulator. Hence, methods comparisons based on empirical data are complementary to those based on simulated data. To our knowledge there are no published reports that compare results generated from empirical data analyzed using multiple GWAS approaches. To compare the effectiveness of different GWAS approaches, we analyzed a single empirical data set using the single-variant, stepwise regression and the Bayesian-based multi-variant approaches and then assessed the degree to which the findings of these methods were supported by information in other independent empirical data sets.
+There is a need to compare the various GWAS methods ~\cite{Bush2012}.  Recently, many GWAS methods have been compared using simulated data ~\cite{Galesloot2014}. Although such studies can provide insight, they suffer from the limitation that simulated data do not necessarily reflect all characteristics of real data because some characteristics of empirical data may be unknown to the simulator. Hence, methods comparisons based on empirical data are complementary to those based on simulated data. To our knowledge there are no published reports that compare results generated from empirical data analyzed using multiple GWAS approaches\DIFaddbegin \DIFadd{, excepting a study conducted for comparing different flavors of mixed-model approaches ~\mbox{%DIFAUXCMD
+\cite{stich2008comparison}
+}%DIFAUXCMD
+}\DIFaddend . To compare the effectiveness of different GWAS approaches, we analyzed a single empirical data set using the single-variant, stepwise regression and the Bayesian-based multi-variant approaches and then assessed the degree to which the findings of these methods were supported by information in other independent empirical data sets.
 
 GWAS is typically associated with high rates of false discovery ~\cite{Visscher2012}. In human studies, a second cohort is often used to genetically validate the most significant SNPs discovered in the first cohort, thereby cost effectively reducing the number of false discoveries ~\cite{Sladek2007}. GWAS often identify associations between genes in pathways expected to impact the phenotype of interest. \DIFdelbegin \DIFdel{In plants for example, Dwarf8 locus associated with flowering time in maize have been validated in a number of populations ~\mbox{%DIFAUXCMD
 \cite{Larsson2013}
@@ -330,7 +333,7 @@ A variant thinning procedure was developed to select the most significant varian
 \subsection*{Genetic validation populations.} 
 \paragraph{Elite inbred lines.}
 
-A total of 220 elite inbred lines, commercial lines that had formerly been subject to IP (Intellectual Property) protection via the plant variation protection act, were obtained from the USDA Plant Introduction Station in Ames, IA (\url{http://www.ars.usda.gov/main/site_main.htm?modecode=36-25-12-00}). These lines were planted in three randomized field trials and observed for KRN phenotypes. DNA was isolated from seedling tissues and used to conduct GBMAS (\DIFaddbegin \DIFadd{genotyping-by-multiplexed-amplicon-sequencin. }\DIFaddend a PCR-based method that exploits Next Generation Sequencing to provide rapid and cost-effective genotyping results\DIFdelbegin \DIFdel{(Wu, Liu and Schnable, unpublished))}\DIFdelend . \DIFaddbegin \url{http://schnablelab.plantgenomics.iastate.edu/docs/resources/protocols/pdf/GBMAS-20150625.pdf}\DIFadd{). }\DIFaddend After sequence trimming, barcode sorting, and alignment to the reference genome, polymorphic variants were discovered using a variant calling pipeline we developed previously [39].
+A total of 220 elite inbred lines, commercial lines that had formerly been subject to IP (Intellectual Property) protection via the plant variation protection act, were obtained from the USDA Plant Introduction Station in Ames, IA (\url{http://www.ars.usda.gov/main/site_main.htm?modecode=36-25-12-00}). These lines were planted in three randomized field trials and observed for KRN phenotypes. DNA was isolated from seedling tissues and used to conduct GBMAS (\DIFaddbegin \DIFadd{genotyping-by-multiplexed-amplicon-sequencing is }\DIFaddend a PCR-based method that exploits Next Generation Sequencing to \DIFdelbegin \DIFdel{provide rapid and cost-effective genotyping results (Wu, Liu and Schnable, unpublished))}\DIFdelend \DIFaddbegin \DIFadd{generate genotyping data. }\url{http://schnablelab.plantgenomics.iastate.edu/docs/resources/protocols/pdf/GBMAS-20150625.pdf}\DIFadd{)}\DIFaddend . After sequence trimming, barcode sorting, and alignment to the reference genome, polymorphic variants were discovered using a variant calling pipeline we developed previously [39].
 %
 The following statistical model ~(\ref{eq:schemeP3}) was used to test the hypothesis that the favorable KAVs were associated with high KRN in the elite inbred lines:
 
@@ -1198,7 +1201,7 @@ Liu K, Goodman M, Muse S, Smith JS, Buckler E, Doebley J.
 
 \subsection*{\DIFadd{S2 Table}}
 \label{Table_S2}
-{\bf \DIFadd{Separate QTL results of IBM and NAM RILs.}} \DIFadd{The markers used in the analysis can be accesed through panzea website.
+{\bf \DIFadd{Separate QTL results of IBM and NAM RILs.}} \DIFadd{The markers used in the analysis can be accesed through Panzea website.
 }
 
 
@@ -1208,7 +1211,7 @@ Liu K, Goodman M, Muse S, Smith JS, Buckler E, Doebley J.
 
 \subsection*{\DIFadd{S4 Table}}
 \label{Table_S4}
-{\bf \DIFadd{Joint QTL results of 25 NAM RIL subpopulations.}} \DIFadd{The markers used in the analysis can be accesed through panzea website.
+{\bf \DIFadd{Joint QTL results of 25 NAM RIL subpopulations.}} \DIFadd{The markers used in the analysis can be accesed through Panzea website.
 }
 
 \subsection*{\DIFadd{S5 Table}}
