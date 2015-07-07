@@ -241,7 +241,7 @@ Subsequent to the adoption of genome wide association studies (GWAS) ~\cite{Klei
 
 There are multiple statistical approaches for conducting GWAS, including both single-variant and multi-variant approaches. Single-variant analyses compare the phenotypic distributions of alternative genotypes at each polymorphic site independently. They can be conducted without correction for population structure or with correction using techniques such as genomic control ~\cite{Devlin1999}, principle component analysis ~\cite{Price2006} or mixed linear models ~\cite{Yu2006}. Although single-variant analyses are most often used in published literature, they have a number of inherent limitations, such as not being able to distinguish among the contributions of closely linked loci ~\cite{Yang2012}, and they sometimes overcorrect for inflation caused by polygenic inheritance ~\cite{Yang2011}. In comparison, multi-variant approaches have already been demonstrated to be superior in classical linkage analyses, where for example, composite interval mapping outperforms simple interval mapping ~\cite{Zeng1993}. Multi-variant approaches to GWAS can explicitly account for large effect loci and estimate their effects simultaneously. Similarly, it has been suggested that the power of GWAS may be improved by conditioning on major-effect loci ~\cite{Kang2010}. One challenge to using multi-variant approaches is, however, the substantial computational burden associated with analyzing a large number of polymorphic sites. As a partial solution, stepwise regression, which selects markers based on forward inclusion and backward elimination, has been proposed ~\cite{Segura2012}. Because the order of marker inclusion has large effects on model fitting, a robust subsampling-based method was developed ~\cite{Valdar2006}. As an alternative to stepwise regression, multi-variant Bayesian-based approaches that were initially developed for genomic prediction by simultaneously fitting all genotyped loci across the genome ~\cite{Meuwissen2001} have been used for GWAS ~\cite{Fan2011, Habier2011}. These approaches fit a mixed model, where the effects of variants are treated as random, with prior assumptions regarding the distributions of their effects. 
 
-There is a need to compare the various GWAS methods ~\cite{Bush2012}.  Recently, many GWAS methods have been compared using simulated data ~\cite{Galesloot2014}. Although such studies can provide insight, they suffer from the limitation that simulated data do not necessarily reflect all characteristics of real data because some characteristics of empirical data may be unknown to the simulator. Hence, methods comparisons based on empirical data are complementary to those based on simulated data. To our knowledge there are no published reports that compare results generated from empirical data analyzed using multiple GWAS approaches, excepting a study conducted for comparing different flavors of mixed-model approaches ~\cite{stich2008comparison}. To compare the effectiveness of different GWAS approaches, we analyzed a single empirical data set using the single-variant, stepwise regression and the Bayesian-based multi-variant approaches and then assessed the degree to which the findings of these methods were supported by information in other independent empirical data sets.
+There is a need to compare the various GWAS methods ~\cite{Bush2012}.  Recently, many GWAS methods have been compared using simulated data ~\cite{Galesloot2014}. Although such studies can provide insight, they suffer from the limitation that simulated data do not necessarily reflect all characteristics of real data because some characteristics of empirical data may be unknown to the simulator. Hence, methods comparisons based on empirical data are complementary to those based on simulated data. To our knowledge there are no published reports that compare results generated from empirical data analyzed using multiple GWAS approaches, excepting a study had compared different flavors of mixed-model approaches ~\cite{stich2008comparison}. To compare the effectiveness of different GWAS approaches, we analyzed a single empirical data set using the single-variant, stepwise regression and the Bayesian-based multi-variant approaches and then assessed the degree to which the findings of these methods were supported by information in other independent empirical data sets.
 
 GWAS is typically associated with high rates of false discovery ~\cite{Visscher2012}. In human studies, a second cohort is often used to genetically validate the most significant SNPs discovered in the first cohort, thereby cost effectively reducing the number of false discoveries ~\cite{Sladek2007}. GWAS often identify associations between genes in pathways expected to impact the phenotype of interest. To our knowledge no large sets of genetic variations identified via GWAS as being associated with a trait of interest but that do have any other obvious connection to the phenotype have been subjected to this type of genetic validation. Here, we report on such a set of genetic variations and provide a maximum estimate for false discovery from GWAS.  
 
@@ -394,7 +394,7 @@ In combination, the 231 selected KAVs explained 64\% of phenotypic variation aft
 \subsection*{Genetic validation of KAVs using three unrelated populations}
 To distinguish true positive association signals from potentially false positive associations, three genetic validation populations that were unrelated to the GWAS populations and to each other were genotyped with the KAVs. GBMAS assays were designed for 140/231 (61\%) KAVs (Methods). A total of 1,102 DNA samples from elite inbred lines (N = 208), extreme KRN accessions from the USDA germplasm collection (N = 606) and individuals from the Iowa Long Ear Synthetic (BSLE, N = 288) ~\cite{Hallauer2005} were individually genotyped by sequencing all multiplexed amplicons from all 1,102 samples in one HiSeq2000 lane (\nameref{Table_S9}). A variant calling pipeline was used to identify variants that were consistent with those detected in the GWAS analyses and that were segregating in at least one of the three genetic validation populations (\nameref{Table_S10}, \nameref{Table_S11} and \nameref{Table_S12}). Informative variants, defined as those which were successfully genotyped, were polymorphic, and had a call rate of  $>$ 0.4 and a MAF $>$ 0.05 were used for genetic validation.
 
-The 208 elite inbred lines were phenotyped for the KRN trait (\nameref{Table_S9}). Among these lines 70/140 (50\%) of the KAVs were informative. The elite lines have KRN that are less extreme and less variable than the NAM lines. This fits with our understanding of breeder practices; they do not select for high KRN phenotypes. Hence, we suspect that the elite lines are sometimes fixed for the “favorable” (high KRN) alleles and sometimes fixed for the “unfavorable” alleles. To control for population structure, a set of SNPs that had previously been used to genotype a subset (N = 91) of these lines was fitted ~\cite{Nelson2008}. Using this control, 22/70 (31\%) of the informative KAVs could be genetically validated in the set of 91 elite inbreds with an FDR $<$ 0.05. Because the elite inbreds are not closely related to the GWAS populations, it is unlikely that uncontrolled population structure could yield false-positive validation assays for KAVs derived from the GWAS populations. Hence, we also conducted a naive analysis using the entire set of elite inbreds (N = 209) without controlling for population structure. In this analysis, 33/70 (47\%) of the KAVs, which included all of the 22 KAVs discussed above, could be validated (\nameref{Table_S9}, \nameref{Table_S10} and \nameref{Table_S13}). 
+The 208 elite inbred lines were phenotyped for the KRN trait (\nameref{Table_S9}). Among these lines 70/140 (50\%) of the KAVs were informative. The elite lines have KRN that are less extreme and less variable than the NAM lines. This fits with our understanding of breeder practices; they do not select for high KRN phenotypes. Hence, we suspect that the elite lines are sometimes fixed for the “favorable” (high KRN) alleles and sometimes fixed for the “unfavorable” alleles (low KRN). To control for population structure, a set of SNPs that had previously been used to genotype a subset (N = 91) of these lines was fitted ~\cite{Nelson2008}. Using this control, 22/70 (31\%) of the informative KAVs could be genetically validated in the set of 91 elite inbreds with an FDR $<$ 0.05. Because the elite inbreds are not closely related to the GWAS populations, it is unlikely that uncontrolled population structure could yield false-positive validation assays for KAVs derived from the GWAS populations. Hence, we also conducted a naive analysis using the entire set of elite inbreds (N = 209) without controlling for population structure. In this analysis, 33/70 (47\%) of the KAVs, which included all of the 22 KAVs discussed above, could be validated (\nameref{Table_S9}, \nameref{Table_S10} and \nameref{Table_S13}). 
 
 The USDA Plant Introduction station maintains a large collection of maize germplasm. 6,952 of their maize accessions have been phenotyped for the KRN trait. We selected the 225 accessions with the largest KRN values, the 208 accessions with the smallest KRN values, and 173 random accessions to serve as the second genetic validation population (\nameref{Table_S9}). The KRN phenotypes in this population are extreme, ranging from 16-30 rows in the high KRN pool to 4-12 rows in the low KRN pool. Because these accessions were maintained via random pollination within accessions, individual accessions are both heterogeneous and heterozygous. We therefore genotyped pools of DNA extracted from up to 12 plants per accession. A model fitted to the estimated allele frequencies was used to test the hypothesis that favorable KAV alleles have higher frequencies in the high KRN pools than in low KRN pools. Among the 56/131 (43\%) informative variants, 14/56 (25\%) could be validated using the cutoffs described in Materials and Methods (\nameref{Table_S9}, \nameref{Table_S11} and \nameref{Table_S13}). 
 
@@ -451,7 +451,7 @@ We gratefully acknowledge Dr. Arnel Hallauer, Dr. Kendall Lamkey and Mr. Paul Wh
 
 %\section*{References}
 % Either type in your references using
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
 % \bibitem{}
 % Text
 % \end{thebibliography}
@@ -466,6 +466,8 @@ We gratefully acknowledge Dr. Arnel Hallauer, Dr. Kendall Lamkey and Mr. Paul Wh
 
 %\begin{thebibliography}{10}
 
+
+%\bibliography{ref} % Use the example bibliography file sample.bib
 \bibitem{Klein2005}
 Klein RJ, Zeiss C, Chew EY, Tsai JY, Sackler RS, Haynes C, et~al.
 \newblock {Complement factor H polymorphism in age-related macular
@@ -629,18 +631,17 @@ Galesloot TE, {Van Steen} K, Kiemeney LALM, Janss LL, Vermeulen SH.
 \newblock {A comparison of multivariate genome-wide association methods}.
 \newblock PLoS ONE. 2014;9.
 
+\bibitem{stich2008comparison}
+Stich B, M{\"o}hring J, Piepho HP, Heckenberger M, Buckler ES, Melchinger AE.
+\newblock Comparison of mixed-model approaches for association mapping.
+\newblock Genetics. 2008;178(3):1745--1754.
+
 \bibitem{Sladek2007}
 Sladek R, Rocheleau G, Rung J, Dina C, Shen L, Serre D, et~al.
 \newblock {A genome-wide association study identifies novel risk loci for type
   2 diabetes.}
 \newblock Nature. 2007 Feb;445(7130):881--5.
 \newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/17293876}.
-
-%\bibitem{Larsson2013}
-%Larsson SJ, Lipka AE, Buckler ES.
-%\newblock {Lessons from Dwarf8 on the Strengths and Weaknesses of Structured
-%  Association Mapping}.
-%\newblock PLoS Genetics. 2013;9(2).
 
 \bibitem{hallauer2010quantitative}
 Hallauer AR, Carena MJ, Miranda~Filho Jd.
@@ -904,11 +905,6 @@ Liu K, Goodman M, Muse S, Smith JS, Buckler E, Doebley J.
   \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1462894\&tool=pmcentrez\&rendertype=abstract}.
 
 \end{thebibliography}
-
-
-%\bibliography{ref} % Use the example bibliography file sample.bib
-
-%\end{thebibliography}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % % % SUPPORTING INFORMATION % % %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %

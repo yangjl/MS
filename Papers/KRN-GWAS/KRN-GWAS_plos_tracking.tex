@@ -1,7 +1,7 @@
 % Template for PLoS
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL KRN-GWAS_plos.tex           Mon Jul  6 15:25:25 2015
-%DIF ADD KRN-GWAS_plos_revised.tex   Mon Jul  6 15:23:42 2015
+%DIF DEL KRN-GWAS_plos.tex           Mon Jul  6 15:46:00 2015
+%DIF ADD KRN-GWAS_plos_revised.tex   Mon Jul  6 16:06:34 2015
 % Version 3.1 February 2015
 %
 % To compile to pdf, run:
@@ -267,7 +267,7 @@ Subsequent to the adoption of genome wide association studies (GWAS) ~\cite{Klei
 
 There are multiple statistical approaches for conducting GWAS, including both single-variant and multi-variant approaches. Single-variant analyses compare the phenotypic distributions of alternative genotypes at each polymorphic site independently. They can be conducted without correction for population structure or with correction using techniques such as genomic control ~\cite{Devlin1999}, principle component analysis ~\cite{Price2006} or mixed linear models ~\cite{Yu2006}. Although single-variant analyses are most often used in published literature, they have a number of inherent limitations, such as not being able to distinguish among the contributions of closely linked loci ~\cite{Yang2012}, and they sometimes overcorrect for inflation caused by polygenic inheritance ~\cite{Yang2011}. In comparison, multi-variant approaches have already been demonstrated to be superior in classical linkage analyses, where for example, composite interval mapping outperforms simple interval mapping ~\cite{Zeng1993}. Multi-variant approaches to GWAS can explicitly account for large effect loci and estimate their effects simultaneously. Similarly, it has been suggested that the power of GWAS may be improved by conditioning on major-effect loci ~\cite{Kang2010}. One challenge to using multi-variant approaches is, however, the substantial computational burden associated with analyzing a large number of polymorphic sites. As a partial solution, stepwise regression, which selects markers based on forward inclusion and backward elimination, has been proposed ~\cite{Segura2012}. Because the order of marker inclusion has large effects on model fitting, a robust subsampling-based method was developed ~\cite{Valdar2006}. As an alternative to stepwise regression, multi-variant Bayesian-based approaches that were initially developed for genomic prediction by simultaneously fitting all genotyped loci across the genome ~\cite{Meuwissen2001} have been used for GWAS ~\cite{Fan2011, Habier2011}. These approaches fit a mixed model, where the effects of variants are treated as random, with prior assumptions regarding the distributions of their effects. 
 
-There is a need to compare the various GWAS methods ~\cite{Bush2012}.  Recently, many GWAS methods have been compared using simulated data ~\cite{Galesloot2014}. Although such studies can provide insight, they suffer from the limitation that simulated data do not necessarily reflect all characteristics of real data because some characteristics of empirical data may be unknown to the simulator. Hence, methods comparisons based on empirical data are complementary to those based on simulated data. To our knowledge there are no published reports that compare results generated from empirical data analyzed using multiple GWAS approaches\DIFaddbegin \DIFadd{, excepting a study conducted for comparing different flavors of mixed-model approaches ~\mbox{%DIFAUXCMD
+There is a need to compare the various GWAS methods ~\cite{Bush2012}.  Recently, many GWAS methods have been compared using simulated data ~\cite{Galesloot2014}. Although such studies can provide insight, they suffer from the limitation that simulated data do not necessarily reflect all characteristics of real data because some characteristics of empirical data may be unknown to the simulator. Hence, methods comparisons based on empirical data are complementary to those based on simulated data. To our knowledge there are no published reports that compare results generated from empirical data analyzed using multiple GWAS approaches\DIFaddbegin \DIFadd{, excepting a study had compared different flavors of mixed-model approaches ~\mbox{%DIFAUXCMD
 \cite{stich2008comparison}
 }%DIFAUXCMD
 }\DIFaddend . To compare the effectiveness of different GWAS approaches, we analyzed a single empirical data set using the single-variant, stepwise regression and the Bayesian-based multi-variant approaches and then assessed the degree to which the findings of these methods were supported by information in other independent empirical data sets.
@@ -489,14 +489,15 @@ We gratefully acknowledge Dr. Arnel Hallauer, Dr. Kendall Lamkey and Mr. Paul Wh
 
 %\section*{References}
 % Either type in your references using
-%DIF < \begin{thebibliography}{}
+%DIF <  \begin{thebibliography}{}
 %DIF < \bibitem{ref}
-\DIFaddbegin \begin{thebibliography}{}
-%DIF >  \bibitem{}
-\DIFaddend % Text
+%DIF < Text
 %DIF < \end{thebibliography}
+\DIFaddbegin \begin{thebibliography}{10}
+%DIF >  \bibitem{}
+%DIF >  Text
 %DIF >  \end{thebibliography}
-%
+\DIFaddend %
 % OR
 %
 % Compile your BiBTeX database using our plos2015.bst
@@ -505,464 +506,515 @@ We gratefully acknowledge Dr. Arnel Hallauer, Dr. Kendall Lamkey and Mr. Paul Wh
 % 
 
 
-\DIFdelbegin %DIFDELCMD < \begin{thebibliography}{10}
-%DIFDELCMD < %%%
+\DIFdelbegin %DIFDELCMD < \bibliography{ref} %%%
+%DIF <  Use the example bibliography file sample.bib
 \DIFdelend %DIF > \begin{thebibliography}{10}
 
-\bibitem{Klein2005}
-Klein RJ, Zeiss C, Chew EY, Tsai JY, Sackler RS, Haynes C, et~al.
-\newblock {Complement factor H polymorphism in age-related macular
-  degeneration.}
-\newblock Science (New York, NY). 2005 Apr;308(5720):385--9.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1512523\&tool=pmcentrez\&rendertype=abstract}.
+
+%DIF > \bibliography{ref} % Use the example bibliography file sample.bib
+\DIFaddbegin \bibitem{Klein2005}
+\DIFadd{Klein RJ, Zeiss C, Chew EY, Tsai JY, Sackler RS, Haynes C, et~al.
+}\newblock {\DIFadd{Complement factor H polymorphism in age-related macular
+  degeneration.}}
+\newblock \DIFadd{Science (New York, NY). 2005 Apr;308(5720):385--9.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1512523\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Visscher2012}
-Visscher PM, Brown MA, McCarthy MI, Yang J.
-\newblock {Five Years of GWAS Discovery}.
-\newblock The American Journal of Human Genetics. 2012 Jan;90(1):7--24.
-\newblock Available from:
-  \url{http://linkinghub.elsevier.com/retrieve/pii/S0002929711005337}.
+\DIFadd{Visscher PM, Brown MA, McCarthy MI, Yang J.
+}\newblock {\DIFadd{Five Years of GWAS Discovery}}\DIFadd{.
+}\newblock \DIFadd{The American Journal of Human Genetics. 2012 Jan;90(1):7--24.
+}\newblock \DIFadd{Available from:
+  }\url{http://linkinghub.elsevier.com/retrieve/pii/S0002929711005337}\DIFadd{.
+}
 
 \bibitem{Brown2011}
-Brown PJ, Upadyayula N, Mahone GS, Tian F, Bradbury PJ, Myles S, et~al.
-\newblock {Distinct Genetic Architectures for Male and Female Inflorescence
-  Traits of Maize}.
-\newblock PLoS Genetics. 2011 Nov;7(11):e1002383.
-\newblock Available from:
-  \url{http://dx.plos.org/10.1371/journal.pgen.1002383}.
+\DIFadd{Brown PJ, Upadyayula N, Mahone GS, Tian F, Bradbury PJ, Myles S, et~al.
+}\newblock {\DIFadd{Distinct Genetic Architectures for Male and Female Inflorescence
+  Traits of Maize}}\DIFadd{.
+}\newblock \DIFadd{PLoS Genetics. 2011 Nov;7(11):e1002383.
+}\newblock \DIFadd{Available from:
+  }\url{http://dx.plos.org/10.1371/journal.pgen.1002383}\DIFadd{.
+}
 
 \bibitem{Tian2011}
-Tian F, Bradbury PJ, Brown PJ, Hung H, Sun Q, Flint-Garcia S, et~al.
-\newblock {Genome-wide association study of leaf architecture in the maize
-  nested association mapping population.}
-\newblock Nature genetics. 2011 Feb;43(2):159--62.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/21217756}.
+\DIFadd{Tian F, Bradbury PJ, Brown PJ, Hung H, Sun Q, Flint-Garcia S, et~al.
+}\newblock {\DIFadd{Genome-wide association study of leaf architecture in the maize
+  nested association mapping population.}}
+\newblock \DIFadd{Nature genetics. 2011 Feb;43(2):159--62.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/21217756}\DIFadd{.
+}
 
 \bibitem{Huang2010}
-Huang X, Wei X, Sang T, Zhao Q, Feng Q, Zhao Y, et~al.
-\newblock {Genome-wide association studies of 14 agronomic traits in rice
-  landraces.}
-\newblock Nature genetics. 2010 Nov;42(11):961--7.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/20972439}.
+\DIFadd{Huang X, Wei X, Sang T, Zhao Q, Feng Q, Zhao Y, et~al.
+}\newblock {\DIFadd{Genome-wide association studies of 14 agronomic traits in rice
+  landraces.}}
+\newblock \DIFadd{Nature genetics. 2010 Nov;42(11):961--7.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/20972439}\DIFadd{.
+}
 
 \bibitem{Morris2013}
-Morris GP, Ramu P, Deshpande SP, Hash CT, Shah T, Upadhyaya HD, et~al.
-\newblock {Population genomic and genome-wide association studies of
-  agroclimatic traits in sorghum.}
-\newblock Proceedings of the National Academy of Sciences of the United States
+\DIFadd{Morris GP, Ramu P, Deshpande SP, Hash CT, Shah T, Upadhyaya HD, et~al.
+}\newblock {\DIFadd{Population genomic and genome-wide association studies of
+  agroclimatic traits in sorghum.}}
+\newblock \DIFadd{Proceedings of the National Academy of Sciences of the United States
   of America. 2013 Jan;110(2):453--8.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3545811\&tool=pmcentrez\&rendertype=abstract}.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3545811\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Cockram2010}
-Cockram J, White J, Zuluaga DL, Smith D, Comadran J, Macaulay M, et~al.
-\newblock {Genome-wide association mapping to candidate polymorphism resolution
-  in the unsequenced barley genome.}
-\newblock Proceedings of the National Academy of Sciences of the United States
+\DIFadd{Cockram J, White J, Zuluaga DL, Smith D, Comadran J, Macaulay M, et~al.
+}\newblock {\DIFadd{Genome-wide association mapping to candidate polymorphism resolution
+  in the unsequenced barley genome.}}
+\newblock \DIFadd{Proceedings of the National Academy of Sciences of the United States
   of America. 2010 Dec;107(50):21611--6.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3003063\&tool=pmcentrez\&rendertype=abstract}.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3003063\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Atwell2010}
-Atwell S, Huang YS, Vilhj\'{a}lmsson BJ, Willems G, Horton M, Li Y, et~al.
-\newblock {Genome-wide association study of 107 phenotypes in Arabidopsis
-  thaliana inbred lines.}
-\newblock Nature. 2010 Jun;465(7298):627--31.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3023908\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Atwell S, Huang YS, Vilhj}\'{a}\DIFadd{lmsson BJ, Willems G, Horton M, Li Y, et~al.
+}\newblock {\DIFadd{Genome-wide association study of 107 phenotypes in Arabidopsis
+  thaliana inbred lines.}}
+\newblock \DIFadd{Nature. 2010 Jun;465(7298):627--31.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3023908\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Meijon2014}
-Meij\'{o}n M, Satbhai SB, Tsuchimatsu T, Busch W.
-\newblock {Genome-wide association study using cellular traits identifies a new
-  regulator of root development in Arabidopsis.}
-\newblock Nature genetics. 2014 Jan;46(1):77--81.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/24212884}.
+\DIFadd{Meij}\'{o}\DIFadd{n M, Satbhai SB, Tsuchimatsu T, Busch W.
+}\newblock {\DIFadd{Genome-wide association study using cellular traits identifies a new
+  regulator of root development in Arabidopsis.}}
+\newblock \DIFadd{Nature genetics. 2014 Jan;46(1):77--81.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/24212884}\DIFadd{.
+}
 
 \bibitem{Devlin1999}
-Devlin B, Roeder K.
-\newblock {Genomic Control for Association Studies}.
-\newblock Biometrics. 1999;55(4):997--1004.
+\DIFadd{Devlin B, Roeder K.
+}\newblock {\DIFadd{Genomic Control for Association Studies}}\DIFadd{.
+}\newblock \DIFadd{Biometrics. 1999;55(4):997--1004.
+}
 
 \bibitem{Price2006}
-Price AL, Patterson NJ, Plenge RM, Weinblatt ME, Shadick Na, Reich D.
-\newblock {Principal components analysis corrects for stratification in
-  genome-wide association studies.}
-\newblock Nature genetics. 2006 Aug;38(8):904--9.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/16862161}.
+\DIFadd{Price AL, Patterson NJ, Plenge RM, Weinblatt ME, Shadick Na, Reich D.
+}\newblock {\DIFadd{Principal components analysis corrects for stratification in
+  genome-wide association studies.}}
+\newblock \DIFadd{Nature genetics. 2006 Aug;38(8):904--9.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/16862161}\DIFadd{.
+}
 
 \bibitem{Yu2006}
-Yu J, Pressoir G, Briggs WH, {Vroh Bi} I, Yamasaki M, Doebley JF, et~al.
-\newblock {A unified mixed-model method for association mapping that accounts
-  for multiple levels of relatedness.}
-\newblock Nature genetics. 2006 Feb;38(2):203--8.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/16380716}.
+\DIFadd{Yu J, Pressoir G, Briggs WH, }{\DIFadd{Vroh Bi}} \DIFadd{I, Yamasaki M, Doebley JF, et~al.
+}\newblock {\DIFadd{A unified mixed-model method for association mapping that accounts
+  for multiple levels of relatedness.}}
+\newblock \DIFadd{Nature genetics. 2006 Feb;38(2):203--8.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/16380716}\DIFadd{.
+}
 
 \bibitem{Yang2012}
-Yang J, Ferreira T, Morris AP, Medland SE, Madden PaF, Heath AC, et~al.
-\newblock {Conditional and joint multiple-SNP analysis of GWAS summary
-  statistics identifies additional variants influencing complex traits}.
-\newblock Nature Genetics. 2012;44(4):369--375.
-\newblock Available from: \url{http://dx.doi.org/10.1038/ng.2213}.
+\DIFadd{Yang J, Ferreira T, Morris AP, Medland SE, Madden PaF, Heath AC, et~al.
+}\newblock {\DIFadd{Conditional and joint multiple-SNP analysis of GWAS summary
+  statistics identifies additional variants influencing complex traits}}\DIFadd{.
+}\newblock \DIFadd{Nature Genetics. 2012;44(4):369--375.
+}\newblock \DIFadd{Available from: }\url{http://dx.doi.org/10.1038/ng.2213}\DIFadd{.
+}
 
 \bibitem{Yang2011}
-Yang J, Weedon MN, Purcell S, Lettre G, Estrada K, Willer CJ, et~al.
-\newblock {Genomic inflation factors under polygenic inheritance.}
-\newblock European journal of human genetics : EJHG. 2011;19(January):807--812.
+\DIFadd{Yang J, Weedon MN, Purcell S, Lettre G, Estrada K, Willer CJ, et~al.
+}\newblock {\DIFadd{Genomic inflation factors under polygenic inheritance.}}
+\newblock \DIFadd{European journal of human genetics : EJHG. 2011;19(January):807--812.
+}
 
 \bibitem{Zeng1993}
-Zeng ZB.
-\newblock {Theoretical basis for separation of multiple linked gene effects in
-  mapping quantitative trait loci.}
-\newblock Proceedings of the National Academy of Sciences of the United States
+\DIFadd{Zeng ZB.
+}\newblock {\DIFadd{Theoretical basis for separation of multiple linked gene effects in
+  mapping quantitative trait loci.}}
+\newblock \DIFadd{Proceedings of the National Academy of Sciences of the United States
   of America. 1993 Dec;90(23):10972--6.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=47903\&tool=pmcentrez\&rendertype=abstract}.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=47903\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Kang2010}
-Kang HM, Sul JH, Service SK, Zaitlen Na, Kong SY, Freimer NB, et~al.
-\newblock {Variance component model to account for sample structure in
-  genome-wide association studies.}
-\newblock Nature genetics. 2010 Apr;42(4):348--54.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3092069\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Kang HM, Sul JH, Service SK, Zaitlen Na, Kong SY, Freimer NB, et~al.
+}\newblock {\DIFadd{Variance component model to account for sample structure in
+  genome-wide association studies.}}
+\newblock \DIFadd{Nature genetics. 2010 Apr;42(4):348--54.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3092069\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Segura2012}
-Segura V, Vilhj\'{a}lmsson BJ, Platt A, Korte A, Seren U, Long Q, et~al.
-\newblock {An efficient multi-locus mixed-model approach for genome-wide
-  association studies in structured populations.}
-\newblock Nature genetics. 2012 Jul;44(7):825--30.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3386481\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Segura V, Vilhj}\'{a}\DIFadd{lmsson BJ, Platt A, Korte A, Seren U, Long Q, et~al.
+}\newblock {\DIFadd{An efficient multi-locus mixed-model approach for genome-wide
+  association studies in structured populations.}}
+\newblock \DIFadd{Nature genetics. 2012 Jul;44(7):825--30.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3386481\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Valdar2006}
-Valdar W, Solberg LC, Gauguier D, Burnett S, Klenerman P, Cookson WO, et~al.
-\newblock {Genome-wide genetic association of complex traits in heterogeneous
-  stock mice.}
-\newblock Nature genetics. 2006;38(8):879--887.
+\DIFadd{Valdar W, Solberg LC, Gauguier D, Burnett S, Klenerman P, Cookson WO, et~al.
+}\newblock {\DIFadd{Genome-wide genetic association of complex traits in heterogeneous
+  stock mice.}}
+\newblock \DIFadd{Nature genetics. 2006;38(8):879--887.
+}
 
 \bibitem{Meuwissen2001}
-Meuwissen TH, Hayes BJ, Goddard ME.
-\newblock {Prediction of total genetic value using genome-wide dense marker
-  maps.}
-\newblock Genetics. 2001 Apr;157(4):1819--29.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1461589\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Meuwissen TH, Hayes BJ, Goddard ME.
+}\newblock {\DIFadd{Prediction of total genetic value using genome-wide dense marker
+  maps.}}
+\newblock \DIFadd{Genetics. 2001 Apr;157(4):1819--29.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1461589\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Fan2011}
-Fan B, Onteru SK, Du ZQ, Garrick DJ, Stalder KJ, Rothschild MF.
-\newblock {Genome-wide association study identifies loci for body composition
-  and structural soundness traits in pigs}.
-\newblock PLoS ONE. 2011;6(2).
+\DIFadd{Fan B, Onteru SK, Du ZQ, Garrick DJ, Stalder KJ, Rothschild MF.
+}\newblock {\DIFadd{Genome-wide association study identifies loci for body composition
+  and structural soundness traits in pigs}}\DIFadd{.
+}\newblock \DIFadd{PLoS ONE. 2011;6(2).
+}
 
 \bibitem{Habier2011}
-Habier D, Fernando RL, Kizilkaya K, Garrick DJ.
-\newblock {Extension of the bayesian alphabet for genomic selection.}
-\newblock BMC bioinformatics. 2011 Jan;12(1):186.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3144464\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Habier D, Fernando RL, Kizilkaya K, Garrick DJ.
+}\newblock {\DIFadd{Extension of the bayesian alphabet for genomic selection.}}
+\newblock \DIFadd{BMC bioinformatics. 2011 Jan;12(1):186.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3144464\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Bush2012}
-Bush WS, Moore JH.
-\newblock {Chapter 11: Genome-Wide Association Studies}.
-\newblock PLoS Computational Biology. 2012;8(12).
+\DIFadd{Bush WS, Moore JH.
+}\newblock {\DIFadd{Chapter 11: Genome-Wide Association Studies}}\DIFadd{.
+}\newblock \DIFadd{PLoS Computational Biology. 2012;8(12).
+}
 
 \bibitem{Galesloot2014}
-Galesloot TE, {Van Steen} K, Kiemeney LALM, Janss LL, Vermeulen SH.
-\newblock {A comparison of multivariate genome-wide association methods}.
-\newblock PLoS ONE. 2014;9.
+\DIFadd{Galesloot TE, }{\DIFadd{Van Steen}} \DIFadd{K, Kiemeney LALM, Janss LL, Vermeulen SH.
+}\newblock {\DIFadd{A comparison of multivariate genome-wide association methods}}\DIFadd{.
+}\newblock \DIFadd{PLoS ONE. 2014;9.
+}
+
+\bibitem{stich2008comparison}
+\DIFadd{Stich B, M}{\"o}\DIFadd{hring J, Piepho HP, Heckenberger M, Buckler ES, Melchinger AE.
+}\newblock \DIFadd{Comparison of mixed-model approaches for association mapping.
+}\newblock \DIFadd{Genetics. 2008;178(3):1745--1754.
+}
 
 \bibitem{Sladek2007}
-Sladek R, Rocheleau G, Rung J, Dina C, Shen L, Serre D, et~al.
-\newblock {A genome-wide association study identifies novel risk loci for type
-  2 diabetes.}
-\newblock Nature. 2007 Feb;445(7130):881--5.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/17293876}.
-
-\DIFdelbegin %DIFDELCMD < \bibitem{Larsson2013}
-%DIFDELCMD < %%%
-\DIFdel{Larsson SJ, Lipka AE, Buckler ES.
-}%DIFDELCMD < \newblock {%%%
-\DIFdel{Lessons from Dwarf8 on the Strengths and Weaknesses of Structured
-  Association Mapping}%DIFDELCMD < }%%%
-\DIFdel{.
-}%DIFDELCMD < \newblock %%%
-\DIFdel{PLoS Genetics. 2013;9(2).
-}\DIFdelend %DIF > \bibitem{Larsson2013}
-%DIF > Larsson SJ, Lipka AE, Buckler ES.
-%DIF > \newblock {Lessons from Dwarf8 on the Strengths and Weaknesses of Structured
-%DIF >   Association Mapping}.
-%DIF > \newblock PLoS Genetics. 2013;9(2).
+\DIFadd{Sladek R, Rocheleau G, Rung J, Dina C, Shen L, Serre D, et~al.
+}\newblock {\DIFadd{A genome-wide association study identifies novel risk loci for type
+  2 diabetes.}}
+\newblock \DIFadd{Nature. 2007 Feb;445(7130):881--5.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/17293876}\DIFadd{.
+}
 
 \bibitem{hallauer2010quantitative}
-Hallauer AR, Carena MJ, Miranda~Filho Jd.
-\newblock {Quantitative genetics in maize breeding}. vol.~6.
-\newblock Springer Science \& Business Media; 2010.
+\DIFadd{Hallauer AR, Carena MJ, Miranda~Filho Jd.
+}\newblock {\DIFadd{Quantitative genetics in maize breeding}}\DIFadd{. vol.~6.
+}\newblock \DIFadd{Springer Science }\& \DIFadd{Business Media; 2010.
+}
 
 \bibitem{Lu2011}
-Lu M, Xie CX, Li XH, Hao ZF, Li MS, Weng JF, et~al.
-\newblock {Mapping of quantitative trait loci for kernel row number in maize
-  across seven environments}.
-\newblock Molecular Breeding. 2011;28:143--152.
+\DIFadd{Lu M, Xie CX, Li XH, Hao ZF, Li MS, Weng JF, et~al.
+}\newblock {\DIFadd{Mapping of quantitative trait loci for kernel row number in maize
+  across seven environments}}\DIFadd{.
+}\newblock \DIFadd{Molecular Breeding. 2011;28:143--152.
+}
 
 \bibitem{Lee2002}
-Lee M, Sharopova N, Beavis WD, Grant D, Katt M, Blair D, et~al.
-\newblock {Expanding the genetic map of maize with the intermated B73 x Mo17
-  (IBM) population}.
-\newblock Plant Molecular Biology. 2002;48:453--461.
+\DIFadd{Lee M, Sharopova N, Beavis WD, Grant D, Katt M, Blair D, et~al.
+}\newblock {\DIFadd{Expanding the genetic map of maize with the intermated B73 x Mo17
+  (IBM) population}}\DIFadd{.
+}\newblock \DIFadd{Plant Molecular Biology. 2002;48:453--461.
+}
 
 \bibitem{Yu2008}
-Yu J, Holland JB, McMullen MD, Buckler ES.
-\newblock {Genetic design and statistical power of nested association mapping
-  in maize.}
-\newblock Genetics. 2008 Jan;178(1):539--51.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2206100\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Yu J, Holland JB, McMullen MD, Buckler ES.
+}\newblock {\DIFadd{Genetic design and statistical power of nested association mapping
+  in maize.}}
+\newblock \DIFadd{Genetics. 2008 Jan;178(1):539--51.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2206100\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{DevelopmentCoreTeam2011}
-{Development Core Team} R. {R: A Language and Environment for Statistical
-  Computing}; 2011.
-\newblock Available from: \url{http://www.r-project.org}.
+{\DIFadd{Development Core Team}} \DIFadd{R. }{\DIFadd{R: A Language and Environment for Statistical
+  Computing}}\DIFadd{; 2011.
+}\newblock \DIFadd{Available from: }\url{http://www.r-project.org}\DIFadd{.
+}
 
 \bibitem{DaCostaE.Silva2012}
-{Da Costa E  Silva} L, Wang S, Zeng ZB.
-\newblock {Composite interval mapping and multiple interval mapping: Procedures
-  and guidelines for using windows QTL cartographer}.
-\newblock Methods in Molecular Biology. 2012;871:75--119.
+{\DIFadd{Da Costa E  Silva}} \DIFadd{L, Wang S, Zeng ZB.
+}\newblock {\DIFadd{Composite interval mapping and multiple interval mapping: Procedures
+  and guidelines for using windows QTL cartographer}}\DIFadd{.
+}\newblock \DIFadd{Methods in Molecular Biology. 2012;871:75--119.
+}
 
 \bibitem{Lander1989}
-Lander ES, Botstein S.
-\newblock {Mapping mendelian factors underlying quantitative traits using RFLP
-  linkage maps}.
-\newblock Genetics. 1989;121:185.
+\DIFadd{Lander ES, Botstein S.
+}\newblock {\DIFadd{Mapping mendelian factors underlying quantitative traits using RFLP
+  linkage maps}}\DIFadd{.
+}\newblock \DIFadd{Genetics. 1989;121:185.
+}
 
 \bibitem{Purcell2007}
-Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MaR, Bender D, et~al.
-\newblock {PLINK: a tool set for whole-genome association and population-based
-  linkage analyses.}
-\newblock American journal of human genetics. 2007 Sep;81(3):559--75.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1950838\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MaR, Bender D, et~al.
+}\newblock {\DIFadd{PLINK: a tool set for whole-genome association and population-based
+  linkage analyses.}}
+\newblock \DIFadd{American journal of human genetics. 2007 Sep;81(3):559--75.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1950838\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Marchini2010}
-Marchini J, Howie B.
-\newblock {Genotype imputation for genome-wide association studies.}
-\newblock Nature reviews Genetics. 2010;11:499--511.
+\DIFadd{Marchini J, Howie B.
+}\newblock {\DIFadd{Genotype imputation for genome-wide association studies.}}
+\newblock \DIFadd{Nature reviews Genetics. 2010;11:499--511.
+}
 
 \bibitem{Aulchenko2007}
-Aulchenko YS, Ripke S, Isaacs A, van Duijn CM.
-\newblock {GenABEL: an R library for genome-wide association analysis.}
-\newblock Bioinformatics (Oxford, England). 2007 May;23(10):1294--6.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/17384015}.
+\DIFadd{Aulchenko YS, Ripke S, Isaacs A, van Duijn CM.
+}\newblock {\DIFadd{GenABEL: an R library for genome-wide association analysis.}}
+\newblock \DIFadd{Bioinformatics (Oxford, England). 2007 May;23(10):1294--6.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/17384015}\DIFadd{.
+}
 
 \bibitem{Benjamini1995}
-Benjamini Y, Hochberg Y.
-\newblock {controlling the false discovery rate: A practical and powerful
-  approach to multiple testing}.
-\newblock Journal of the Royal Statistical Society Series B \ldots.
-  1995;Available from: \url{http://www.jstor.org/stable/10.2307/2346101}.
+\DIFadd{Benjamini Y, Hochberg Y.
+}\newblock {\DIFadd{controlling the false discovery rate: A practical and powerful
+  approach to multiple testing}}\DIFadd{.
+}\newblock \DIFadd{Journal of the Royal Statistical Society Series B \ldots.
+  1995;Available from: }\url{http://www.jstor.org/stable/10.2307/2346101}\DIFadd{.
+}
 
 \bibitem{Hallauer2004}
-Hallauer AR, Ross AJ, Lee M.
-\newblock {Long-term Divergent Selection for Ear Length in Maize}. 2004;24.
+\DIFadd{Hallauer AR, Ross AJ, Lee M.
+}\newblock {\DIFadd{Long-term Divergent Selection for Ear Length in Maize}}\DIFadd{. 2004;24.
+}
 
 \bibitem{Poole2007}
-Poole RL.
-\newblock {The TAIR database.}
-\newblock Methods in molecular biology (Clifton, NJ). 2007;406:179--212.
+\DIFadd{Poole RL.
+}\newblock {\DIFadd{The TAIR database.}}
+\newblock \DIFadd{Methods in molecular biology (Clifton, NJ). 2007;406:179--212.
+}
 
 \bibitem{Kanehisa2002}
-Kanehisa M.
-\newblock {The KEGG database.}
-\newblock Novartis Foundation symposium. 2002;247:91--101; discussion 101--103,
+\DIFadd{Kanehisa M.
+}\newblock {\DIFadd{The KEGG database.}}
+\newblock \DIFadd{Novartis Foundation symposium. 2002;247:91--101; discussion 101--103,
   119--128, 244--252.
+}
 
 \bibitem{Barazesh2008}
-Barazesh S, McSteen P.
-\newblock {Hormonal control of grass inflorescence development.}
-\newblock Trends in plant science. 2008 Dec;13(12):656--62.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/18986827}.
+\DIFadd{Barazesh S, McSteen P.
+}\newblock {\DIFadd{Hormonal control of grass inflorescence development.}}
+\newblock \DIFadd{Trends in plant science. 2008 Dec;13(12):656--62.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/18986827}\DIFadd{.
+}
 
 \bibitem{Bortiri2006}
-Bortiri E, Chuck G, Vollbrecht E, Rocheford T, Martienssen R, Hake S.
-\newblock {ramosa2 encodes a LATERAL ORGAN BOUNDARY domain protein that
-  determines the fate of stem cells in branch meristems of maize.}
-\newblock The Plant cell. 2006;18:574--585.
+\DIFadd{Bortiri E, Chuck G, Vollbrecht E, Rocheford T, Martienssen R, Hake S.
+}\newblock {\DIFadd{ramosa2 encodes a LATERAL ORGAN BOUNDARY domain protein that
+  determines the fate of stem cells in branch meristems of maize.}}
+\newblock \DIFadd{The Plant cell. 2006;18:574--585.
+}
 
 \bibitem{McSteen2001}
-McSteen P, Hake S.
-\newblock barren inflorescence2 regulates axillary meristem development in the
+\DIFadd{McSteen P, Hake S.
+}\newblock \DIFadd{barren inflorescence2 regulates axillary meristem development in the
   maize inflorescence.
-\newblock Development (Cambridge, England). 2001;128:2881--2891.
+}\newblock \DIFadd{Development (Cambridge, England). 2001;128:2881--2891.
+}
 
 \bibitem{Upadyayula2006}
-Upadyayula N, da~Silva HS, Bohn MO, Rocheford TR.
-\newblock {Genetic and QTL analysis of maize tassel and ear inflorescence
-  architecture.}
-\newblock TAG Theoretical and applied genetics Theoretische und angewandte
+\DIFadd{Upadyayula N, da~Silva HS, Bohn MO, Rocheford TR.
+}\newblock {\DIFadd{Genetic and QTL analysis of maize tassel and ear inflorescence
+  architecture.}}
+\newblock \DIFadd{TAG Theoretical and applied genetics Theoretische und angewandte
   Genetik. 2006 Feb;112(4):592--606.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/16395569}.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/16395569}\DIFadd{.
+}
 
 \bibitem{Xu2011}
-Xu XM, Wang J, Xuan Z, Goldshmidt A, Borrill PGM, Hariharan N, et~al.
-\newblock {Chaperonins facilitate KNOTTED1 cell-to-cell trafficking and stem
-  cell function.}
-\newblock Science (New York, NY). 2011 Aug;333(6046):1141--4.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/21868675}.
+\DIFadd{Xu XM, Wang J, Xuan Z, Goldshmidt A, Borrill PGM, Hariharan N, et~al.
+}\newblock {\DIFadd{Chaperonins facilitate KNOTTED1 cell-to-cell trafficking and stem
+  cell function.}}
+\newblock \DIFadd{Science (New York, NY). 2011 Aug;333(6046):1141--4.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/21868675}\DIFadd{.
+}
 
 \bibitem{McMullen2009}
-McMullen MD, Kresovich S, Villeda HS, Bradbury P, Li H, Sun Q, et~al.
-\newblock {Genetic properties of the maize nested association mapping
-  population.}
-\newblock Science (New York, NY). 2009 Aug;325(5941):737--40.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/19661427}.
+\DIFadd{McMullen MD, Kresovich S, Villeda HS, Bradbury P, Li H, Sun Q, et~al.
+}\newblock {\DIFadd{Genetic properties of the maize nested association mapping
+  population.}}
+\newblock \DIFadd{Science (New York, NY). 2009 Aug;325(5941):737--40.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/19661427}\DIFadd{.
+}
 
 \bibitem{Srdic2007}
-Srdic J, Pajic Z, Drinic-Mladenovic S.
-\newblock {Inheritance of maize grain yield components}.
-\newblock Maydica. 2007;52:261--264.
-\newblock Available from:
-  \url{http://www.scopus.com/inward/record.url?eid=2-s2.0-37249062073\&partnerID=40\&md5=99c7136edf3ea03599a3d8355a54444a}.
+\DIFadd{Srdic J, Pajic Z, Drinic-Mladenovic S.
+}\newblock {\DIFadd{Inheritance of maize grain yield components}}\DIFadd{.
+}\newblock \DIFadd{Maydica. 2007;52:261--264.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.scopus.com/inward/record.url?eid=2-s2.0-37249062073\&partnerID=40\&md5=99c7136edf3ea03599a3d8355a54444a}\DIFadd{.
+}
 
 \bibitem{Toledo2011}
-Toledo FHRB, Ramalho MAP, Abreu GB, de~Souza JC.
-\newblock {Inheritance of kernel row number, a multicategorical threshold trait
-  of maize ears}.
-\newblock Genetics and Molecular Research. 2011;10:2133--2139.
+\DIFadd{Toledo FHRB, Ramalho MAP, Abreu GB, de~Souza JC.
+}\newblock {\DIFadd{Inheritance of kernel row number, a multicategorical threshold trait
+  of maize ears}}\DIFadd{.
+}\newblock \DIFadd{Genetics and Molecular Research. 2011;10:2133--2139.
+}
 
 \bibitem{Liu2010}
-Liu S, Chen HD, Makarevitch I, Shirmer R, Emrich SJ, Dietrich CR, et~al.
-\newblock {High-throughput genetic mapping of mutants via quantitative single
-  nucleotide polymorphism typing.}
-\newblock Genetics. 2010 Jan;184(1):19--26.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2815916\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Liu S, Chen HD, Makarevitch I, Shirmer R, Emrich SJ, Dietrich CR, et~al.
+}\newblock {\DIFadd{High-throughput genetic mapping of mutants via quantitative single
+  nucleotide polymorphism typing.}}
+\newblock \DIFadd{Genetics. 2010 Jan;184(1):19--26.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2815916\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Buckler2009}
-Buckler ES, Holland JB, Bradbury PJ, Acharya CB, Brown PJ, Browne C, et~al.
-\newblock {The genetic architecture of maize flowering time.}
-\newblock Science (New York, NY). 2009 Aug;325(5941):714--8.
-\newblock Available from:
-  \url{http://www.sciencemag.org/content/325/5941/714.short
-  http://www.ncbi.nlm.nih.gov/pubmed/19661422}.
+\DIFadd{Buckler ES, Holland JB, Bradbury PJ, Acharya CB, Brown PJ, Browne C, et~al.
+}\newblock {\DIFadd{The genetic architecture of maize flowering time.}}
+\newblock \DIFadd{Science (New York, NY). 2009 Aug;325(5941):714--8.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.sciencemag.org/content/325/5941/714.short
+  http://www.ncbi.nlm.nih.gov/pubmed/19661422}\DIFadd{.
+}
 
 \bibitem{Gore2009}
-Gore Ma, Chia JM, Elshire RJ, Sun Q, Ersoz ES, Hurwitz BL, et~al.
-\newblock {A first-generation haplotype map of maize.}
-\newblock Science (New York, NY). 2009 Nov;326(5956):1115--7.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/19965431}.
+\DIFadd{Gore Ma, Chia JM, Elshire RJ, Sun Q, Ersoz ES, Hurwitz BL, et~al.
+}\newblock {\DIFadd{A first-generation haplotype map of maize.}}
+\newblock \DIFadd{Science (New York, NY). 2009 Nov;326(5956):1115--7.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/19965431}\DIFadd{.
+}
 
 \bibitem{Chia2012}
-Chia JM, Song C, Bradbury PJ, Costich D, de~Leon N, Doebley J, et~al.
-\newblock {Maize HapMap2 identifies extant variation from a genome in flux.}
-\newblock Nature genetics. 2012 Jan;44(7):803--7.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/22660545}.
+\DIFadd{Chia JM, Song C, Bradbury PJ, Costich D, de~Leon N, Doebley J, et~al.
+}\newblock {\DIFadd{Maize HapMap2 identifies extant variation from a genome in flux.}}
+\newblock \DIFadd{Nature genetics. 2012 Jan;44(7):803--7.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/22660545}\DIFadd{.
+}
 
 \bibitem{Barbazuk2007}
-Barbazuk WB, Emrich SJ, Chen HD, Li L, Schnable PS.
-\newblock {SNP discovery via 454 transcriptome sequencing.}
-\newblock The Plant journal : for cell and molecular biology. 2007
+\DIFadd{Barbazuk WB, Emrich SJ, Chen HD, Li L, Schnable PS.
+}\newblock {\DIFadd{SNP discovery via 454 transcriptome sequencing.}}
+\newblock \DIFadd{The Plant journal : for cell and molecular biology. 2007
   Sep;51(5):910--8.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2169515\&tool=pmcentrez\&rendertype=abstract}.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2169515\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Manolio2010}
-Manolio Ta.
-\newblock {Genomewide association studies and assessment of the risk of
-  disease.}
-\newblock The New England journal of medicine. 2010;363:166--176.
+\DIFadd{Manolio Ta.
+}\newblock {\DIFadd{Genomewide association studies and assessment of the risk of
+  disease.}}
+\newblock \DIFadd{The New England journal of medicine. 2010;363:166--176.
+}
 
 \bibitem{Li2012}
-Li X, Zhu C, Yeh CT, Wu W, Takacs EM, Petsch Ka, et~al.
-\newblock {Genic and nongenic contributions to natural variation of
-  quantitative traits in maize.}
-\newblock Genome research. 2012 Dec;22(12):2436--44.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3514673\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Li X, Zhu C, Yeh CT, Wu W, Takacs EM, Petsch Ka, et~al.
+}\newblock {\DIFadd{Genic and nongenic contributions to natural variation of
+  quantitative traits in maize.}}
+\newblock \DIFadd{Genome research. 2012 Dec;22(12):2436--44.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3514673\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \bibitem{Hallauer2005}
-Hallauer AR.
-\newblock {Registration of BSLE(M-S)C30 and BSLE(M-L)C30 Maize Germplasm}.
-\newblock Crop Science. 2005;45(5):2132.
-\newblock Available from:
-  \url{https://www.crops.org/publications/cs/abstracts/45/5/2132}.
+\DIFadd{Hallauer AR.
+}\newblock {\DIFadd{Registration of BSLE(M-S)C30 and BSLE(M-L)C30 Maize Germplasm}}\DIFadd{.
+}\newblock \DIFadd{Crop Science. 2005;45(5):2132.
+}\newblock \DIFadd{Available from:
+  }\url{https://www.crops.org/publications/cs/abstracts/45/5/2132}\DIFadd{.
+}
 
 \bibitem{Nelson2008}
-Nelson PT, Coles ND, Holland JB, Bubeck DM, Smith S, Goodman MM.
-\newblock {Molecular Characterization of Maize Inbreds with Expired U.S. Plant
-  Variety Protection}.
-\newblock Crop Science. 2008;48(5):1673.
-\newblock Available from:
-  \url{https://www.crops.org/publications/cs/abstracts/48/5/1673}.
+\DIFadd{Nelson PT, Coles ND, Holland JB, Bubeck DM, Smith S, Goodman MM.
+}\newblock {\DIFadd{Molecular Characterization of Maize Inbreds with Expired U.S. Plant
+  Variety Protection}}\DIFadd{.
+}\newblock \DIFadd{Crop Science. 2008;48(5):1673.
+}\newblock \DIFadd{Available from:
+  }\url{https://www.crops.org/publications/cs/abstracts/48/5/1673}\DIFadd{.
+}
 
 \bibitem{Fu2002}
-Fu H, Zheng Z, Dooner HK.
-\newblock {Recombination rates between adjacent genic and retrotransposon
-  regions in maize vary by 2 orders of magnitude.}
-\newblock Proceedings of the National Academy of Sciences of the United States
+\DIFadd{Fu H, Zheng Z, Dooner HK.
+}\newblock {\DIFadd{Recombination rates between adjacent genic and retrotransposon
+  regions in maize vary by 2 orders of magnitude.}}
+\newblock \DIFadd{Proceedings of the National Academy of Sciences of the United States
   of America. 2002;99:1082--1087.
+}
 
 \bibitem{Liu2009}
-Liu S, Yeh CT, Ji T, Ying K, Wu H, Tang HM, et~al.
-\newblock {Mu transposon insertion sites and meiotic recombination events
+\DIFadd{Liu S, Yeh CT, Ji T, Ying K, Wu H, Tang HM, et~al.
+}\newblock {\DIFadd{Mu transposon insertion sites and meiotic recombination events
   co-localize with epigenetic marks for open chromatin across the maize
-  genome}.
-\newblock PLoS Genetics. 2009;5.
+  genome}}\DIFadd{.
+}\newblock \DIFadd{PLoS Genetics. 2009;5.
+}
 
 \bibitem{Bommert2013}
-Bommert P, Nagasawa NS, Jackson D.
-\newblock {Quantitative variation in maize kernel row number is controlled by
-  the FASCIATED EAR2 locus.}
-\newblock Nature genetics. 2013 Feb;(February):1--5.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/23377180}.
+\DIFadd{Bommert P, Nagasawa NS, Jackson D.
+}\newblock {\DIFadd{Quantitative variation in maize kernel row number is controlled by
+  the FASCIATED EAR2 locus.}}
+\newblock \DIFadd{Nature genetics. 2013 Feb;(February):1--5.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/23377180}\DIFadd{.
+}
 
 \bibitem{Bommert2005}
-Bommert P, Lunde C, Nardmann J, Vollbrecht E, Running M, Jackson D, et~al.
-\newblock {thick tassel dwarf1 encodes a putative maize ortholog of the
-  Arabidopsis CLAVATA1 leucine-rich repeat receptor-like kinase.}
-\newblock Development (Cambridge, England). 2005 Mar;132(6):1235--45.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/15716347}.
+\DIFadd{Bommert P, Lunde C, Nardmann J, Vollbrecht E, Running M, Jackson D, et~al.
+}\newblock {\DIFadd{thick tassel dwarf1 encodes a putative maize ortholog of the
+  Arabidopsis CLAVATA1 leucine-rich repeat receptor-like kinase.}}
+\newblock \DIFadd{Development (Cambridge, England). 2005 Mar;132(6):1235--45.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/15716347}\DIFadd{.
+}
 
 \bibitem{Clark2001}
-Clark SE.
-\newblock {Cell signalling at the shoot meristem.}
-\newblock Nature reviews Molecular cell biology. 2001 Apr;2(4):276--84.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/11283725}.
+\DIFadd{Clark SE.
+}\newblock {\DIFadd{Cell signalling at the shoot meristem.}}
+\newblock \DIFadd{Nature reviews Molecular cell biology. 2001 Apr;2(4):276--84.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/11283725}\DIFadd{.
+}
 
 \bibitem{Sigmon2010}
-Sigmon B, Vollbrecht E.
-\newblock {Evidence of selection at the ramosa1 locus during maize
-  domestication}.
-\newblock Molecular Ecology. 2010;19:1296--1311.
+\DIFadd{Sigmon B, Vollbrecht E.
+}\newblock {\DIFadd{Evidence of selection at the ramosa1 locus during maize
+  domestication}}\DIFadd{.
+}\newblock \DIFadd{Molecular Ecology. 2010;19:1296--1311.
+}
 
 \bibitem{Balding2006}
-Balding DJ.
-\newblock {A tutorial on statistical methods for population association
-  studies.}
-\newblock Nature reviews Genetics. 2006;7:781--791.
+\DIFadd{Balding DJ.
+}\newblock {\DIFadd{A tutorial on statistical methods for population association
+  studies.}}
+\newblock \DIFadd{Nature reviews Genetics. 2006;7:781--791.
+}
 
 \bibitem{Kim2007}
-Kim S, Plagnol V, Hu TT, Toomajian C, Clark RM, Ossowski S, et~al.
-\newblock {Recombination and linkage disequilibrium in Arabidopsis thaliana.}
-\newblock Nature genetics. 2007 Sep;39(9):1151--5.
-\newblock Available from: \url{http://www.ncbi.nlm.nih.gov/pubmed/17676040}.
+\DIFadd{Kim S, Plagnol V, Hu TT, Toomajian C, Clark RM, Ossowski S, et~al.
+}\newblock {\DIFadd{Recombination and linkage disequilibrium in Arabidopsis thaliana.}}
+\newblock \DIFadd{Nature genetics. 2007 Sep;39(9):1151--5.
+}\newblock \DIFadd{Available from: }\url{http://www.ncbi.nlm.nih.gov/pubmed/17676040}\DIFadd{.
+}
 
 \bibitem{Liu2003}
-Liu K, Goodman M, Muse S, Smith JS, Buckler E, Doebley J.
-\newblock {Genetic structure and diversity among maize inbred lines as inferred
-  from DNA microsatellites.}
-\newblock Genetics. 2003 Dec;165(4):2117--28.
-\newblock Available from:
-  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1462894\&tool=pmcentrez\&rendertype=abstract}.
+\DIFadd{Liu K, Goodman M, Muse S, Smith JS, Buckler E, Doebley J.
+}\newblock {\DIFadd{Genetic structure and diversity among maize inbred lines as inferred
+  from DNA microsatellites.}}
+\newblock \DIFadd{Genetics. 2003 Dec;165(4):2117--28.
+}\newblock \DIFadd{Available from:
+  }\url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1462894\&tool=pmcentrez\&rendertype=abstract}\DIFadd{.
+}
 
 \end{thebibliography}
-\DIFaddbegin 
-
-
-\DIFaddend %\bibliography{ref} % Use the example bibliography file sample.bib
-
-%DIF > \end{thebibliography}
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\DIFaddend % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % % % SUPPORTING INFORMATION % % %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
