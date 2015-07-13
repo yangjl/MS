@@ -13,45 +13,45 @@ Warning--missing publisher in DevelopmentCoreTeam2011
 while executing---line 1874 of file plos2015.bst
 Warning--empty journal in Hallauer2004
 Warning--there's a number but no volume in Bommert2013
-You've used 65 entries,
+You've used 66 entries,
             3170 wiz_defined-function locations,
-            1163 strings with 27393 characters,
-and the built_in function-call counts, 188206 in all, are:
-= -- 23200
-> -- 1232
+            1168 strings with 27593 characters,
+and the built_in function-call counts, 189696 in all, are:
+= -- 23386
+> -- 1244
 < -- 1
-+ -- 654
-- -- 308
-* -- 17080
-:= -- 20192
-add.period$ -- 295
-call.type$ -- 65
++ -- 663
+- -- 311
+* -- 17200
+:= -- 20355
+add.period$ -- 299
+call.type$ -- 66
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 69
-duplicate$ -- 12094
-empty$ -- 18603
-format.name$ -- 365
-if$ -- 43630
+cite$ -- 70
+duplicate$ -- 12219
+empty$ -- 18745
+format.name$ -- 369
+if$ -- 43980
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 815
-newline$ -- 365
-num.names$ -- 65
-pop$ -- 1264
+int.to.str$ -- 66
+missing$ -- 825
+newline$ -- 370
+num.names$ -- 66
+pop$ -- 1281
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1370
+skip$ -- 1388
 stack$ -- 0
-substring$ -- 43065
-swap$ -- 1804
+substring$ -- 43342
+swap$ -- 1825
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 741
-width$ -- 67
-write$ -- 791
+while$ -- 749
+width$ -- 68
+write$ -- 802
 (There was 1 error message)
