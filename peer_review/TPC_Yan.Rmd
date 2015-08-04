@@ -1,0 +1,43 @@
+---
+title: "Review"
+date: "August 4, 2015"
+output: pdf_document
+---
+
+Yan et al., constructed a multi-parent mapping population using 14 diverse maize lines. 
+
+
+Hey Jeff,
+
+I don't need a super duper deep review on this as I'm shooting for three reviewers. Could you assess the low-frequency argument and if this really works given the population structure that they utilized. Any insights on how detection power issues could alter their work would be a nice bonus.
+
+Thanks
+Dan
+
+
+- Line 50-52: I suggest to cite more recent literature(s) or data. How about the contributions of nitrogen usage and plant density?
+
+- Line 82-84: For each locus, ideally, 50% of the alleles come from B73 and 50% of the alleles come from non-B73 according to NAM design, isn't it? I agree that non-B73 alleles were derived from 25 founder lines. Please explicitly explain the "statistical issues" for this design.
+
+- experimental design?
+
+- Line 139: Did you consider the direction of effect when inegrating two or more co-localized QTLs?
+
+- Line 432: remove "each".
+
+- Line 627: This is not fine mapping.
+
+- Line 652-654: "binomial distribution" is an assumpution of the data distribution, not a statistical method.
+
+- Line 670: broad-sense heritability should be $H^{2}$.
+
+- 
+
+
+
+
+
+
+
+
+

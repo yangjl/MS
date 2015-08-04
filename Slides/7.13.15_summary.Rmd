@@ -1,0 +1,21 @@
+---
+title: "Project Summary"
+author: "Jinliang Yang"
+date: "July 13, 2015"
+output: beamer_presentation
+---
+
+Jinliang Yang's Projects
+========================================================
+
+## GERP improves genomic prediction of hybrid phenotype
+
+- Genotype and phenotype from 66 hybrids and 12 founder inbreds
+- Genomic selection using GERP information
+- Paper targeted August 2015
+
+## The origin of biological nitrogen fixation
+
+- SNP50k data from 35 Totontepec lines
+- Introgression analysis
+- Paper targeted October 2015
