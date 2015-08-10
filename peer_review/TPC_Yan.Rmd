@@ -11,6 +11,8 @@ Theoretically, the minimum allele frequency in their population is 1/14 (7%). Be
 In addition, I am a little bit suspicious about the power simulation. Under scenario iv) (Figure 4, “model” used here is confusing), to my understanding, QTLs with opposite effects would be hard to be detected by JLM and GWAS, because their effects tend to be cancelled out. Why under such scenario, on the contrary, their JLM has the highest power? For the simulation, they only talk about power issue, how about false discovery? If the boosted power was due to the increased false discovery, it seems not very useful after all.
 
 
+
+
 # Minor points (line by line)
 
 - Line 50-52: it would be great to cite more recent literature(s) or data. How about other factors for yield improvement, i.e., the contributions of nitrogen usage and plant density?
