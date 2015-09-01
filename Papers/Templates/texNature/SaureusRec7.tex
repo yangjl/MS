@@ -1,0 +1,207 @@
+%\documentclass[twocolumn,twoside]{article}
+\documentclass[twoside,twocolumn, letterpaper]{article}
+
+\usepackage{graphics}
+\usepackage{color}
+
+%\usepackage{NatGenLetT}
+\usepackage{NatureLetT}
+
+\usepackage{times}
+
+\DeclareMathAlphabet{\msfsl}{OT1}{cmss}{m}{sl}
+\DeclareMathAlphabet{\msfrg}{OT1}{cmss}{n}{sl}
+
+\renewcommand{\baselinestretch}{1}
+
+\addtolength{\oddsidemargin}{-.2cm}
+\addtolength{\evensidemargin}{-1.2cm}
+
+\addtolength{\textwidth}{1.5cm}
+\addtolength{\topmargin}{-1.75cm}
+\addtolength{\textheight}{3.5cm}
+
+\renewcommand{\textfraction}{0.01}
+\renewcommand{\topfraction}{0.99}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.90}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.80}
+\renewcommand{\sfdefault}{phv}
+
+\makeatletter
+\renewcommand{\footnotesep}{-2pt}
+\makeatletter
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+% fancy for Nature Genetics
+%\fancyhead[RO]{\begin{picture}(600,1)(10,20)\put(440,32) {\textcolor{Dgreen}{\stbld{LETTERS}}}\end{picture}}
+%\fancyhead[RE]{\begin{picture}(600,1)(10,20)\put(10,32) {\textcolor{Dgreen}{\stbld{LETTERS}}}\end{picture}}
+%\fancyhead[C]{\begin{picture}(600,1)(10,20)\linethickness{50pt}\put(-43,52) {{\color{pTop}{\line(1,0){615}}}}\linethickness{0.5pt}\put(10,-678) {{\line(1,0){515}}}\end{picture}}
+
+% fancy for Nature
+\fancyhead[RO]{\begin{picture}(600,1)(10,20)\put(460,46) {\textcolor{Dgreen}{\stbld{LETTERS}}} \put(10,46) {\textcolor{Dgreen}{\sf{NATURE}}} \end{picture}}
+\fancyhead[RE]{\begin{picture}(600,1)(10,20)\put(10,46) {\textcolor{Dgreen}{\stbld{LETTERS}}} \put(460,46) {\textcolor{Dgreen}{\sf{NATURE}}} \end{picture}}
+\fancyhead[C]{\begin{picture}(600,1)(10,20)\linethickness{25pt}\put(-43,55) {{\color{pTop}{\line(1,0){615}}}}\linethickness{0.5pt}\put(10,-678) {{\line(1,0){515}}}\end{picture}}
+
+\fancyfoot[RO]{\thepage}
+\fancyfoot[LE]{\thepage}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{
+    \fancyhf{}
+}
+\setcounter{footnote}{0}%
+
+\title{Evolutionary Advantages of Homologous Recombination in a Bacterial Population}
+
+\author{
+Shohei Takuno
+\thanks{Graduate University for Advanced Studies, Hayama, Kanagawa 240-0193, Japan } $^,$\thanks{These authors contributed equally to this work.}
+ \hspace{0.5mm}, Tomoyuki Kado$^{1,2}$, Ryuichi P Sugino$^{1}$, Luay Nakhleh\thanks{ 
+Department of Computer Science, Rice University, Houston, TX 77005, USA} \hspace{0.5mm}, 
+and Hideki Innan$^{1,}$\thanks{Correspondence should be addressed to H.I. (innan\_hideki@soken.ac.jp).}\hspace{0.6mm}
+}
+
+\date{\small Manuscript intended for \emph{Nature}, \today}
+
+\usepackage[sort&compress]{natbib}
+\bibpunct{}{}{,}{s}{}{\textsuperscript{,}}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\begin{document} 
+\maketitle
+
+\begin{abstract}
+\noindent \bf
+\noindent It is widely accepted that recombination in sexual eukaryotes is evolutionarily advantageous because it can break down linkage between loci and subsequently create new combinations of alleles \cite[]{Felsenstein_1974_4448362, MaynardSmith78:book, Kondrashov_1993_8409359, Barton_1998_9748151, Otto_2002_11967550}---an argument that is frequently used to explain the existence of two sexes. In asexual species such as bacteria, however, the evolutionary role of homologous recombination (bacteria's recombination mechanism) has been long neglected, and the assumption of clonal inheritance, {\em i.e.}, the whole genome is completely linked, has been central to almost all evolutionary theories of asexual species. Accordingly, a number of new findings 
+have been reported in the literature based on the assumption of clonal inheritance when analyzing data derived from experimental evolutionary studies. 
+However, through rigorous population genetic analysis of genome-wide single nucleotide polymorphism (SNP) data in the bacteria {\em Staphylococcus aureus}, we report here a massive extent of homologous recombination in this population. We found that linkage disequilibrium (LD) between SNPs quickly decays, and there is almost no LD between SNPs that are more than 10 kb apart---a scenario similar to that in sexual eukaryotes.
+Then, through simulations, we demonstrate that the observed level of recombination is sufficiently high for bacteria to gain evolutionary advantages, through Ê
+homologous recombination, in facilitating the fixation of beneficial mutations in different individuals and avoiding the hitchhiking of deleterious mutations. We further verify that our conclusion should hold for other bacterial species. Our findings call into question the validity of the application of the clonal inheritance model to bacteria as well as the accuracy of results and inferences obtained from bacterial populations under this model.
+\end{abstract}
+
+\vspace{6mm}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE
+\begin{figure*}[tb]   
+  \begin{center}
+   \vspace{-2mm}
+   \includegraphics[width=0.98\textwidth]{fig/treeCircle}
+   \renewcommand{\baselinestretch}{0.9}
+   \vspace{-3mm}
+   \caption{
+   (\textbf{a}) An NJ tree of the 12 strains in \emph{S. aureus} based on the distance matrix of all synonymous SNPs. The 12 strains were classified into 5 groups, named A, B, C, D and E. Each of the first three groups (A, B, and C) consists of multiple strains with almost identical genomes (nucleotide difference is $< 0.0003 $), which is in agreement with the sampling history: for example, JH1 and JH9 were isolated from a single patient.  (\textbf{b}) The proportions of different tree-shapes.  (\textbf{c}) The distribution of tree-shapes across the genome. See text for details.
+   }
+\vspace{-4mm}
+    \label{circle}
+  \end{center}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE
+
+
+\noindent It is widely accepted that recombination is evolutionarily advantageous because it can break down linkage between loci and subsequently create new combinations of alleles \cite[]{Felsenstein_1974_4448362, MaynardSmith78:book, Kondrashov_1993_8409359, Barton_1998_9748151, Otto_2002_11967550}---an argument that is frequently used to explain the existence of two sexes. As such, the common assumption that the evolution of asexual species, such as bacteria, is largely clonal and does not utilize recombination, puts such species at an evolutionary disadvantage in at least two scenarios. In the first scenario, known as ``clonal interference" of beneficial mutations, when two beneficial mutations arise simultaneously in different individuals, it is impossible that both of them fix in the population because when one fixes, the other has to be lost \cite[]{Fisher30:book, Muller_1932_62, Hill_1966_37, Gerrish_1998_9720276}. In the second scenario, known as ``hitchhiking" of deleterious mutations, a single chromosome possesses both deleterious and beneficial mutations. When the beneficial mutation fixes by positive selection, the linked deleterious mutations also fix \cite[]{Muller_1964_31, Kojima_1967_4, Maynard_Smith_1974_5}. 
+
+
+  
+The assumption of clonal inheritance, {\em i.e.}, the whole genome is completely linked, has been central to almost all evolutionary theories of asexual species. These theories have provided the basis for analyses of artificial evolution of bacterial populations in the lab, as well as for deriving estimates of their evolutionary parameters, including the rate and fitness effects of mutations \cite[]{Imhof_2001_11158603,Rozen_CB_2002,Hegreness_2006_16543462,Perfeito_2007_17690297}. However, what if the assumption of no recombination is not valid for bacteria? One might claim that because bacterial homologous recombination causes only an exchange of small tracts (the outcome is similar to allelic gene conversion in eukaryotes) \cite[]{Wiuf_2000_10790416,Didelot_2007_17151252}, there may not be a significant evolutionary advantage. However, there has been no thorough study to support this claim. Further, one may illustrate how bacteria can overcome, by utilizing recombination (\emph{i.e.}, homologous recombination), the two aforementioned evolutionary disadvantage scenarios.  In the first scenario, recombination brings the two beneficial mutations on the same chromosome, and consequently the double fixation is possible. In the second scenario, recombination breaks the linkage between the beneficial and deleterious mutations, allowing the fixation of the former and the less simultaneous fixation of the latter. 
+
+Although the presence of homologous recombination in bacteria has been known for more than six decades \cite[]{LEDERBERG_1946_63}, our current understanding of the rate and evolutionary benefits of homologous recombination is still limited, except that a number of bacterial species exhibit evidence for homologous recombination in individual gene-based polymorphism data \cite[]{Maiden_1998_9501229,Feil_2001_11136255}. In this report, by using 12 genome sequences of \emph{Staphylococcus aureus} as a model, we evaluate the genome-wide level of homologous recombination. We then consider the advantageous effect of the estimated level of recombination by using simulations, where we investigate the behavior of beneficial and deleterious mutations in a large bacterial population. To this end, we show how significant an evolutionary role homologous recombination plays in a bacterial population's ability to avoid clonal interference of beneficial mutations and hitchhiking of deleterious mutations. 
+
+
+
+\emph{S. aureus} is a major pathogen that is associated with serious community-acquired and nosocomial diseases \cite[]{Emori_1993_8269394,Steinberg_1996_49}. This species has multiple methicillin-resistant \emph{S. aureus} (MRSA) strains, and the whole genome sequences are available for more than ten strains, including MRSA and MSSA (methicillin-susceptible \emph{S. aureus}) strains (Supplementary Table~1). This availability of whole genome sequences of multiple strains in a single species provides a unique opportunity to investigate the genome-wide pattern of homologous recombination. Those genomes were aligned, and 65,412 SNPs were identified in 2.3 Mb of well-aligned regions, which cover more than 80 \% of the entire \emph{S. aureus} genome (on average, $\sim$2.8 Mb; Supplementary Fig.~1). The average pairwise nucleotide differences per site is $\pi=0.00847$ for all sites, and $\pi_S=0.0247$ for synonymous sites (Supplementary Information). 
+
+%A short version of the three paras
+Estimation of the homologous recombination rate from polymorphism data is difficult without knowing the demographic history of the population. This is especially true for bacterial populations that usually have strong clonal structure \cite[]{Selander_1980_56,Smith_1993_8506277}. Indeed, the relationship of the 12 strains is very different from that expected when they are sampled from a panmictic population (Fig.~\ref{circle}a). Based on this tree representing the genome-wide average of tree structure of the 12 strains, the 12 strains can be classified into 5 groups, named A, B, C, D and E, indicating there is a strong clonal structure. However, we found that the ancestral population of the first three groups (A, B, and C) should be sufficiently large so that the coalescent patterns of their ancestral lineages are very similar to that expected in a panmictic population undergoing extensive recombination. This is because the three possible coalescent patterns, ((A, B), C), ((B, C), A) and ((A, C), B), appear with nearly identical frequencies with a slight excess of the first type (Fig.~\ref{circle}b) and their spacial distribution across the genome is nearly random (Fig.~\ref{circle}c).
+
+Here we use these information to estimate the rate of homologous recombination in the A-B-C ancestral population. The demographic parameters were first inferred from the SNP data assuming a simple model as illustrated in Fig.~\ref{demo}a (Supplementary Information). We found that the inferred model well describes the coalescent pattern of the A-B-C trio (Fig.~\ref{demo}b). Conditional on this estimated demography, the rate of homologous recombination was estimated from the decay of linkage disequilibrium (LD) along distance. Representatives of the three groups, A, B and C, provide the minimum sample size to detect recombination when an outgroup (D or E) is available. Following the method of Ruderfer \emph{et al.} \cite{Ruderfer_2006_16892060}, we used 5,289 SNPs at which the allelic configuration of $\{\mbox{A, B, C, D, E}\}$ $\in\{\{1,1,0,0,0\},\{0,1,1,0,0\},\{1,0,1,0,0\}\}$, where 0 and 1 represent two variable nucleotides. For these sites, it is very likely that 0 is the ancestral allelic state; therefore, the tree shape can be parsimoniously inferred (\emph{i.e.,} ((A, B), C), ((B, C), A) and ((A, C), B) are given for $\{1,1,0,0,0\}$, $\{0,1,1,0,0\}$, and $\{1,0,1,0,0\}$, respectively). It is expected that the probability of tree-shape compatibility for a pair of completely linked sites is 1 and this probability decreases as the recombination rate between the two sites increases. When the two sites are completely unlinked, the probability is expected to be 0.34. Thus, the decrease of the probability of tree-shape compatibility against distance is analogous to the decay of LD. Fig.~\ref{demo}c shows the average probability of tree-shape compatibility, which is given by a decreasing function of distance. It was found that the probability decreases dramatically and becomes close to the theoretical minimum when the distance is larger than 5 kb. 
+
+
+
+
+%Estimation of the homologous recombination rate from polymorphism data is difficult without knowing the demographic history of the population. This is especially true for bacterial populations that usually have strong clonal structure \cite[]{Selander_1980_56,Smith_1993_8506277}. Indeed, the relationship of the 12 strains is very different from that expected when they are sampled from a panmictic population. Fig.~\ref{circle}a shows an NJ tree based on the distance matrix of all synonymous SNPs. This tree represents the genome-wide average of tree structure of the 12 strains, and indicates that the 12 strains can be classified into 5 groups, named A, B, C, D and E. Each of the first three groups (A, B, and C) consists of multiple strains with almost identical genomes (nucleotide difference is $< 0.0003 $), which is in agreement with the sampling history: for example, JH1 and JH9 were isolated from a single patient.
+
+%We here focus on the relationship among three groups, A, B and C, because they should be ideal for estimating the recombination rate. We can consider that the coalescent patterns of the ancestral lineages of the three groups are very similar to that expected in a panmictic population undergoing extensive recombination because of two reasons. First, the three possible coalescent patterns, ((A, B), C), ((B, C), A) and ((A, C), B), appear with nearly identical frequencies. We here define the ``major topology" such that A, B and C are more closely related, as illustrated in Fig.~\ref{circle}b. The major topology includes those with all three possible coalescent patterns for the A-B-C trio. It does not specify the coalescent patterns of D, E and the ancestor of A-B-C, because this relationship cannot be resolved due to the lack of an outgroup. In the well-aligned regions, there are 1,788 coding genes. For each gene, an NJ tree was constructed (about 20 \% of genes with very few SNPs were excluded). Fig.~\ref{circle}b shows that more than 80 \% of those trees are consistent with the major topology, among which the proportion of three patterns are very similar, though ((A, B), C) is slightly more common than the other two. Second, the shape of the gene tree changes gene by gene, that is, the three types of trees distribute almost randomly along the chromosome (Fig.~\ref{circle}c). These two observations indicate that the ancestral lineages of A, B, and C seem to meet in a presumably large ancestral population quite recently, and extensive homologous recombination makes the coalescent pattern of the trio in each gene nearly random. The slight excess of ((A, B), C) over ((B, C), A) and ((A, C), B) indicates that the population split of A and B is slightly younger than that of C and the ancestor of A and B. 
+
+%To obtain more detailed insights into the demographic history of the ancestral lineages of the three groups, we estimated the ancestral population sizes and divergence times assuming a simple model illustrated in Fig.~\ref{demo}a. According to the theories in refs. \cite{Takahata_1995_7482371,Hudson_1983_61}, we estimated the demographic parameters involved in the model (Supplementary Information). As expected, we found that the A-B-C trio shared a very large ancestral population; Our maximum likelihood (ML) estimate of the population mutation rate is $\hat{\theta_2}=\hat{2N_2\mu}=0.0105$, where $N_2$ and $\mu$ are the effective population size and mutation rate per site, respectively, so that $\hat{N_2}$ is estimated to be $5.3\times 10^7$ if $\mu=10^{-10}$ is assumed \cite[]{Drake_1991_1831267}. The value of $\hat{t_2}$ was estimated to be $3.5\times 10^6$ generations (200 years if 1 generation per 30 min is assumed \cite[]{Laurent_2001_11222560}), which corresponds to only 7 \% of the mean coalescent time in the ancestral population. After the split of AB and C, A and B shared an ancestral population with $N_1$, which was estimated to be $0.569\hat{N_{2}}$, and time of population split between A and B was estimated to be $\hat{\mu t_{1}}\approx 0$. Fig.~\ref{demo}b shows that the distributions of observed divergences among the A-B-C trio are in excellent agreement with the expectations under the inferred demographic model, indicating that the inferred model well represents the coalescent process among the A-B-C trio. 
+
+%Conditional on this estimated demography, the rate of homologous recombination was estimated from the decay of linkage disequilibrium (LD) along distance. Representatives of the three groups, A, B and C, provide the minimum sample size to detect recombination when an outgroup (D or E) is available. Following the method of Ruderfer \emph{et al.} \cite{Ruderfer_2006_16892060}, we used 5,289 SNPs at which the allelic configuration of $\{\mbox{A, B, C, D, E}\}$ $\in\{\{1,1,0,0,0\},\{0,1,1,0,0\},\{1,0,1,0,0\}\}$, where 0 and 1 represent two variable nucleotides. For these sites, it is very likely that 0 is the ancestral allelic state; therefore, the tree shape can be parsimoniously inferred (\emph{i.e.,} ((A, B), C), ((B, C), A) and ((A, C), B) are given for $\{1,1,0,0,0\}$, $\{0,1,1,0,0\}$, and $\{1,0,1,0,0\}$, respectively). It is expected that the probability of tree-shape compatibility for a pair of completely linked sites is 1 and this probability decreases as the recombination rate between the two sites increases. When the two sites are completely unlinked, the probability is expected to be 0.34. Thus, the decrease of the probability of tree-shape compatibility against distance is analogous to the decay of LD. Fig.~\ref{demo}c shows the average probability of tree-shape compatibility, which is given by a decreasing function of distance. It was found that the probability decreases dramatically and becomes close to the theoretical minimum when the distance is larger than 5 kb. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE
+\begin{figure*}[tb]   
+  \begin{center}
+   \vspace{-2mm}
+   \includegraphics[width=0.8\textwidth]{fig/ms}
+   \renewcommand{\baselinestretch}{0.9}
+   \vspace{-3mm}
+   \caption{
+   \textbf{a}, The demographic model for the A-B-C trio used in this study. The parameters estimated are also shown (Supplementary Information). \textbf{b}, The distributions of the synonymous nucleotide divergence between groups A-C (green boxes in the upper panel), B-C (blue boxes in the upper panel) and A-B (red triangles in the lower panel). The expected distributions under the inferred demography are shown by gray lines. \textbf{c}, The decay of linkage disequilibrium (LD). The horizontal and vertical axes represent the distances (kb) between SNPs and the probability of tree-shape compatibility, respectively. The gray circles represent the observation (the proportion of compatible trees for SNP pairs given distance). Distances were binned, and each circle represent the proportion of compatible trees in the same bin. The red line represents the expected decay of LD with the estimated rate, $\hat{G}$ = 0.006, $\hat{1/q}$ = 10 kb.}
+\vspace{-6mm}
+    \label{demo}
+  \end{center}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE
+
+
+
+Our observation suggests extensive homologous recombination along the chromosome, and this is not consistent with the model of a tight linkage of bacterial chromosomes.
+Coalescent simulations were performed to estimate the rate of homologous recombination, $g$. A homologous recombination event is modeled such that the process is analogous to allelic gene conversion \cite{Wiuf_2000_10790416,Didelot_2007_17151252}. We take the parameter $g$ to 
+ represent the initiation rate of a transferring event per site per generation, and $G$ to be the population rate, $G=2Ng$, where $N$ is the effective population size. The elongation of the converted tract starts at the initiation site and is terminated at a constant rate, $q$. Therefore, the tract length follows a geometric function with mean $1/q$, and the two parameters $G$ and $q$ determine the decay function (Supplementary Information). We found that $\hat{G}$ = 0.006 with $\hat{1/q} \geq 10$ kb explains the observation very well (Fig.~\ref{demo}c, Supplementary Information). Furthermore, we found that the observed decay is almost as much as that expected with typical estimated rates of recombination (crossing-over, see Supplementary Information). From these observations, we hypothesized that bacterial populations may benefit from homologous recombination almost as well as eukaryotes benefit from (meiotic) recombination.
+
+To investigate the beneficial effect of recombination, forward simulations of the evolution of a bacterial population were performed. The purpose of the simulations is to examine the fixation processes of adaptive and deleterious mutations in a circular genome, which does not undergo meiotic crossing-over but homologous recombination. The model assumes that each individual has a circular genome with size $L=2\times10^{6}$-bp, in which advantageous and deleterious mutations arise at rates $U_{A}$ and $U_{D}$ per genome per generation, respectively. The fitness effects of advantageous and deleterious mutations follow exponential distributions with means $\bar{s}_{A}$ and $\bar{s}_{D}$, respectively. $U_{A}=\{10^{-8}, 10^{-7}, 10^{-6}, 10^{-5}\}$,  $U_{D}=10^{-4}$, $\bar{s}_{A}=0.01$ and $\bar{s}_{D}=\{0,-0.001,-0.01\}$ were assumed based on empirical estimates (Supplementary Information). Because the bacterial population size would be highly variable, we considered a wide range of $N=\{10^4, 10^5, 10^6, 10^7\}$ (see Supplementary Information for our choice of parameters). 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE
+\begin{figure*}[tb]   
+  \begin{center}
+   \vspace{-2mm}
+   \includegraphics[width=0.98\textwidth]{fig/KaKd}
+   \renewcommand{\baselinestretch}{0.9}
+   \vspace{-3mm}
+   \caption{Partial results of the forward simulations. The effect of homologous recombination on the substitution rates of adaptive and deleterious mutations ($K_A$ and $K_D$) are shown. For full results, see Supplementary Fig.~4-6.
+The black and white arrows represent the expectations assuming free recombination and complete linkage, respectively. The blue arrows represent the results with the estimated recombination rate without selection taken into account ($\hat{R}_{neu}$). The red arrows roughly show the levels with ($\hat{R}_{sel}$), an estimate taking selection into account (Supplementary Information). Red arrows are not shown when $N=10^7$ because we did not obtain reliable simulation results for the decay of LD. 
+   }
+\vspace{-6mm}
+    \label{ka}
+  \end{center}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FIGURE
+
+For each parameter set, a long simulation run was performed to accumulate a large number of adaptive and deleterious substitutions (Supplementary Information), from which we investigated (i) how the interference among competing adaptive mutations is relaxed by homologous recombination and (ii) how homologous recombination can prevent fixations of deleterious mutations through the hitchhiking effect of advantageous mutations. For (i), we focused on $K_A$, the substitution rate of advantageous mutations per genome per generation (Fig.~\ref{ka}a). In each panel, the population size is fixed, and the substitution rates ($K_A$) obtained from the simulations are plotted. Obviously, $K_A$ is given by an increasing function of the adaptive mutation rate ($U_{A}$), and there is also a positive correlation with the rate of homologous recombination. In each panel, we also show the upper and lower limits of $K_A$ (Supplementary Information). The former assumes free recombination among all adaptive mutations, though this is not a realistic situation in any organism, including eukaryotes. The lower limit was obtained by simulations assuming the entire chromosome is completely linked. As expected, results of all simulations with homologous recombination fall within the range defined by the upper and lower limits (Fig.~\ref{ka}a), and as the recombination rate increases, $K_A$ increases, because the interference among competing adaptive mutations is relaxed. 
+
+A rough expected value of $K_A$ with the estimated homologous recombination rate (\emph{i.e.,} $\hat{G}=0.006$) for \emph{S. aureus} is shown by a blue arrow. It seems that the estimated level of homologous recombination plays a significant role in relaxing the interference, but the effect largely depends on $N$: The effect decreases as $N$ increases. However, it should be noted that we estimated the recombination rate assuming a neutral population, and that this assumption causes a serious underestimation when selection is operating (Supplementary Fig.~8). To correct this bias, we checked the decay of LD in our simulations with selection, and roughly inferred what recombination rate would be consistent with the 
+ decay of LD we observed in \emph{S. aureus} (red arrow). We found that the interference can be significantly relaxed even in large populations. Thus, in \emph{S. aureus}, it may be concluded that homologous recombination plays a crucial role in breaking down the linkage and reconstructing good pairs of mutations, resulting in efficient fixations of adaptive mutations. Although Fig.~\ref{ka}a shows the results of the simulations without deleterious mutations, we confirmed that almost identical results were obtained with deleterious mutations (Supplementary Information). 
+
+For (ii), we focused on $K_D$, the substitution rates of deleterious mutations. The main reason of the fixation of deleterious mutations is the hitchhiking effect: when an adaptive mutation is fixed in the population, linked deleterious mutations could fix along. Therefore, $K_D$ increases with an  
+ increase in the adaptive mutation rate. The recombination rate also has a significant effect on the substitution rate. The upper limit can be obtained when there is no recombination, where a number of deleterious mutations will fix by hitchhiking, and lower limit is obtained when all mutations are unlinked (Supplementary Information). Fig.~\ref{ka}b summarizes the results of the simulations when $\bar{s}_{D}=-0.01$, which shows that homologous recombination reduces substitutions of deleterious mutations in comparison with the case of complete linkage (upper limit). Given the rate of homologous recombination that accounts for the observed LD decay, $K_D$ is close to the lower limit, indicating a significant role of homologous recombination to avoid fixation of many deleterious mutations along with the fixation of adaptive ones.
+
+In summary, our population genetic analysis of genome-wide SNPs of \emph{S. aureus} revealed dramatic decay of linkage between SNPs (Fig.~\ref{demo}c), which resulted in frequent changes of tree shape along the chromosome (Fig.~\ref{circle}c). This observation can be explained by a very high rate of homologous recombination, which should provide the species with a way to better respond to selection. It has been thought that bacteria do not undergo crossing-over, so that they do not benefit from recombination. However, we here hypothesize that homologous recombination would work to improve bacteria's response to selection almost as well as crossing-over works in eukaryotes. It should be pointed out that our observation is not specific to \emph{S. aureus}. Most bacterial species undergo homologous recombination. The rate may be highly variable among species, and one of the important factors to determine the rate may be the efficacy of natural transformation, through which homologous recombination occurs \cite[]{Lorenz_1994_7968924}. According to the summary of empirical estimates of the transformation efficacy of various bacterial species in ref. \cite[]{Lorenz_1994_7968924}, \emph{S. aureus} is one of the species with the lowest transformation frequencies. In consistent with this, the level of tree incongruency in 7 MLST loci in \emph{S. aureus} is not high in comparison with other species \cite[]{Feil_2001_11136255,Narra_2006_16950097}. Therefore, we can presume that our hypothesis should hold for many bacterial species. This can be supported by Supplementary Fig.~9, in which the decay of LD is investigated in four additional species with genomic sequence data from multiple strains available. All four species exhibit very similar patterns to that in \emph{S. aureus}; LD decays rapidly when distance is short and saturates in several kb. It is indicated that these species also undergo extensive homologous recombination. 
+
+Our results have two major implications. First, our findings are not consistent with the model of clonal interference. Although this model has been questioned with increasing evidence for homologous recombination, almost all experimental evolutionary studies of bacteria still assume the model to estimate the adaptive and deleterious mutation rates and their fitness effects. This study strongly indicates that those estimates assuming the clonal interference model should be reconsidered, because they should be highly inflated. The second implication concerns the evolution of sex. It has been thought that when eukaryotes evolved from prokaryotes, bisexual systems evolved such that recombination (crossing-over) would occur through meiosis because of its evolutionary benefits. Because this view is based on the classic concept that prokaryote genomes do not benefit from recombination, it may need to be reconsidered in light of our findings. \\
+
+
+{\scriptsize \sf
+\renewcommand{\baselinestretch}{2.0}
+\bibliography{KadoSau,Sau}
+\bibliographystyle{NatureSeriesT}
+}
+\vspace{6mm}
+\noindent \stFig{Supplementary Information} \sf{is linked to the online version of the paper at http://www.nature.com/nature/index.html}\\
+
+\section{\stFig Acknowledgements}
+\sf{This work is primarily supported by NIH and NSF grants to LN and HI. ST and RPS are research fellows of the Japan Society for the Promotion of Science (JSPS).}\\
+
+\section{\stFig Author Contributions}
+\sf{H.I. and L.K.N. designed this work. S.T., T.K. and R.P.S analyzed data and T.K performed simulations. S.T., L.K.N. and H.I. wrote the paper.}\\
+
+
+\end{document}
+

@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: SaureusRec7.aux
+The style file: NatureSeriesT.bst
+Database file #1: KadoSau.bib
+Database file #2: Sau.bib
+You've used 28 entries,
+            1833 wiz_defined-function locations,
+            678 strings with 8284 characters,
+and the built_in function-call counts, 6353 in all, are:
+= -- 579
+> -- 256
+< -- 0
++ -- 88
+- -- 60
+* -- 581
+:= -- 1022
+add.period$ -- 110
+call.type$ -- 28
+change.case$ -- 26
+chr.to.int$ -- 0
+cite$ -- 28
+duplicate$ -- 252
+empty$ -- 570
+format.name$ -- 60
+if$ -- 1373
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 30
+newline$ -- 143
+num.names$ -- 28
+pop$ -- 38
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 27
+stack$ -- 0
+substring$ -- 579
+swap$ -- 56
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 54
+width$ -- 30
+write$ -- 306
