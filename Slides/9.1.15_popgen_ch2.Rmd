@@ -1,0 +1,102 @@
+---
+title: "PopGen Chapter 2: Genotype Frequencies"
+author: "Jinliang Yang"
+date: "August 31, 2015"
+output: ioslides_presentation
+---
+
+## Chapter 1: Thinking like a population geneticist
+
+**population genetics**: is a dialog between predictions based on principles of Mendelian inheritance and results obtained from empirical measurement of genotype and allele freq that form the basis of hypothesis tests.
+
+- Expectations
+- Theory and assumptions
+- Simulation
+
+## 2.1 Mendel’s model of particulate genetics 
+
+- Mendel’s first law (Aa): independent segregation of alleles at a single locus
+
+- Mendel’s second law (AaBb): independent assortment of multiple loci
+
+## 2.2 Hardy-Weinberg expected genotype freq
+
+- HW and its assumptions
+- Each assumption is a popgen process
+- HW is a null model
+- HW in haplo-diploid systems?
+
+## 2.3 Why does HW work?
+- A simple proof of HW
+- HW with more than two alleles
+
+$f(A)_t = f(A)_{t+1}$  
+genotype freq remain constant over generations as long as the assumptions of HW are met.
+
+Under Mendelian heredity, genotype and allele freq should not change over time unless one or more of our assumptions is not met.
+
+## 2.4 Applications of HW
+- apply HW to estimate the freq of an observed genotype in a forensic DNA typing case
+- The x2 test gauges whether observed and expected differ more than expected by chance
+- Assume HW to compare two genetic models
+
+## 2.5 The fixation index and heterozygosity
+- The fixation index (F) measures deviation from HW expected heterozygote freq
+- Examples of mating systems and F in wild populations
+- Observed and expected heterozygosity
+
+**assortative mating**: is used to describe non-random mating  
+**positive assortative mating**: individuals with like genotypes or phenotypes tend to mate  
+**negative assortative mating**: individuals with unlike genotypes or phenotypes tend to mate  
+**Consanguineous mating or biparental inbreeding**: mating among related individuals  
+
+## 2.5 The fixation index and heterozygosity
+**fixation index (F)**: used to compare how much heterozygosity is present in an actual population relative to expected levels of heterozygosity under random mating.
+
+Negative values indicate heterozygote excess and positive values indicate homozygote excess relative to HW expectation.
+
+## 2.6 Mating among relatives
+
+- Consanguineous mating alters genotype freq but not allele freq
+- Mating among relatives and the probability that two alleles are identical by descent
+- Inbreeding depression and its possible causes
+- The many meaning of inbreeding
+
+Impacts of inbreeding on genotype and allele freq
+
+Inbreeding causes alleles to be packaged more frequently as homozygotes (heterozygosity declines) and inbreeding does not alter allele freq in a population.
+
+## 2.6 Mating among relatives
+**autozygous**: a homozygous genotype composed of two identical alleles that are inherited from a common ancestor
+**allozygout**: a homozygous or heterozygous genotype composed of two alleles not inherited from a recent common ancestor
+**degree of relatedness**: the expected proportion of alleles between two individuals that are identical by descent; twice the autozygosity.
+**coefficient of inbreeding (f)**: the probability that two alleles in a homozygous genotype are identical by descent.
+
+The inbreeding coefficient and the fixation index are measures of excess homozygosity and therefore are just different ways of expressing the heterozygosity.
+
+## Phenotypic consequences of inbreeding
+ 
+In plants, traits early in the life cycle such as germination less often show inbreeding depression?
+
+The many meaning of inbreeding
+
+many uses of this term “inbreeding"
+
+## 2.7 Gametic disequilibrium
+- Estimating gametic disequilibrium with D
+- Approach to gametic equilibrium over time
+- Causes of gametic disequilibrium
+
+Processes that maintain or increase gametic disequilibrium 
+1. Physical linkage
+the degree of physical linkage of loci dictates the recombination rate and thereby the decay of gametic disequilibrium
+2. Natural selection
+?
+3. Mutation
+overall, it is effect is modest.
+4. Mixing of diverged populations
+?
+5. mating system
+?
+6. Chance
+
