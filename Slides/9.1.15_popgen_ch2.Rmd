@@ -15,9 +15,13 @@ output: ioslides_presentation
 
 ## 2.1 Mendel’s model of particulate genetics 
 
-- Mendel’s first law (Aa): independent segregation of alleles at a single locus
-
-- Mendel’s second law (AaBb): independent assortment of multiple loci
+- Mendel’s first law (Aa): independent segregation of alleles at a single locus  
+random sampling without bias
+```{r, warning=FALSE}
+chisq.test(table(rbinom(1000, 1, p=0.5)+rbinom(1000, 1, p=0.5)), c(1,2,1))
+```
+- Mendel’s second law (AaBb): independent assortment of multiple loci  
+independent (apply the product rule)
 
 ## 2.2 Hardy-Weinberg expected genotype freq
 
@@ -26,77 +30,95 @@ output: ioslides_presentation
 - HW is a null model
 - HW in haplo-diploid systems?
 
+```{r, eval=FALSE}
+geno <- as.data.frame(t(sapply(1:999/1000, 
+                               function(x){ return(c(x^2,2*x*(1-x),(1-x)^2))})))
+plot(1:999/1000, geno[,1], type="l", lty=2, lwd=2, col="red", 
+     xlab="Allele Freq (p)", ylab="Genotype Freq")
+lines(1:999/1000, geno[,2], type="l", lty=1, lwd=2, col="blue")
+lines(1:999/1000, geno[,3], type="l", lty=3, lwd=2, col="green")
+```
+
+## 2.2 Hardy-Weinberg expected genotype freq
+```{r, fig.align='center', echo=FALSE}
+geno <- as.data.frame(t(sapply(1:999/1000, 
+                               function(x){ return(c(x^2,2*x*(1-x),(1-x)^2))})))
+plot(1:999/1000, geno[,1], type="l", lty=2, lwd=2, col="red", xlab="Allele Freq (p)", ylab="Genotype Freq")
+lines(1:999/1000, geno[,2], type="l", lty=1, lwd=2, col="blue")
+lines(1:999/1000, geno[,3], type="l", lty=3, lwd=2, col="green")
+```
+
 ## 2.3 Why does HW work?
 - A simple proof of HW
 - HW with more than two alleles
 
-$f(A)_t = f(A)_{t+1}$  
-genotype freq remain constant over generations as long as the assumptions of HW are met.
+HW equation: $p^2 + 2pq + q^2 =1$  
+HW equilibrium: $f(A)_t = f(A)_{t+1}$    
 
-Under Mendelian heredity, genotype and allele freq should not change over time unless one or more of our assumptions is not met.
+genotype freq remain constant over generations as long as the assumptions of HW are met.
 
 ## 2.4 Applications of HW
 - apply HW to estimate the freq of an observed genotype in a forensic DNA typing case
-- The x2 test gauges whether observed and expected differ more than expected by chance
+- The $\chi^2$ test gauges whether observed and expected differ more than expected by chance
+
+Chisq test provides the probability of obtaining the difference between the observed and expected number of outcomes by chance alone if the null hypothesis is true.
+
 - Assume HW to compare two genetic models
 
 ## 2.5 The fixation index and heterozygosity
 - The fixation index (F) measures deviation from HW expected heterozygote freq
-- Examples of mating systems and F in wild populations
-- Observed and expected heterozygosity
 
-**assortative mating**: is used to describe non-random mating  
-**positive assortative mating**: individuals with like genotypes or phenotypes tend to mate  
-**negative assortative mating**: individuals with unlike genotypes or phenotypes tend to mate  
-**Consanguineous mating or biparental inbreeding**: mating among related individuals  
+$F = (H_e - H_o) / H_e$
 
-## 2.5 The fixation index and heterozygosity
 **fixation index (F)**: used to compare how much heterozygosity is present in an actual population relative to expected levels of heterozygosity under random mating.
 
 Negative values indicate heterozygote excess and positive values indicate homozygote excess relative to HW expectation.
 
+## 2.5 The fixation index and heterozygosity
+- Examples of mating systems and F in wild populations
+- Observed and expected heterozygosity
+
+**positive assortative mating**: individuals with like genotypes or phenotypes tend to mate  
+**negative assortative mating**: individuals with unlike genotypes or phenotypes tend to mate  
+**Consanguineous mating or biparental inbreeding**: mating among related individuals  
+
 ## 2.6 Mating among relatives
 
-- Consanguineous mating alters genotype freq but not allele freq
-- Mating among relatives and the probability that two alleles are identical by descent
-- Inbreeding depression and its possible causes
-- The many meaning of inbreeding
+- Consanguineous mating **alters genotype freq but not allele freq**
 
 Impacts of inbreeding on genotype and allele freq
 
 Inbreeding causes alleles to be packaged more frequently as homozygotes (heterozygosity declines) and inbreeding does not alter allele freq in a population.
 
 ## 2.6 Mating among relatives
-**autozygous**: a homozygous genotype composed of two identical alleles that are inherited from a common ancestor
-**allozygout**: a homozygous or heterozygous genotype composed of two alleles not inherited from a recent common ancestor
-**degree of relatedness**: the expected proportion of alleles between two individuals that are identical by descent; twice the autozygosity.
-**coefficient of inbreeding (f)**: the probability that two alleles in a homozygous genotype are identical by descent.
+- Mating among relatives and the probability that two alleles are identical by descent
+
+**autozygous**: a homozygous genotype composed of two identical alleles that are inherited from a common ancestor  
+**allozygout**: a homozygous or heterozygous genotype composed of two alleles not inherited from a recent common ancestor  
+**degree of relatedness**: the expected proportion of alleles between two individuals that are identical by descent; twice the autozygosity.  
+**coefficient of inbreeding (f)**: the probability that two alleles in a homozygous genotype are identical by descent.  
 
 The inbreeding coefficient and the fixation index are measures of excess homozygosity and therefore are just different ways of expressing the heterozygosity.
 
-## Phenotypic consequences of inbreeding
- 
-In plants, traits early in the life cycle such as germination less often show inbreeding depression?
+## 2.6 Mating among relatives
+- Inbreeding depression and its possible causes
 
-The many meaning of inbreeding
+Phenotypic consequences of inbreeding 
+In plants, traits early in the life cycle such as germination less often show inbreeding depression? 
 
-many uses of this term “inbreeding"
+- The many meaning of inbreeding  
+the term “inbreeding"
 
-## 2.7 Gametic disequilibrium
+## 2.7 Gametic disequilibrium (or LD?)
 - Estimating gametic disequilibrium with D
 - Approach to gametic equilibrium over time
 - Causes of gametic disequilibrium
 
-Processes that maintain or increase gametic disequilibrium 
-1. Physical linkage
-the degree of physical linkage of loci dictates the recombination rate and thereby the decay of gametic disequilibrium
-2. Natural selection
-?
-3. Mutation
-overall, it is effect is modest.
-4. Mixing of diverged populations
-?
-5. mating system
-?
-6. Chance
+Processes that maintain or increase gametic disequilibrium   
+1. Physical linkage  
+2. Natural selection  
+3. Mutation  
+4. Mixing of diverged populations  
+5. mating system  
+6. Chance  
 
