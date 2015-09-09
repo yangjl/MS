@@ -1,0 +1,39 @@
+---
+title: "Teaching Statement"
+author: ""
+date: "Jinliang Yang"
+output: pdf_document
+---
+
+---------
+
+1. general principles, mentoring and teaching experience
+
+different levels of teaching
+
+- hand on experience
+- project guided
+- social media, teaching blog and twitter 
+
+My teaching phyloshpy has been developed during my active involvement in education as a graduate student at Iowa State University. 
+
+I have mentored five undergraduate students.
+
+REU student: 
+
+Honors program participants: Audra Loy  
+REU paricipants: Aaron Kusmec, Samantha Roehl  
+Lab assistants: Uyen Pham, Talissa Sari  
+graduate level: Li Li, Haiying Jiang, guest lecture  
+
+A National Science Foundation (NSF) Research Experiences for Undergraduates (REU), focused on field-based studies of plant conservation genetics.
+
+2. 
+
+3. Interdepartmental. benefit greatly from perspectives provided by other disciplines and believe there is a substantial need for cross-diciplinary training in plant breeding, quantitative genetics, population genetics, statistics and bioinformatics. 
+
+4. Coding and genomics, big data, machine learning.
+
+
+
+
