@@ -1,7 +1,7 @@
 ---
 title: "Teaching Statement"
-author: ""
-date: "Jinliang Yang"
+author: "Jinliang Yang"
+date: ""
 output: pdf_document
 ---
 
@@ -31,6 +31,15 @@ A National Science Foundation (NSF) Research Experiences for Undergraduates (REU
 2. 
 
 3. Interdepartmental. benefit greatly from perspectives provided by other disciplines and believe there is a substantial need for cross-diciplinary training in plant breeding, quantitative genetics, population genetics, statistics and bioinformatics. 
+
+My research and learning process benefited a lot from a across discipline discussion group, including Dr. Dan Nethon and his students for statistical consulation and Dr. Aruru and his students for computational consulation. From basic statistical concepts such as randomazation of experimental design to more complex ones, such as mixed linear model. And also got the efficient computational solutions.
+
+The availability of the enoumous amount of genomic data make the . try to interprate the biological process or hypothesis into mathematical or statistical model. To realize this, in depth understanding of the mathematical or statistical theory is important. 
+
+I will implement the classical genetic concepts into different simulation process. to visualize the process and help students to better understand the biological concepts. At the same time, teaching students to modeling and simulating biological.
+
+
+to motivate students to learning thing by themselves.
 
 4. Coding and genomics, big data, machine learning.
 
