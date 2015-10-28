@@ -1,1 +1,1 @@
-run-latexdiff --old 73e46adeb25d837e9c7ad:Papers/KRN-GWAS/KRN-GWAS_plos_revised.tex --new c47a3109c4b48896ba3504c:Papers/KRN-GWAS/KRN-GWAS_plos_revised.tex --diff Papers/KRN-GWAS/KRN-GWAS_plos_tracking.tex
+run-latexdiff --old d26ca8dc4beefef4982bb913fe0db:Papers/KRN-GWAS/KRN-GWAS_plos_revised.tex --new local:Papers/KRN-GWAS/KRN-GWAS_plos_revised.tex --diff Papers/KRN-GWAS/KRN-GWAS_plos_tracking.tex

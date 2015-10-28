@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  26 OCT 2015 05:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  26 OCT 2015 05:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -951,7 +951,10 @@ Type  H <return>  for immediate help.
                                                   
 l.111 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -984,7 +987,10 @@ Type  H <return>  for immediate help.
                                                   
 l.119 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [2]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 135.
@@ -1005,7 +1011,10 @@ Type  H <return>  for immediate help.
                                                   
 l.135 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [3]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 157.
@@ -1026,7 +1035,10 @@ Type  H <return>  for immediate help.
                                                   
 l.157 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [4]
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 168.
@@ -1050,7 +1062,10 @@ Type  H <return>  for immediate help.
                                                   
 l.175 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [5]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 196.
@@ -1071,7 +1086,10 @@ Type  H <return>  for immediate help.
                                                   
 l.196 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [6]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1095,7 +1113,10 @@ Type  H <return>  for immediate help.
                                                   
 l.216 ... little heterosis or reciprocal effects.}
                                                   
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [7]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 232.
@@ -1116,7 +1137,10 @@ Type  H <return>  for immediate help.
                                                   
 l.232 ... three different statistical approaches.}
                                                   
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [8]
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 237.
@@ -1140,7 +1164,10 @@ Type  H <return>  for immediate help.
                                                   
 l.253 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [9]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 260.
@@ -1161,7 +1188,10 @@ Type  H <return>  for immediate help.
                                                   
 l.260 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [10]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 270.
@@ -1182,7 +1212,10 @@ Type  H <return>  for immediate help.
                                                   
 l.270 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [11]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 288.
@@ -1203,7 +1236,10 @@ Type  H <return>  for immediate help.
                                                   
 l.288 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [12]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 298.
@@ -1224,7 +1260,10 @@ Type  H <return>  for immediate help.
                                                   
 l.298 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [13]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 347.
@@ -1245,7 +1284,10 @@ Type  H <return>  for immediate help.
                                                   
 l.347 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [14]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 427.
@@ -1266,7 +1308,10 @@ Type  H <return>  for immediate help.
                                                   
 l.427 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [15]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 509.
@@ -1287,7 +1332,10 @@ Type  H <return>  for immediate help.
                                                   
 l.509 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [16]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 601.
@@ -1308,7 +1356,10 @@ Type  H <return>  for immediate help.
                                                   
 l.601 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [17]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 678.
@@ -1329,7 +1380,10 @@ Type  H <return>  for immediate help.
                                                   
 l.678 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [18]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 769.
@@ -1350,7 +1404,10 @@ Type  H <return>  for immediate help.
                                                   
 l.769 \subsection
                  *{S2 Fig}
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [19]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 802.
@@ -1371,7 +1428,10 @@ Type  H <return>  for immediate help.
                                                   
 l.802 \subsection
                  *{S4 Table}
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [20]
 
 LaTeX Warning: File `PLOS-submission.eps' not found on input line 842.
@@ -1392,7 +1452,10 @@ Type  H <return>  for immediate help.
                                                   
 l.842 
       
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [21] 
 AED: lastpage setting LastPage
 
@@ -1414,7 +1477,10 @@ Type  H <return>  for immediate help.
                                                   
 l.848 \end{document}
                     
-? 
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 [22]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 848.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 848.
@@ -1429,7 +1495,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 848.
 Here is how much of TeX's memory you used:
  11431 strings out of 493117
  169587 string characters out of 6135433
- 334671 words of memory out of 5000000
+ 335671 words of memory out of 5000000
  14514 multiletter control sequences out of 15000+600000
  10384 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1452,7 +1518,7 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 2014/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy6.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb>
-Output written on KRN-GWAS_plos_tracking.pdf (22 pages, 281690 bytes).
+Output written on KRN-GWAS_plos_tracking.pdf (22 pages, 281898 bytes).
 PDF statistics:
  570 PDF objects out of 1000 (max. 8388607)
  523 compressed objects within 6 object streams
